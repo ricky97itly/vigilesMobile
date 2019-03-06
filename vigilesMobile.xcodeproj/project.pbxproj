@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2161CD82222FF7F2001ABD2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD81222FF7F2001ABD2E /* AppDelegate.swift */; };
+		2161CD84222FF7F2001ABD2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD83222FF7F2001ABD2E /* ViewController.swift */; };
+		2161CD87222FF7F2001ABD2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161CD85222FF7F2001ABD2E /* Main.storyboard */; };
+		2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */; };
+		2161CD8C222FF7F3001ABD2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2161CD8B222FF7F3001ABD2E /* Assets.xcassets */; };
+		2161CD8F222FF7F3001ABD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */; };
+		2161CD9A222FF7F3001ABD2E /* vigilesMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD99222FF7F3001ABD2E /* vigilesMobileTests.swift */; };
+		2161CDA5222FF7F3001ABD2E /* vigilesMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CDA4222FF7F3001ABD2E /* vigilesMobileUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2161CD96222FF7F3001ABD2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2161CD76222FF7F2001ABD2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2161CD7D222FF7F2001ABD2E;
+			remoteInfo = vigilesMobile;
+		};
+		2161CDA1222FF7F3001ABD2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2161CD76222FF7F2001ABD2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2161CD7D222FF7F2001ABD2E;
+			remoteInfo = vigilesMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2161CD7E222FF7F2001ABD2E /* vigilesMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vigilesMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2161CD81222FF7F2001ABD2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2161CD83222FF7F2001ABD2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2161CD86222FF7F2001ABD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2161CD89222FF7F2001ABD2E /* vigilesMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = vigilesMobile.xcdatamodel; sourceTree = "<group>"; };
+		2161CD8B222FF7F3001ABD2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2161CD8E222FF7F3001ABD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2161CD90222FF7F3001ABD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2161CD95222FF7F3001ABD2E /* vigilesMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vigilesMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2161CD99222FF7F3001ABD2E /* vigilesMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vigilesMobileTests.swift; sourceTree = "<group>"; };
+		2161CD9B222FF7F3001ABD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2161CDA0222FF7F3001ABD2E /* vigilesMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vigilesMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2161CDA4222FF7F3001ABD2E /* vigilesMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vigilesMobileUITests.swift; sourceTree = "<group>"; };
+		2161CDA6222FF7F3001ABD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2161CD7B222FF7F2001ABD2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2161CD92222FF7F3001ABD2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2161CD9D222FF7F3001ABD2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2161CD75222FF7F2001ABD2E = {
+			isa = PBXGroup;
+			children = (
+				2161CD80222FF7F2001ABD2E /* vigilesMobile */,
+				2161CD98222FF7F3001ABD2E /* vigilesMobileTests */,
+				2161CDA3222FF7F3001ABD2E /* vigilesMobileUITests */,
+				2161CD7F222FF7F2001ABD2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2161CD7F222FF7F2001ABD2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2161CD7E222FF7F2001ABD2E /* vigilesMobile.app */,
+				2161CD95222FF7F3001ABD2E /* vigilesMobileTests.xctest */,
+				2161CDA0222FF7F3001ABD2E /* vigilesMobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2161CD80222FF7F2001ABD2E /* vigilesMobile */ = {
+			isa = PBXGroup;
+			children = (
+				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
+				2161CD83222FF7F2001ABD2E /* ViewController.swift */,
+				2161CD85222FF7F2001ABD2E /* Main.storyboard */,
+				2161CD8B222FF7F3001ABD2E /* Assets.xcassets */,
+				2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */,
+				2161CD90222FF7F3001ABD2E /* Info.plist */,
+				2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */,
+			);
+			path = vigilesMobile;
+			sourceTree = "<group>";
+		};
+		2161CD98222FF7F3001ABD2E /* vigilesMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				2161CD99222FF7F3001ABD2E /* vigilesMobileTests.swift */,
+				2161CD9B222FF7F3001ABD2E /* Info.plist */,
+			);
+			path = vigilesMobileTests;
+			sourceTree = "<group>";
+		};
+		2161CDA3222FF7F3001ABD2E /* vigilesMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2161CDA4222FF7F3001ABD2E /* vigilesMobileUITests.swift */,
+				2161CDA6222FF7F3001ABD2E /* Info.plist */,
+			);
+			path = vigilesMobileUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2161CD7D222FF7F2001ABD2E /* vigilesMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2161CDA9222FF7F3001ABD2E /* Build configuration list for PBXNativeTarget "vigilesMobile" */;
+			buildPhases = (
+				2161CD7A222FF7F2001ABD2E /* Sources */,
+				2161CD7B222FF7F2001ABD2E /* Frameworks */,
+				2161CD7C222FF7F2001ABD2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vigilesMobile;
+			productName = vigilesMobile;
+			productReference = 2161CD7E222FF7F2001ABD2E /* vigilesMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2161CD94222FF7F3001ABD2E /* vigilesMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2161CDAC222FF7F3001ABD2E /* Build configuration list for PBXNativeTarget "vigilesMobileTests" */;
+			buildPhases = (
+				2161CD91222FF7F3001ABD2E /* Sources */,
+				2161CD92222FF7F3001ABD2E /* Frameworks */,
+				2161CD93222FF7F3001ABD2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2161CD97222FF7F3001ABD2E /* PBXTargetDependency */,
+			);
+			name = vigilesMobileTests;
+			productName = vigilesMobileTests;
+			productReference = 2161CD95222FF7F3001ABD2E /* vigilesMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2161CD9F222FF7F3001ABD2E /* vigilesMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2161CDAF222FF7F3001ABD2E /* Build configuration list for PBXNativeTarget "vigilesMobileUITests" */;
+			buildPhases = (
+				2161CD9C222FF7F3001ABD2E /* Sources */,
+				2161CD9D222FF7F3001ABD2E /* Frameworks */,
+				2161CD9E222FF7F3001ABD2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2161CDA2222FF7F3001ABD2E /* PBXTargetDependency */,
+			);
+			name = vigilesMobileUITests;
+			productName = vigilesMobileUITests;
+			productReference = 2161CDA0222FF7F3001ABD2E /* vigilesMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2161CD76222FF7F2001ABD2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Riccardo Mores";
+				TargetAttributes = {
+					2161CD7D222FF7F2001ABD2E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					2161CD94222FF7F3001ABD2E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2161CD7D222FF7F2001ABD2E;
+					};
+					2161CD9F222FF7F3001ABD2E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2161CD7D222FF7F2001ABD2E;
+					};
+				};
+			};
+			buildConfigurationList = 2161CD79222FF7F2001ABD2E /* Build configuration list for PBXProject "vigilesMobile" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2161CD75222FF7F2001ABD2E;
+			productRefGroup = 2161CD7F222FF7F2001ABD2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2161CD7D222FF7F2001ABD2E /* vigilesMobile */,
+				2161CD94222FF7F3001ABD2E /* vigilesMobileTests */,
+				2161CD9F222FF7F3001ABD2E /* vigilesMobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2161CD7C222FF7F2001ABD2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2161CD8F222FF7F3001ABD2E /* LaunchScreen.storyboard in Resources */,
+				2161CD8C222FF7F3001ABD2E /* Assets.xcassets in Resources */,
+				2161CD87222FF7F2001ABD2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2161CD93222FF7F3001ABD2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2161CD9E222FF7F3001ABD2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2161CD7A222FF7F2001ABD2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */,
+				2161CD84222FF7F2001ABD2E /* ViewController.swift in Sources */,
+				2161CD82222FF7F2001ABD2E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2161CD91222FF7F3001ABD2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2161CD9A222FF7F3001ABD2E /* vigilesMobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2161CD9C222FF7F3001ABD2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2161CDA5222FF7F3001ABD2E /* vigilesMobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2161CD97222FF7F3001ABD2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2161CD7D222FF7F2001ABD2E /* vigilesMobile */;
+			targetProxy = 2161CD96222FF7F3001ABD2E /* PBXContainerItemProxy */;
+		};
+		2161CDA2222FF7F3001ABD2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2161CD7D222FF7F2001ABD2E /* vigilesMobile */;
+			targetProxy = 2161CDA1222FF7F3001ABD2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2161CD85222FF7F2001ABD2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2161CD86222FF7F2001ABD2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2161CD8E222FF7F3001ABD2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2161CDA7222FF7F3001ABD2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2161CDA8222FF7F3001ABD2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2161CDAA222FF7F3001ABD2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q84HB5733Y;
+				INFOPLIST_FILE = vigilesMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2161CDAB222FF7F3001ABD2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q84HB5733Y;
+				INFOPLIST_FILE = vigilesMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2161CDAD222FF7F3001ABD2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q84HB5733Y;
+				INFOPLIST_FILE = vigilesMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vigilesMobile.app/vigilesMobile";
+			};
+			name = Debug;
+		};
+		2161CDAE222FF7F3001ABD2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q84HB5733Y;
+				INFOPLIST_FILE = vigilesMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vigilesMobile.app/vigilesMobile";
+			};
+			name = Release;
+		};
+		2161CDB0222FF7F3001ABD2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q84HB5733Y;
+				INFOPLIST_FILE = vigilesMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = vigilesMobile;
+			};
+			name = Debug;
+		};
+		2161CDB1222FF7F3001ABD2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q84HB5733Y;
+				INFOPLIST_FILE = vigilesMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = vigilesMobile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2161CD79222FF7F2001ABD2E /* Build configuration list for PBXProject "vigilesMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2161CDA7222FF7F3001ABD2E /* Debug */,
+				2161CDA8222FF7F3001ABD2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2161CDA9222FF7F3001ABD2E /* Build configuration list for PBXNativeTarget "vigilesMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2161CDAA222FF7F3001ABD2E /* Debug */,
+				2161CDAB222FF7F3001ABD2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2161CDAC222FF7F3001ABD2E /* Build configuration list for PBXNativeTarget "vigilesMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2161CDAD222FF7F3001ABD2E /* Debug */,
+				2161CDAE222FF7F3001ABD2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2161CDAF222FF7F3001ABD2E /* Build configuration list for PBXNativeTarget "vigilesMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2161CDB0222FF7F3001ABD2E /* Debug */,
+				2161CDB1222FF7F3001ABD2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2161CD89222FF7F2001ABD2E /* vigilesMobile.xcdatamodel */,
+			);
+			currentVersion = 2161CD89222FF7F2001ABD2E /* vigilesMobile.xcdatamodel */;
+			path = vigilesMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2161CD76222FF7F2001ABD2E /* Project object */;
+}
