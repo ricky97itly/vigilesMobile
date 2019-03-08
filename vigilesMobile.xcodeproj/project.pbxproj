@@ -15,6 +15,12 @@
 		2161CD8F222FF7F3001ABD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */; };
 		2161CD9A222FF7F3001ABD2E /* vigilesMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD99222FF7F3001ABD2E /* vigilesMobileTests.swift */; };
 		2161CDA5222FF7F3001ABD2E /* vigilesMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CDA4222FF7F3001ABD2E /* vigilesMobileUITests.swift */; };
+		218BD3E62232DB080067FE59 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3E52232DB080067FE59 /* Home.storyboard */; };
+		218BD3E82232DB340067FE59 /* Cerca.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3E72232DB340067FE59 /* Cerca.storyboard */; };
+		218BD3EA2232DB5B0067FE59 /* Aggiungi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3E92232DB5B0067FE59 /* Aggiungi.storyboard */; };
+		218BD3EC2232DB680067FE59 /* Storico.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3EB2232DB680067FE59 /* Storico.storyboard */; };
+		218BD3EE2232DB750067FE59 /* Profilo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3ED2232DB750067FE59 /* Profilo.storyboard */; };
+		218BD3F62232E7BE0067FE59 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218BD3F52232E7BE0067FE59 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		2161CDA0222FF7F3001ABD2E /* vigilesMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vigilesMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2161CDA4222FF7F3001ABD2E /* vigilesMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vigilesMobileUITests.swift; sourceTree = "<group>"; };
 		2161CDA6222FF7F3001ABD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		218BD3E52232DB080067FE59 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		218BD3E72232DB340067FE59 /* Cerca.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cerca.storyboard; sourceTree = "<group>"; };
+		218BD3E92232DB5B0067FE59 /* Aggiungi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Aggiungi.storyboard; sourceTree = "<group>"; };
+		218BD3EB2232DB680067FE59 /* Storico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storico.storyboard; sourceTree = "<group>"; };
+		218BD3ED2232DB750067FE59 /* Profilo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profilo.storyboard; sourceTree = "<group>"; };
+		218BD3F52232E7BE0067FE59 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +111,10 @@
 		2161CD80222FF7F2001ABD2E /* vigilesMobile */ = {
 			isa = PBXGroup;
 			children = (
+				218BD3E42232DAE90067FE59 /* Storyboards */,
 				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
 				2161CD83222FF7F2001ABD2E /* ViewController.swift */,
+				218BD3F52232E7BE0067FE59 /* HomeViewController.swift */,
 				2161CD85222FF7F2001ABD2E /* Main.storyboard */,
 				2161CD8B222FF7F3001ABD2E /* Assets.xcassets */,
 				2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */,
@@ -126,6 +140,18 @@
 				2161CDA6222FF7F3001ABD2E /* Info.plist */,
 			);
 			path = vigilesMobileUITests;
+			sourceTree = "<group>";
+		};
+		218BD3E42232DAE90067FE59 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				218BD3E52232DB080067FE59 /* Home.storyboard */,
+				218BD3E72232DB340067FE59 /* Cerca.storyboard */,
+				218BD3E92232DB5B0067FE59 /* Aggiungi.storyboard */,
+				218BD3EB2232DB680067FE59 /* Storico.storyboard */,
+				218BD3ED2232DB750067FE59 /* Profilo.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +261,11 @@
 				2161CD8F222FF7F3001ABD2E /* LaunchScreen.storyboard in Resources */,
 				2161CD8C222FF7F3001ABD2E /* Assets.xcassets in Resources */,
 				2161CD87222FF7F2001ABD2E /* Main.storyboard in Resources */,
+				218BD3E62232DB080067FE59 /* Home.storyboard in Resources */,
+				218BD3EE2232DB750067FE59 /* Profilo.storyboard in Resources */,
+				218BD3E82232DB340067FE59 /* Cerca.storyboard in Resources */,
+				218BD3EA2232DB5B0067FE59 /* Aggiungi.storyboard in Resources */,
+				218BD3EC2232DB680067FE59 /* Storico.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +293,7 @@
 				2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */,
 				2161CD84222FF7F2001ABD2E /* ViewController.swift in Sources */,
 				2161CD82222FF7F2001ABD2E /* AppDelegate.swift in Sources */,
+				218BD3F62232E7BE0067FE59 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
