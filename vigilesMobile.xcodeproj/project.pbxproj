@@ -21,6 +21,10 @@
 		218BD3EC2232DB680067FE59 /* Storico.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3EB2232DB680067FE59 /* Storico.storyboard */; };
 		218BD3EE2232DB750067FE59 /* Profilo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3ED2232DB750067FE59 /* Profilo.storyboard */; };
 		218BD3F62232E7BE0067FE59 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218BD3F52232E7BE0067FE59 /* HomeViewController.swift */; };
+		21A818D62233C42100F5B1AA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D52233C42100F5B1AA /* SearchViewController.swift */; };
+		21A818D82233C48A00F5B1AA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D72233C48A00F5B1AA /* AddViewController.swift */; };
+		21A818DA2233C4E800F5B1AA /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */; };
+		21A818DC2233C57800F5B1AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818DB2233C57800F5B1AA /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		218BD3EB2232DB680067FE59 /* Storico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storico.storyboard; sourceTree = "<group>"; };
 		218BD3ED2232DB750067FE59 /* Profilo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profilo.storyboard; sourceTree = "<group>"; };
 		218BD3F52232E7BE0067FE59 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		21A818D52233C42100F5B1AA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		21A818D72233C48A00F5B1AA /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
+		21A818DB2233C57800F5B1AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +121,11 @@
 			children = (
 				218BD3E42232DAE90067FE59 /* Storyboards */,
 				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
+				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
+				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
 				2161CD83222FF7F2001ABD2E /* ViewController.swift */,
+				21A818D72233C48A00F5B1AA /* AddViewController.swift */,
+				21A818D52233C42100F5B1AA /* SearchViewController.swift */,
 				218BD3F52232E7BE0067FE59 /* HomeViewController.swift */,
 				2161CD85222FF7F2001ABD2E /* Main.storyboard */,
 				2161CD8B222FF7F3001ABD2E /* Assets.xcassets */,
@@ -290,9 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A818D62233C42100F5B1AA /* SearchViewController.swift in Sources */,
 				2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */,
+				21A818D82233C48A00F5B1AA /* AddViewController.swift in Sources */,
 				2161CD84222FF7F2001ABD2E /* ViewController.swift in Sources */,
+				21A818DA2233C4E800F5B1AA /* HistoricalViewController.swift in Sources */,
 				2161CD82222FF7F2001ABD2E /* AppDelegate.swift in Sources */,
+				21A818DC2233C57800F5B1AA /* ProfileViewController.swift in Sources */,
 				218BD3F62232E7BE0067FE59 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,7 +494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -496,7 +512,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
