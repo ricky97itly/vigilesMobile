@@ -15,6 +15,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Wgg-c3-I8Q" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ad1-zs-kr5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.85870569939999997" green="0.2589114904" blue="0.2587057948" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -76,7 +77,7 @@
         <scene sceneID="OeM-e9-N7r">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="x9T-Nm-8WM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="home" id="Tet-HM-LSe"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="Tet-HM-LSe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xh-tH-rIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
