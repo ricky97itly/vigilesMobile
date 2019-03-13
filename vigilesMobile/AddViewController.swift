@@ -10,10 +10,29 @@ import UIKit
 
 class AddViewController: UIViewController {
 
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var address: UITextField!
+    @IBOutlet weak var emergencyDescription: UITextField!
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var labelAddress: UILabel!
+    @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var addBtn: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.addBtn.layer.cornerRadius = 15
+        self.addBtn.layer.borderWidth = 1
+//        self.addBtn.layer.borderColor = UIColor.clear.cgColor
+        self.addBtn.clipsToBounds = true
+        
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func addEmergency() {
+        labelName.text = "Ciao Ale"
     }
     
 
