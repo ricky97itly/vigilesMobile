@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		086EE0C457ABFCA06CA1D96D /* Pods_vigilesMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */; };
-		2114AA1F223FC1CA006E23C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */; };
+		2114AA20223FDF5A006E23C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */; };
 		2161CD82222FF7F2001ABD2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD81222FF7F2001ABD2E /* AppDelegate.swift */; };
 		2161CD84222FF7F2001ABD2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD83222FF7F2001ABD2E /* ViewController.swift */; };
 		2161CD87222FF7F2001ABD2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161CD85222FF7F2001ABD2E /* Main.storyboard */; };
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2114AA1F223FC1CA006E23C1 /* CoreLocation.framework in Frameworks */,
+				2114AA20223FDF5A006E23C1 /* CoreLocation.framework in Frameworks */,
 				086EE0C457ABFCA06CA1D96D /* Pods_vigilesMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
