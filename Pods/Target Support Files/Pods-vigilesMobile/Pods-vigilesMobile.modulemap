@@ -1,0 +1,6 @@
+framework module Pods_vigilesMobile {
+  umbrella header "Pods-vigilesMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}
