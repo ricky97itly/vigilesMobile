@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
      @IBOutlet var homeSwipe: UISwipeGestureRecognizer!
      @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 10000
+    let regionInMeters: Double = 50000
     
     
     override func viewDidLoad() {
