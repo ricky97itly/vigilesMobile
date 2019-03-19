@@ -13,7 +13,6 @@
 		2161CD84222FF7F2001ABD2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD83222FF7F2001ABD2E /* ViewController.swift */; };
 		2161CD87222FF7F2001ABD2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161CD85222FF7F2001ABD2E /* Main.storyboard */; };
 		2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */; };
-		2161CD8C222FF7F3001ABD2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2161CD8B222FF7F3001ABD2E /* Assets.xcassets */; };
 		2161CD8F222FF7F3001ABD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */; };
 		2161CD9A222FF7F3001ABD2E /* vigilesMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD99222FF7F3001ABD2E /* vigilesMobileTests.swift */; };
 		2161CDA5222FF7F3001ABD2E /* vigilesMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CDA4222FF7F3001ABD2E /* vigilesMobileUITests.swift */; };
@@ -55,7 +54,6 @@
 		2161CD83222FF7F2001ABD2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2161CD86222FF7F2001ABD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2161CD89222FF7F2001ABD2E /* vigilesMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = vigilesMobile.xcdatamodel; sourceTree = "<group>"; };
-		2161CD8B222FF7F3001ABD2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2161CD8E222FF7F3001ABD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2161CD90222FF7F3001ABD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2161CD95222FF7F3001ABD2E /* vigilesMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vigilesMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,7 +146,6 @@
 				21A818D52233C42100F5B1AA /* SearchViewController.swift */,
 				218BD3F52232E7BE0067FE59 /* HomeViewController.swift */,
 				2161CD85222FF7F2001ABD2E /* Main.storyboard */,
-				2161CD8B222FF7F3001ABD2E /* Assets.xcassets */,
 				2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */,
 				2161CD90222FF7F3001ABD2E /* Info.plist */,
 				2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */,
@@ -319,7 +316,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2161CD8F222FF7F3001ABD2E /* LaunchScreen.storyboard in Resources */,
-				2161CD8C222FF7F3001ABD2E /* Assets.xcassets in Resources */,
 				2161CD87222FF7F2001ABD2E /* Main.storyboard in Resources */,
 				218BD3E62232DB080067FE59 /* Home.storyboard in Resources */,
 				218BD3EE2232DB750067FE59 /* Profilo.storyboard in Resources */,
