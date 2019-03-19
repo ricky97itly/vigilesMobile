@@ -8,12 +8,15 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITextFieldDelegate  {
+class SearchViewController: UIViewController, UISearchBarDelegate  {
+    @IBOutlet weak var searchBar: UISearchBar!
+    
 
-    @IBOutlet weak var search: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        search.self.delegate = self
+        searchBar.self.delegate = self
+        self.searchBar.layer.cornerRadius = 20
+        self.searchBar.clipsToBounds = true
 
         // Do any additional setup after loading the view.
     }
@@ -24,7 +27,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate  {
     }
     // hide keyboard when I press return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        search.resignFirstResponder()
+        searchBar.resignFirstResponder()
         return (true)
     }
     

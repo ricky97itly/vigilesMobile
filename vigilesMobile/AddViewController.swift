@@ -17,25 +17,32 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var labelAddress: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var mediaBtn: UIButton!
+    @IBOutlet weak var tag: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addBtn.layer.cornerRadius = 15
         self.addBtn.layer.borderWidth = 1
-//        self.addBtn.layer.borderColor = UIColor.clear.cgColor
+        self.addBtn.layer.borderColor = UIColor.white.cgColor
         self.addBtn.clipsToBounds = true
+        self.mediaBtn.layer.cornerRadius = 12
+        self.address.layer.cornerRadius = 12
+        self.name.layer.cornerRadius = 12
+        self.emergencyDescription.layer.cornerRadius = 12
+        self.tag.layer.cornerRadius = 12
         self.address.delegate = self
         self.name.delegate = self
         self.emergencyDescription.delegate = self
         // Do any additional setup after loading the view.
     }
     
-    // hide keyboard when I press outise
+    // Nasconde tastiera quando premo fuori
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    // hide keyboard when I press return
+    // Nasconde tastiera quando premo invio
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         name.resignFirstResponder()
         address.resignFirstResponder()
@@ -44,7 +51,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func addEmergency() {
-        labelName.text = "Ciao Ale"
+        print("Tap button")
     }
     
 
