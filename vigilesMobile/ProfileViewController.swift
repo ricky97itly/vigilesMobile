@@ -10,6 +10,9 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var numberOfSegnalations: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         

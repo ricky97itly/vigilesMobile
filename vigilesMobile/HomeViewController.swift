@@ -14,16 +14,26 @@ import CoreLocation
 
 
 class HomeViewController: UIViewController {
-     @IBOutlet var homeSwipe: UISwipeGestureRecognizer!
-     @IBOutlet weak var mapView: MKMapView!
+     
+
+    @IBOutlet var changeView: UISwipeGestureRecognizer!
+    @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 50000
+    let regionInMeters: Double = 60000
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocAuth()
         // Do any additional setup after loading the view.
+    }
+    var isInitiallyZoomedToUserLocation: Bool = false
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        if !isInitiallyZoomedToUserLocation {
+            isInitiallyZoomedToUserLocation = true
+            mapView.showAnnotations([userLocation], animated: true)
+        }
     }
     
     func setupLocManager() {
@@ -82,6 +92,17 @@ extension HomeViewController: CLLocationManagerDelegate {
         checkLocAuth()
         
     }
+    
+    @IBAction func changeView(sender: UISwipeGestureRecognizer) {
+        //        print("Ho fatto swipe")
+        //        print(sender.direction)
+        if sender.direction == UISwipeGestureRecognizer.Direction.left {
+            self.tabBarController?.selectedIndex = 2
+            print("swipe")
+        }
+    }
+    
+
     
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var address: UITextField!
@@ -25,10 +25,22 @@ class AddViewController: UIViewController {
         self.addBtn.layer.borderWidth = 1
 //        self.addBtn.layer.borderColor = UIColor.clear.cgColor
         self.addBtn.clipsToBounds = true
-        
-        
-
+        self.address.delegate = self
+        self.name.delegate = self
+        self.emergencyDescription.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    // hide keyboard when I press outise
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    // hide keyboard when I press return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        name.resignFirstResponder()
+        address.resignFirstResponder()
+        emergencyDescription.resignFirstResponder()
+        return (true)
     }
     
     @IBAction func addEmergency() {

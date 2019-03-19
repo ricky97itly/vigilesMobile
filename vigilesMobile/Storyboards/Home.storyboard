@@ -34,6 +34,10 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Z2t-b0-lUu">
                                 <rect key="frame" x="0.0" y="94" width="375" height="654"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ESe-fW-ll4" appends="YES" id="ETC-ZD-X66"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -44,14 +48,14 @@
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="gui-rX-u9F"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="homeSwipe" destination="INA-o1-RSX" id="TQT-qZ-s4L"/>
+                        <outlet property="changeView" destination="ESe-fW-ll4" id="EGx-VX-JET"/>
                         <outlet property="mapView" destination="Z2t-b0-lUu" id="B83-c0-KHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af4-VJ-wc0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="INA-o1-RSX">
+                <swipeGestureRecognizer direction="right" id="ESe-fW-ll4">
                     <connections>
-                        <action selector="homeSwipeWithSender:" destination="al6-vH-7u9" id="cTM-Pt-2QK"/>
+                        <action selector="changeViewWithSender:" destination="al6-vH-7u9" id="ENW-7o-GcY"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

@@ -26,15 +26,34 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnq-Z0-jSb">
+                                <rect key="frame" x="16" y="94" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="cJO-mP-zRo"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="u9g-Rj-fxa" appends="YES" id="7xh-dE-1H4"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cerca" image="cerca" id="BAX-4c-3r1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="search" destination="fnq-Z0-jSb" id="sDE-Jl-TER"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w17-HM-SpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="u9g-Rj-fxa">
+                    <connections>
+                        <action selector="changeViewWithSender:" destination="kat-ax-NOf" id="RAb-Ky-zXt"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="180" y="185.46798029556652"/>
         </scene>
