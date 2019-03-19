@@ -28,14 +28,14 @@ class SearchViewController: UIViewController, UITextFieldDelegate  {
         return (true)
     }
     
-//    @IBAction func changeView(sender: UISwipeGestureRecognizer) {
-//        if sender.direction == UISwipeGestureRecognizer.Direction.left {
-//            self.tabBarController?.selectedIndex = 0
-//        }
-//        else if sender.direction == UISwipeGestureRecognizer.Direction.right {
-//            self.tabBarController?.selectedIndex = 1
-//        }
-//    }
+    @IBAction func changeView(sender: UISwipeGestureRecognizer) {
+        if sender.direction == UISwipeGestureRecognizer.Direction.left {
+            self.tabBarController?.selectedIndex = 0
+        }
+        else if sender.direction == UISwipeGestureRecognizer.Direction.right {
+            self.tabBarController?.selectedIndex = 1
+        }
+    }
     
 
     /*

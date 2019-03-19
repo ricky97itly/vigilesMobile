@@ -13,13 +13,13 @@ import CoreLocation
 //import GooglePlaces
 
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, CLLocationManagerDelegate {
      
 
     @IBOutlet var changeView: UISwipeGestureRecognizer!
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 60000
+    let regionRadius: CLLocationDistance = 10
     
     
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
     func centerViewOnUser() {
         if let location = locationManager.location?.coordinate {
 //            Quanto zoom su posizione
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
             mapView.setRegion(region, animated: true)
         }
     }
@@ -77,32 +77,4 @@ class HomeViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
         }
     }
-}
-
-extension HomeViewController: CLLocationManagerDelegate {
-//   Ogni volta che l'utente si muove
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.latitude)
-        let region = MKCoordinateRegion.init(center: center, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-        mapView.setRegion(region, animated: true)
-    }
-//    Quando viene cambiata autorizzazione
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkLocAuth()
-        
-    }
-    
-    @IBAction func changeView(sender: UISwipeGestureRecognizer) {
-        //        print("Ho fatto swipe")
-        //        print(sender.direction)
-        if sender.direction == UISwipeGestureRecognizer.Direction.left {
-            self.tabBarController?.selectedIndex = 2
-            print("swipe")
-        }
-    }
-    
-
-    
-    
 }
