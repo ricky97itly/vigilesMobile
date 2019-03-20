@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+
     @IBOutlet weak var chatBtn: UIButton!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var name: UILabel!

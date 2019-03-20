@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,7 +33,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dy7-gZ-YJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1266" y="-198"/>
+            <point key="canvasLocation" x="-652" y="-198"/>
         </scene>
         <!--Cerca-->
         <scene sceneID="v0T-x0-v3p">
@@ -83,12 +85,146 @@
             </objects>
             <point key="canvasLocation" x="-1677" y="200"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Yy8-0d-LN8">
+            <objects>
+                <viewController id="1uB-ca-aHy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qy4-5G-gKy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="VigilesLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="D44-AD-obh">
+                                <rect key="frame" x="67" y="97" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f5z-k6-pfd" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="48" y="348" width="278" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCr-Ud-rQO" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="48" y="418" width="278" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujd-TU-2M6">
+                                <rect key="frame" x="164" y="527" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Entra">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="vigilesRed"/>
+                        <viewLayoutGuide key="safeArea" id="uf1-5g-6Il"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGv-5K-PiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1431" y="-198"/>
+        </scene>
+        <!--RegisterView Controller-->
+        <scene sceneID="Cpm-0o-6JU">
+            <objects>
+                <viewController id="YA2-kc-dk7" userLabel="RegisterView Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y4h-4I-81Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="VigilesLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="Cyc-hg-HE2">
+                                <rect key="frame" x="67" y="89" width="240" height="128"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Nome" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydy-az-6C2" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="48" y="265" width="278" height="30"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cognome" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z8K-Z5-csW" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="48" y="329" width="278" height="30"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JOT-Yz-blM" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="48" y="391" width="278" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wh8-3W-dEd" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="48" y="449" width="278" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ripeti Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DO5-Nl-wpg" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="48" y="511" width="278" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-fS-V4O">
+                                <rect key="frame" x="155" y="597" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Registrati">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="vigilesRed"/>
+                        <constraints>
+                            <constraint firstItem="lfo-sx-pJS" firstAttribute="bottom" secondItem="ydy-az-6C2" secondAttribute="bottom" constant="10" id="4EN-Qe-T0l"/>
+                            <constraint firstItem="ydy-az-6C2" firstAttribute="top" secondItem="Cyc-hg-HE2" secondAttribute="bottom" constant="48" id="7rk-qC-VFI"/>
+                            <constraint firstItem="z8K-Z5-csW" firstAttribute="top" secondItem="ydy-az-6C2" secondAttribute="bottom" constant="34" id="8l3-w4-oVl"/>
+                            <constraint firstItem="lfo-sx-pJS" firstAttribute="bottom" secondItem="ydy-az-6C2" secondAttribute="bottom" constant="40" id="F5b-xT-DkL"/>
+                            <constraint firstItem="Cyc-hg-HE2" firstAttribute="leading" secondItem="lfo-sx-pJS" secondAttribute="leading" constant="67" id="SVa-R4-RE3"/>
+                            <constraint firstItem="z8K-Z5-csW" firstAttribute="top" secondItem="ydy-az-6C2" secondAttribute="bottom" constant="48" id="Sg5-pT-BsP"/>
+                            <constraint firstItem="lfo-sx-pJS" firstAttribute="bottom" secondItem="z8K-Z5-csW" secondAttribute="bottom" constant="419" id="WNs-iI-oS2"/>
+                            <constraint firstItem="lfo-sx-pJS" firstAttribute="trailing" secondItem="Cyc-hg-HE2" secondAttribute="trailing" constant="68" id="iQs-Gd-HAw"/>
+                            <constraint firstItem="Cyc-hg-HE2" firstAttribute="top" secondItem="lfo-sx-pJS" secondAttribute="top" constant="45" id="sCU-Ov-Ox6"/>
+                            <constraint firstItem="lfo-sx-pJS" firstAttribute="bottom" secondItem="ydy-az-6C2" secondAttribute="bottom" constant="10" id="vgE-86-w1u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lfo-sx-pJS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="msp-7T-PS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2178.4000000000001" y="-198.02955665024632"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="VigilesLogoWhite" width="270" height="390"/>
         <image name="aggiungi" width="26" height="24"/>
         <image name="cerca" width="26" height="24"/>
         <image name="home" width="26" height="24"/>
         <image name="profilo" width="26" height="24"/>
         <image name="storico" width="26" height="24"/>
+        <namedColor name="vigilesRed">
+            <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

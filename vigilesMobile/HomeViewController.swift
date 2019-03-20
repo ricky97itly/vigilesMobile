@@ -16,12 +16,12 @@ import CoreLocation
 class HomeViewController: UIViewController, CLLocationManagerDelegate {
      
 
-    @IBOutlet var changeView: UISwipeGestureRecognizer!
+    @IBOutlet weak var changeBtn: UIButton!
+//    @IBOutlet var changeView: UISwipeGestureRecognizer!
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 10
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocAuth()

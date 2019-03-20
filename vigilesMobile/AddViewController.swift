@@ -22,17 +22,18 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var chatBtn: UIButton!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addBtn.layer.cornerRadius = 15
         self.addBtn.layer.borderWidth = 1
         self.addBtn.layer.borderColor = UIColor.white.cgColor
         self.addBtn.clipsToBounds = true
-        self.mediaBtn.layer.cornerRadius = 12
-        self.address.layer.cornerRadius = 12
-        self.name.layer.cornerRadius = 12
-        self.emergencyDescription.layer.cornerRadius = 12
-        self.tag.layer.cornerRadius = 12
+        self.mediaBtn.layer.cornerRadius = 15
+        self.address.layer.cornerRadius = 15
+        self.name.layer.cornerRadius = 15
+        self.emergencyDescription.layer.cornerRadius = 15
+        self.tag.layer.cornerRadius = 15
         self.address.delegate = self
         self.name.delegate = self
         self.emergencyDescription.delegate = self

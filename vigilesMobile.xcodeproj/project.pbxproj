@@ -17,6 +17,7 @@
 		2161CD8F222FF7F3001ABD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */; };
 		2161CD9A222FF7F3001ABD2E /* vigilesMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD99222FF7F3001ABD2E /* vigilesMobileTests.swift */; };
 		2161CDA5222FF7F3001ABD2E /* vigilesMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CDA4222FF7F3001ABD2E /* vigilesMobileUITests.swift */; };
+		21791B14224283960008B28C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21791B13224283960008B28C /* RegisterViewController.swift */; };
 		218BD3E62232DB080067FE59 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3E52232DB080067FE59 /* Home.storyboard */; };
 		218BD3E82232DB340067FE59 /* Cerca.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3E72232DB340067FE59 /* Cerca.storyboard */; };
 		218BD3EA2232DB5B0067FE59 /* Aggiungi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3E92232DB5B0067FE59 /* Aggiungi.storyboard */; };
@@ -64,6 +65,7 @@
 		2161CDA0222FF7F3001ABD2E /* vigilesMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vigilesMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2161CDA4222FF7F3001ABD2E /* vigilesMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vigilesMobileUITests.swift; sourceTree = "<group>"; };
 		2161CDA6222FF7F3001ABD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21791B13224283960008B28C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		218BD3E52232DB080067FE59 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		218BD3E72232DB340067FE59 /* Cerca.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cerca.storyboard; sourceTree = "<group>"; };
 		218BD3E92232DB5B0067FE59 /* Aggiungi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Aggiungi.storyboard; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				218BD3E42232DAE90067FE59 /* Storyboards */,
 				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
+				21791B13224283960008B28C /* RegisterViewController.swift */,
 				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
 				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
 				2161CD83222FF7F2001ABD2E /* ViewController.swift */,
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21791B14224283960008B28C /* RegisterViewController.swift in Sources */,
 				21A818D62233C42100F5B1AA /* SearchViewController.swift in Sources */,
 				2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */,
 				21A818D82233C48A00F5B1AA /* AddViewController.swift in Sources */,

@@ -12,6 +12,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate  {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var chatBtn: UIButton!
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

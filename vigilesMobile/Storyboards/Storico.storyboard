@@ -25,10 +25,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuO-aV-Z1R">
-                                <rect key="frame" x="325" y="44" width="33" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oby-he-D6n">
+                                <rect key="frame" x="334" y="48" width="25" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="5UY-ng-FrK"/>
+                                    <constraint firstAttribute="width" constant="25" id="KTC-YL-A1w"/>
+                                    <constraint firstAttribute="height" constant="23" id="iGc-vK-DQl"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="chat"/>
                             </button>
@@ -36,12 +37,11 @@
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kuO-aV-Z1R" firstAttribute="leading" secondItem="5Zu-Vn-21A" secondAttribute="trailing" constant="93" id="4DM-n6-prh"/>
-                            <constraint firstItem="kuO-aV-Z1R" firstAttribute="top" secondItem="5Zu-Vn-21A" secondAttribute="top" id="9D1-td-5bT"/>
+                            <constraint firstItem="oby-he-D6n" firstAttribute="centerY" secondItem="5Zu-Vn-21A" secondAttribute="centerY" id="Dhy-k9-e40"/>
+                            <constraint firstItem="oby-he-D6n" firstAttribute="trailing" secondItem="Azt-zA-d36" secondAttribute="trailingMargin" id="Gkb-gt-ELg"/>
                             <constraint firstItem="5Zu-Vn-21A" firstAttribute="top" secondItem="o4R-sN-gYm" secondAttribute="top" id="ILa-Nj-efR"/>
-                            <constraint firstItem="kuO-aV-Z1R" firstAttribute="centerY" secondItem="5Zu-Vn-21A" secondAttribute="centerY" id="cO2-9I-Rez"/>
+                            <constraint firstItem="oby-he-D6n" firstAttribute="top" secondItem="o4R-sN-gYm" secondAttribute="top" constant="4" id="eLr-Kd-W4j"/>
                             <constraint firstItem="o4R-sN-gYm" firstAttribute="trailing" secondItem="5Zu-Vn-21A" secondAttribute="trailing" constant="143" id="gm1-en-EXU"/>
-                            <constraint firstItem="o4R-sN-gYm" firstAttribute="trailing" secondItem="kuO-aV-Z1R" secondAttribute="trailing" constant="17" id="mI9-be-Csx"/>
                             <constraint firstItem="5Zu-Vn-21A" firstAttribute="leading" secondItem="o4R-sN-gYm" secondAttribute="leading" constant="143" id="ztR-BE-FrY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o4R-sN-gYm"/>
@@ -49,7 +49,7 @@
                     <tabBarItem key="tabBarItem" title="Storico" image="storico" id="tar-hb-Yo4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="chatBtn" destination="kuO-aV-Z1R" id="8EZ-Rg-bdo"/>
+                        <outlet property="chatBtn" destination="oby-he-D6n" id="yR9-oU-xmY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nok-EU-yLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
