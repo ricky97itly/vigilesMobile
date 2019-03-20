@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aggiungi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWU-rl-8H8">
-                                <rect key="frame" x="135" y="45" width="105" height="30"/>
+                                <rect key="frame" x="134.66666666666666" y="45" width="105" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -34,13 +34,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQk-bR-hAP">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQk-bR-hAP">
                                 <rect key="frame" x="16" y="158" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Uuf-4s-2DF"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Indirizzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-18-XWP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indirizzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-18-XWP">
                                 <rect key="frame" x="16" y="217" width="102" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LPW-8Q-Jyx"/>
@@ -49,8 +52,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esH-pj-BkF">
-                                <rect key="frame" x="16" y="259" width="343" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esH-pj-BkF">
+                                <rect key="frame" x="16" y="259" width="343" height="30.333333333333314"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Glv-on-n9H">
+                                <rect key="frame" x="125" y="574" width="234" height="29"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -74,7 +83,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pDL-5B-fjQ">
-                                <rect key="frame" x="16" y="356" width="343" height="150"/>
+                                <rect key="frame" x="16" y="355.66666666666669" width="343" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="qfV-7Q-bn0"/>
                                 </constraints>
@@ -103,12 +112,13 @@
                                 </constraints>
                                 <state key="normal" image="add"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Glv-on-n9H">
-                                <rect key="frame" x="125" y="574" width="234" height="29"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSv-Qx-Uy3">
+                                <rect key="frame" x="325" y="44" width="33.333333333333314" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="2Mf-Ac-Ng6"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="chat"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,6 +137,7 @@
                             <constraint firstItem="kEA-M1-EXA" firstAttribute="leading" secondItem="tQk-bR-hAP" secondAttribute="leading" id="GDO-QJ-Ntw"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="kEA-M1-EXA" secondAttribute="trailing" constant="75" id="Iwr-gQ-zqX"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="42K-W8-U6F" secondAttribute="trailing" constant="281" id="NKN-Nf-QiP"/>
+                            <constraint firstItem="tQk-bR-hAP" firstAttribute="top" secondItem="cSv-Qx-Uy3" secondAttribute="bottom" constant="83" id="OOs-ib-pdx"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="oBk-X7-4If" secondAttribute="trailing" constant="133" id="PRL-or-9IA"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="lVU-hg-dYx" secondAttribute="trailing" constant="215" id="RDB-Df-d0x"/>
                             <constraint firstItem="esH-pj-BkF" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="RJY-2c-Srn"/>
@@ -151,11 +162,14 @@
                             <constraint firstItem="Glv-on-n9H" firstAttribute="centerY" secondItem="42K-W8-U6F" secondAttribute="centerY" id="da2-oq-4wx"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="esH-pj-BkF" secondAttribute="trailing" constant="16" id="ehu-s7-P21"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="oBk-X7-4If" secondAttribute="trailing" constant="133" id="ept-Ii-E73"/>
+                            <constraint firstItem="cSv-Qx-Uy3" firstAttribute="leading" secondItem="vWU-rl-8H8" secondAttribute="trailing" constant="85.333333333333343" id="fbp-Ue-Jcm"/>
                             <constraint firstItem="42K-W8-U6F" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="fcM-Dr-Mh2"/>
+                            <constraint firstItem="cSv-Qx-Uy3" firstAttribute="top" secondItem="sVa-Vf-IIx" secondAttribute="top" id="gAZ-tX-NKF"/>
                             <constraint firstItem="Glv-on-n9H" firstAttribute="leading" secondItem="42K-W8-U6F" secondAttribute="trailing" constant="31" id="ggP-a1-XRO"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="42K-W8-U6F" secondAttribute="trailing" constant="281" id="hcB-ER-AiQ"/>
                             <constraint firstItem="MPL-Qw-BvV" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="125" id="k9H-ts-aVc"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="MPL-Qw-BvV" secondAttribute="trailing" constant="106" id="lI9-fb-bpO"/>
+                            <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="cSv-Qx-Uy3" secondAttribute="trailing" constant="16.666666666666686" id="mnI-6z-Ix8"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="Glv-on-n9H" secondAttribute="trailing" constant="16" id="nJ4-2k-6ru"/>
                             <constraint firstItem="kEA-M1-EXA" firstAttribute="leading" secondItem="esH-pj-BkF" secondAttribute="leading" id="neJ-dP-COB"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="pDL-5B-fjQ" secondAttribute="trailing" constant="16" id="oKw-AU-5hP"/>
@@ -178,6 +192,7 @@
                     <connections>
                         <outlet property="addBtn" destination="oBk-X7-4If" id="ETq-Dm-Zi4"/>
                         <outlet property="address" destination="esH-pj-BkF" id="j34-Ka-l7b"/>
+                        <outlet property="chatBtn" destination="cSv-Qx-Uy3" id="XB3-Ie-ENe"/>
                         <outlet property="emergencyDescription" destination="pDL-5B-fjQ" id="U3o-Ud-WTz"/>
                         <outlet property="labelAddress" destination="g0P-18-XWP" id="X9r-JE-XjW"/>
                         <outlet property="labelDescription" destination="lVU-hg-dYx" id="wvY-aV-Ixd"/>
@@ -195,6 +210,7 @@
     <resources>
         <image name="add" width="75" height="75"/>
         <image name="aggiungi" width="26" height="24"/>
+        <image name="chat" width="78" height="78"/>
         <namedColor name="vigilesRed">
             <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

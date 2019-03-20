@@ -19,6 +19,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var mediaBtn: UIButton!
     @IBOutlet weak var tag: UITextField!
+    @IBOutlet weak var chatBtn: UIButton!
     
     
     override func viewDidLoad() {

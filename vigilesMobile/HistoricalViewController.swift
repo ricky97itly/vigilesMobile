@@ -9,7 +9,8 @@
 import UIKit
 
 class HistoricalViewController: UIViewController {
-
+    @IBOutlet weak var chatBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

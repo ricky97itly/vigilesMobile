@@ -19,9 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profilo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hu-n8-oTL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Profilo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hu-n8-oTL">
                                 <rect key="frame" x="147" y="44" width="81" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -52,10 +51,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmj-7w-uzy">
+                                <rect key="frame" x="325" y="44" width="33" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="94e-PA-yWo"/>
+                                    <constraint firstAttribute="width" constant="33" id="z0b-sK-05h"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="chat"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Fmj-7w-uzy" firstAttribute="top" secondItem="cdz-w5-JYQ" secondAttribute="top" id="ByF-SQ-Ch0"/>
+                            <constraint firstItem="Fmj-7w-uzy" firstAttribute="bottom" secondItem="3hu-n8-oTL" secondAttribute="bottom" id="Urd-Et-eK0"/>
+                            <constraint firstItem="Fmj-7w-uzy" firstAttribute="top" secondItem="3hu-n8-oTL" secondAttribute="top" id="Z01-f2-y3Z"/>
+                            <constraint firstItem="Fmj-7w-uzy" firstAttribute="leading" secondItem="3hu-n8-oTL" secondAttribute="trailing" constant="97" id="oIc-fZ-t2p"/>
+                            <constraint firstItem="cdz-w5-JYQ" firstAttribute="trailing" secondItem="Fmj-7w-uzy" secondAttribute="trailing" constant="17" id="sSa-Ky-aJP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cdz-w5-JYQ"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="xcd-K5-OwO" appends="YES" id="73M-p7-kL5"/>
@@ -64,6 +78,7 @@
                     <tabBarItem key="tabBarItem" title="Profilo" image="profilo" id="Mlk-X9-Pwj"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="chatBtn" destination="Fmj-7w-uzy" id="sh4-Zx-DCR"/>
                         <outlet property="name" destination="thC-Yc-5JA" id="MPG-Az-A6N"/>
                         <outlet property="numberOfSegnalations" destination="Sua-cm-l68" id="osB-Mq-5rH"/>
                         <outlet property="profilePic" destination="PzJ-1q-dLS" id="JK8-f7-uZS"/>
@@ -76,6 +91,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chat" width="78" height="78"/>
         <image name="profilo" width="26" height="24"/>
         <namedColor name="vigilesRed">
             <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

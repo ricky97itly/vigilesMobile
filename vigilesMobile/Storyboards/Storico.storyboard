@@ -19,20 +19,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Storico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zu-Vn-21A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Storico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zu-Vn-21A">
                                 <rect key="frame" x="143" y="44" width="89" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuO-aV-Z1R">
+                                <rect key="frame" x="325" y="44" width="33" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="5UY-ng-FrK"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="chat"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kuO-aV-Z1R" firstAttribute="leading" secondItem="5Zu-Vn-21A" secondAttribute="trailing" constant="93" id="4DM-n6-prh"/>
+                            <constraint firstItem="kuO-aV-Z1R" firstAttribute="top" secondItem="5Zu-Vn-21A" secondAttribute="top" id="9D1-td-5bT"/>
+                            <constraint firstItem="5Zu-Vn-21A" firstAttribute="top" secondItem="o4R-sN-gYm" secondAttribute="top" id="ILa-Nj-efR"/>
+                            <constraint firstItem="kuO-aV-Z1R" firstAttribute="centerY" secondItem="5Zu-Vn-21A" secondAttribute="centerY" id="cO2-9I-Rez"/>
+                            <constraint firstItem="o4R-sN-gYm" firstAttribute="trailing" secondItem="5Zu-Vn-21A" secondAttribute="trailing" constant="143" id="gm1-en-EXU"/>
+                            <constraint firstItem="o4R-sN-gYm" firstAttribute="trailing" secondItem="kuO-aV-Z1R" secondAttribute="trailing" constant="17" id="mI9-be-Csx"/>
+                            <constraint firstItem="5Zu-Vn-21A" firstAttribute="leading" secondItem="o4R-sN-gYm" secondAttribute="leading" constant="143" id="ztR-BE-FrY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o4R-sN-gYm"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Storico" image="storico" id="tar-hb-Yo4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="chatBtn" destination="kuO-aV-Z1R" id="8EZ-Rg-bdo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nok-EU-yLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,6 +58,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chat" width="78" height="78"/>
         <image name="storico" width="26" height="24"/>
         <namedColor name="vigilesRed">
             <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
