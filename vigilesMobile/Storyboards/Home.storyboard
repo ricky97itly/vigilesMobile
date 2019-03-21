@@ -19,48 +19,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXC-j9-ef1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXC-j9-ef1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="vigilesRed"/>
                                 <color key="highlightedColor" name="vigilesRed"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="vigilesLogo" translatesAutoresizingMaskIntoConstraints="NO" id="m1Z-vr-MN5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vigilesLogo" translatesAutoresizingMaskIntoConstraints="NO" id="m1Z-vr-MN5">
                                 <rect key="frame" x="168" y="40" width="38" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Z2t-b0-lUu">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z2t-b0-lUu">
                                 <rect key="frame" x="0.0" y="94" width="375" height="654"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pW9-35-pyM">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pW9-35-pyM">
                                 <rect key="frame" x="334" y="48" width="25" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="ZcI-r8-XZT"/>
-                                    <constraint firstAttribute="height" constant="23" id="kYO-Le-E8Y"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="chat"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="NXC-j9-ef1" firstAttribute="trailing" secondItem="Z2t-b0-lUu" secondAttribute="trailing" id="1nk-Cz-cUJ"/>
-                            <constraint firstItem="Z2t-b0-lUu" firstAttribute="top" secondItem="pW9-35-pyM" secondAttribute="bottom" constant="23" id="8SN-XJ-L9m"/>
-                            <constraint firstItem="LOt-bv-v7e" firstAttribute="trailing" secondItem="pW9-35-pyM" secondAttribute="trailing" constant="16" id="AFe-Qm-byw"/>
-                            <constraint firstAttribute="trailing" secondItem="NXC-j9-ef1" secondAttribute="trailing" id="DZe-Vc-LrE"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="Z2t-b0-lUu" secondAttribute="bottom" constant="-19" id="Efd-lo-7SP"/>
-                            <constraint firstItem="NXC-j9-ef1" firstAttribute="centerX" secondItem="m1Z-vr-MN5" secondAttribute="centerX" id="R5S-k0-d71"/>
-                            <constraint firstItem="NXC-j9-ef1" firstAttribute="leading" secondItem="Z2t-b0-lUu" secondAttribute="leading" id="W63-1W-p2u"/>
-                            <constraint firstItem="Z2t-b0-lUu" firstAttribute="top" secondItem="NXC-j9-ef1" secondAttribute="bottom" id="euf-sU-qkT"/>
-                            <constraint firstItem="pW9-35-pyM" firstAttribute="top" secondItem="LOt-bv-v7e" secondAttribute="top" constant="4" id="jlE-kz-OCT"/>
-                            <constraint firstItem="Z2t-b0-lUu" firstAttribute="top" secondItem="m1Z-vr-MN5" secondAttribute="bottom" constant="15" id="mSC-jB-gLa"/>
-                            <constraint firstItem="NXC-j9-ef1" firstAttribute="top" secondItem="UWw-12-UHa" secondAttribute="top" id="mvh-KM-2Yc"/>
-                            <constraint firstItem="m1Z-vr-MN5" firstAttribute="top" secondItem="UWw-12-UHa" secondAttribute="topMargin" constant="-4" id="q1h-x1-dz0"/>
-                            <constraint firstItem="NXC-j9-ef1" firstAttribute="leading" secondItem="UWw-12-UHa" secondAttribute="leading" id="uqC-nY-wke"/>
-                            <constraint firstItem="m1Z-vr-MN5" firstAttribute="leading" secondItem="LOt-bv-v7e" secondAttribute="leading" constant="168" id="wCG-DR-e0J"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LOt-bv-v7e"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="gui-rX-u9F"/>

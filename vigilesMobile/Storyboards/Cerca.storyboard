@@ -19,18 +19,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cerca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U33-50-LTm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cerca" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U33-50-LTm">
                                 <rect key="frame" x="152" y="45" width="70" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eId-4h-5eQ">
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eId-4h-5eQ">
                                 <rect key="frame" x="16" y="105" width="343" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="uf3-Gu-YYk"/>
-                                </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
@@ -38,31 +37,15 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4v-Xy-GDh">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4v-Xy-GDh">
                                 <rect key="frame" x="334" y="48" width="25" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="AtT-wm-nT7"/>
-                                    <constraint firstAttribute="height" constant="23" id="an6-Ee-zNW"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="chat"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="eId-4h-5eQ" firstAttribute="centerX" secondItem="U33-50-LTm" secondAttribute="centerX" constant="0.5" id="1mr-wY-Lss"/>
-                            <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="eId-4h-5eQ" secondAttribute="trailing" constant="16" id="PKC-7a-U63"/>
-                            <constraint firstItem="M4v-Xy-GDh" firstAttribute="top" secondItem="cJO-mP-zRo" secondAttribute="top" constant="4" id="QJ4-gr-crx"/>
-                            <constraint firstItem="M4v-Xy-GDh" firstAttribute="centerY" secondItem="U33-50-LTm" secondAttribute="centerY" id="Shf-6s-4LY"/>
-                            <constraint firstItem="eId-4h-5eQ" firstAttribute="top" secondItem="U33-50-LTm" secondAttribute="bottom" constant="31" id="bfc-wk-Abm"/>
-                            <constraint firstItem="eId-4h-5eQ" firstAttribute="leading" secondItem="cJO-mP-zRo" secondAttribute="leading" constant="16" id="c6z-us-0Fw"/>
-                            <constraint firstItem="cJO-mP-zRo" firstAttribute="bottom" secondItem="eId-4h-5eQ" secondAttribute="bottom" constant="584" id="fKL-gc-RwV"/>
-                            <constraint firstItem="eId-4h-5eQ" firstAttribute="leading" secondItem="cJO-mP-zRo" secondAttribute="leading" constant="16" id="l6a-dR-07J"/>
-                            <constraint firstItem="eId-4h-5eQ" firstAttribute="top" secondItem="U33-50-LTm" secondAttribute="bottom" constant="31" id="vmi-IE-C3I"/>
-                            <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="eId-4h-5eQ" secondAttribute="trailing" constant="16" id="wXx-Hf-6i3"/>
-                            <constraint firstItem="M4v-Xy-GDh" firstAttribute="trailing" secondItem="eId-4h-5eQ" secondAttribute="trailing" id="xZU-cE-Bjp"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cJO-mP-zRo"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="u9g-Rj-fxa" appends="YES" id="7xh-dE-1H4"/>
