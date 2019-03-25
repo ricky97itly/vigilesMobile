@@ -17,6 +17,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerBtn: UIButton!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.enterBtn.layer.cornerRadius = 15
@@ -34,5 +35,47 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
-}
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    // hide keyboard when I press return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        email.resignFirstResponder()
+        password.resignFirstResponder()
+        return (true)
+    }
+    @IBAction func checkBox(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+        }
+        else {
+            sender.isSelected = true
+        }
+    }
+    
+
+    }
+    
+
+//    @IBAction func EnterBtn(_ sender: Any) {
+//        let email =_email.text
+//        let password =_password.text
+//
+//       if(email == "" || password == "") {
+//            return
+//    }
+//
+//        DoLogin(email!, password!)
+//    }
+//
+//    func DoLogin(_ email:String, _ psw:String) {
+//       let url = URL (string: "")
+//       let session = URLSession.shared
+//   
+//       let request = NSMutableURLRequest(url: url)
+//
+//    }
+//    
+//}
+
 

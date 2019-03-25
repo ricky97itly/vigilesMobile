@@ -9,14 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "vigilesMobile/LoginViewController.swift"
-            timestampString = "574879488.968052"
+            filePath = "vigilesMobile/CollectionViewCell.swift"
+            timestampString = "575225390.223738"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "CollectionViewCell"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
