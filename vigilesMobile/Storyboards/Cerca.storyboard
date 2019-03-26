@@ -47,18 +47,90 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Risultati" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4z-zW-njp">
+                                <rect key="frame" x="16" y="198" width="78" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mca-Qt-tzs">
+                                <rect key="frame" x="16" y="240" width="343" height="453"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xPS-Oh-ygl">
+                                    <size key="itemSize" width="343" height="126"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cella" id="hNr-kP-DtR" customClass="DataCollectionViewCell" customModule="vigilesMobile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jTO-sh-tyc">
+                                                    <rect key="frame" x="8" y="9" width="54" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Indirizzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd3-Kv-LHg">
+                                                    <rect key="frame" x="274" y="16" width="99" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrizione" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL3-hq-rh2">
+                                                    <rect key="frame" x="9" y="66" width="350" height="49"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titolo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czx-9t-g3A">
+                                                    <rect key="frame" x="68" y="12" width="117" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="codeImg" destination="jTO-sh-tyc" id="Ljy-Bh-KEI"/>
+                                            <outlet property="emergencyAddress" destination="cd3-Kv-LHg" id="VOg-BD-TI0"/>
+                                            <outlet property="emergencyDescription" destination="DL3-hq-rh2" id="pr8-mh-Zoo"/>
+                                            <outlet property="emergencyTitle" destination="czx-9t-g3A" id="Xcu-7Y-UXZ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="kat-ax-NOf" id="TEd-nd-0Uh"/>
+                                    <outlet property="delegate" destination="kat-ax-NOf" id="a5c-Rv-Ih1"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Mca-Qt-tzs" firstAttribute="leading" secondItem="cJO-mP-zRo" secondAttribute="leading" constant="16" id="3oU-Xl-PdD"/>
+                            <constraint firstItem="R4z-zW-njp" firstAttribute="top" secondItem="eId-4h-5eQ" secondAttribute="bottom" constant="48" id="ANE-pf-uZP"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="bottom" secondItem="eId-4h-5eQ" secondAttribute="bottom" constant="587" id="AkC-tw-cgG"/>
+                            <constraint firstItem="Mca-Qt-tzs" firstAttribute="top" secondItem="R4z-zW-njp" secondAttribute="bottom" constant="26" id="IEa-HW-dah"/>
                             <constraint firstItem="eId-4h-5eQ" firstAttribute="leading" secondItem="cJO-mP-zRo" secondAttribute="leading" constant="16" id="KSD-Ae-4KO"/>
                             <constraint firstItem="TeG-lD-mJR" firstAttribute="centerY" secondItem="U33-50-LTm" secondAttribute="centerY" id="Pwh-9x-eeW"/>
+                            <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="R4z-zW-njp" secondAttribute="trailing" constant="281" id="Sok-G5-f7l"/>
                             <constraint firstItem="TeG-lD-mJR" firstAttribute="top" secondItem="cJO-mP-zRo" secondAttribute="top" constant="5" id="bIn-3z-9WC"/>
-                            <constraint firstItem="eId-4h-5eQ" firstAttribute="centerX" secondItem="U33-50-LTm" secondAttribute="centerX" id="f2V-Yp-Ysu"/>
+                            <constraint firstItem="R4z-zW-njp" firstAttribute="leading" secondItem="eId-4h-5eQ" secondAttribute="leading" id="cTw-u3-Epl"/>
+                            <constraint firstItem="cJO-mP-zRo" firstAttribute="bottom" secondItem="Mca-Qt-tzs" secondAttribute="bottom" constant="36" id="cwr-T9-0BX"/>
+                            <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="Mca-Qt-tzs" secondAttribute="trailing" constant="16" id="flI-eJ-k1K"/>
                             <constraint firstItem="eId-4h-5eQ" firstAttribute="top" secondItem="U33-50-LTm" secondAttribute="bottom" constant="27" id="lqg-Ch-Ot4"/>
+                            <constraint firstItem="U33-50-LTm" firstAttribute="leading" secondItem="cJO-mP-zRo" secondAttribute="leading" constant="152" id="mRX-1L-hcf"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="eId-4h-5eQ" secondAttribute="trailing" constant="16" id="ndX-ME-Bca"/>
+                            <constraint firstItem="U33-50-LTm" firstAttribute="centerX" secondItem="eId-4h-5eQ" secondAttribute="centerX" id="ovt-VH-4Gn"/>
                             <constraint firstItem="TeG-lD-mJR" firstAttribute="trailing" secondItem="eId-4h-5eQ" secondAttribute="trailing" id="pgm-HM-Z6m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cJO-mP-zRo"/>
@@ -70,6 +142,7 @@
                     <navigationItem key="navigationItem" id="s35-1k-SyV"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="collectionView" destination="Mca-Qt-tzs" id="HWA-hc-KOd"/>
                         <outlet property="searchBar" destination="eId-4h-5eQ" id="ybN-HT-fKt"/>
                     </connections>
                 </viewController>
@@ -80,7 +153,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="407" y="161"/>
+            <point key="canvasLocation" x="405.60000000000002" y="159.60591133004928"/>
         </scene>
     </scenes>
     <resources>
