@@ -25,14 +25,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeG-lD-mJR">
-                                <rect key="frame" x="334" y="48" width="25" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="UvE-sa-Dwu"/>
-                                    <constraint firstAttribute="height" constant="23" id="zHY-TT-a04"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="chat"/>
-                            </button>
                             <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eId-4h-5eQ">
                                 <rect key="frame" x="16" y="94" width="343" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,9 +113,7 @@
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="bottom" secondItem="eId-4h-5eQ" secondAttribute="bottom" constant="587" id="AkC-tw-cgG"/>
                             <constraint firstItem="Mca-Qt-tzs" firstAttribute="top" secondItem="R4z-zW-njp" secondAttribute="bottom" constant="26" id="IEa-HW-dah"/>
                             <constraint firstItem="eId-4h-5eQ" firstAttribute="leading" secondItem="cJO-mP-zRo" secondAttribute="leading" constant="16" id="KSD-Ae-4KO"/>
-                            <constraint firstItem="TeG-lD-mJR" firstAttribute="centerY" secondItem="U33-50-LTm" secondAttribute="centerY" id="Pwh-9x-eeW"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="R4z-zW-njp" secondAttribute="trailing" constant="281" id="Sok-G5-f7l"/>
-                            <constraint firstItem="TeG-lD-mJR" firstAttribute="top" secondItem="cJO-mP-zRo" secondAttribute="top" constant="5" id="bIn-3z-9WC"/>
                             <constraint firstItem="R4z-zW-njp" firstAttribute="leading" secondItem="eId-4h-5eQ" secondAttribute="leading" id="cTw-u3-Epl"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="bottom" secondItem="Mca-Qt-tzs" secondAttribute="bottom" constant="36" id="cwr-T9-0BX"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="Mca-Qt-tzs" secondAttribute="trailing" constant="16" id="flI-eJ-k1K"/>
@@ -131,7 +121,6 @@
                             <constraint firstItem="U33-50-LTm" firstAttribute="leading" secondItem="cJO-mP-zRo" secondAttribute="leading" constant="152" id="mRX-1L-hcf"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="eId-4h-5eQ" secondAttribute="trailing" constant="16" id="ndX-ME-Bca"/>
                             <constraint firstItem="U33-50-LTm" firstAttribute="centerX" secondItem="eId-4h-5eQ" secondAttribute="centerX" id="ovt-VH-4Gn"/>
-                            <constraint firstItem="TeG-lD-mJR" firstAttribute="trailing" secondItem="eId-4h-5eQ" secondAttribute="trailing" id="pgm-HM-Z6m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cJO-mP-zRo"/>
                         <connections>
@@ -158,7 +147,6 @@
     </scenes>
     <resources>
         <image name="cerca" width="26" height="24"/>
-        <image name="chat" width="78" height="78"/>
         <namedColor name="vigilesRed">
             <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

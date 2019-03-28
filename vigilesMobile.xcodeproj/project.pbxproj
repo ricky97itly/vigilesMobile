@@ -30,6 +30,8 @@
 		21A818DC2233C57800F5B1AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818DB2233C57800F5B1AA /* ProfileViewController.swift */; };
 		5622B7EB224A5ABC007D5CB6 /* DataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622B7EA224A5ABC007D5CB6 /* DataCollectionViewCell.swift */; };
 		56ACCF32224C2833003F0063 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ACCF31224C2833003F0063 /* CollectionViewCell.swift */; };
+		56ACCF34224D16B2003F0063 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ACCF33224D16B2003F0063 /* ChatCollectionViewCell.swift */; };
+		56ACCF36224D16FE003F0063 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ACCF35224D16FE003F0063 /* ChatViewController.swift */; };
 		56FD53F52243133A006C9533 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FD53F42243133A006C9533 /* LoginViewController.swift */; };
 		BE3B4FF6A1412A6CD4595E5D /* Pods_vigilesMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2FA954C38D63C577560DB /* Pods_vigilesMobileTests.framework */; };
 		C8D492E4EC223C50C0615350 /* Pods_vigilesMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B16419C71430A4682DD227 /* Pods_vigilesMobileUITests.framework */; };
@@ -84,6 +86,8 @@
 		3F83C3C4A90BA5068CB6FB9A /* Pods-vigilesMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vigilesMobile.debug.xcconfig"; path = "Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		5622B7EA224A5ABC007D5CB6 /* DataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectionViewCell.swift; sourceTree = "<group>"; };
 		56ACCF31224C2833003F0063 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		56ACCF33224D16B2003F0063 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
+		56ACCF35224D16FE003F0063 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = vigilesMobile/ChatViewController.swift; sourceTree = SOURCE_ROOT; };
 		56FD53F42243133A006C9533 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = vigilesMobile/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		7EB2FA954C38D63C577560DB /* Pods_vigilesMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vigilesMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vigilesMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +153,7 @@
 			children = (
 				218BD3E42232DAE90067FE59 /* Storyboards */,
 				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
+				56ACCF35224D16FE003F0063 /* ChatViewController.swift */,
 				21791B13224283960008B28C /* RegisterViewController.swift */,
 				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
 				56FD53F42243133A006C9533 /* LoginViewController.swift */,
@@ -164,6 +169,7 @@
 				2161CD90222FF7F3001ABD2E /* Info.plist */,
 				2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */,
 				56ACCF31224C2833003F0063 /* CollectionViewCell.swift */,
+				56ACCF33224D16B2003F0063 /* ChatCollectionViewCell.swift */,
 			);
 			path = vigilesMobile;
 			sourceTree = "<group>";
@@ -459,6 +465,7 @@
 			files = (
 				21791B14224283960008B28C /* RegisterViewController.swift in Sources */,
 				21A818D62233C42100F5B1AA /* SearchViewController.swift in Sources */,
+				56ACCF34224D16B2003F0063 /* ChatCollectionViewCell.swift in Sources */,
 				56ACCF32224C2833003F0063 /* CollectionViewCell.swift in Sources */,
 				2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */,
 				21A818D82233C48A00F5B1AA /* AddViewController.swift in Sources */,
@@ -466,6 +473,7 @@
 				2161CD84222FF7F2001ABD2E /* ViewController.swift in Sources */,
 				21A818DA2233C4E800F5B1AA /* HistoricalViewController.swift in Sources */,
 				2161CD82222FF7F2001ABD2E /* AppDelegate.swift in Sources */,
+				56ACCF36224D16FE003F0063 /* ChatViewController.swift in Sources */,
 				21A818DC2233C57800F5B1AA /* ProfileViewController.swift in Sources */,
 				56FD53F52243133A006C9533 /* LoginViewController.swift in Sources */,
 				218BD3F62232E7BE0067FE59 /* HomeViewController.swift in Sources */,

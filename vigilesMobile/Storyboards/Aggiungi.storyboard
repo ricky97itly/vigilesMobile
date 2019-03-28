@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aggiungi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWU-rl-8H8">
-                                <rect key="frame" x="134" y="46" width="106" height="29"/>
+                                <rect key="frame" x="134.66666666666666" y="45" width="105" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -112,14 +112,6 @@
                                 </constraints>
                                 <state key="normal" image="add"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of7-Pg-FGI">
-                                <rect key="frame" x="334" y="49" width="25" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="Z5A-1F-g2w"/>
-                                    <constraint firstAttribute="width" constant="25" id="vgg-4a-vzP"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="chat"/>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4ye-in-p2N">
                                 <rect key="frame" x="16" y="355" width="343" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -131,15 +123,12 @@
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Of7-Pg-FGI" firstAttribute="top" secondItem="sVa-Vf-IIx" secondAttribute="top" constant="5" id="0jC-ek-3P7"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="42K-W8-U6F" secondAttribute="trailing" constant="292" id="236-TN-jYo"/>
                             <constraint firstItem="42K-W8-U6F" firstAttribute="top" secondItem="YWF-um-eZ9" secondAttribute="bottom" constant="15.33" id="304-ZX-gvw"/>
                             <constraint firstItem="oBk-X7-4If" firstAttribute="top" secondItem="Glv-on-n9H" secondAttribute="bottom" constant="67" id="3Rm-37-f6V"/>
                             <constraint firstItem="oBk-X7-4If" firstAttribute="centerX" secondItem="vWU-rl-8H8" secondAttribute="centerX" id="4JG-Ef-1Zb"/>
                             <constraint firstItem="kEA-M1-EXA" firstAttribute="top" secondItem="JJJ-ar-pfL" secondAttribute="top" constant="116" id="4hn-D3-Yeh"/>
-                            <constraint firstItem="Of7-Pg-FGI" firstAttribute="centerY" secondItem="vWU-rl-8H8" secondAttribute="centerY" id="6SS-Cx-zA5"/>
                             <constraint firstItem="g0P-18-XWP" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="894-VN-ywN"/>
-                            <constraint firstItem="Of7-Pg-FGI" firstAttribute="leading" secondItem="vWU-rl-8H8" secondAttribute="trailing" constant="94" id="8qI-KZ-dcb"/>
                             <constraint firstItem="MPL-Qw-BvV" firstAttribute="top" secondItem="pDL-5B-fjQ" secondAttribute="bottom" constant="18" id="9aH-7y-k0e"/>
                             <constraint firstItem="oBk-X7-4If" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="132" id="A1G-UY-c6O"/>
                             <constraint firstItem="tQk-bR-hAP" firstAttribute="top" secondItem="kEA-M1-EXA" secondAttribute="bottom" constant="21" id="C80-Bw-6JE"/>
@@ -169,7 +158,6 @@
                             <constraint firstItem="pDL-5B-fjQ" firstAttribute="top" secondItem="lVU-hg-dYx" secondAttribute="bottom" constant="13.33" id="ag9-g4-T35"/>
                             <constraint firstItem="esH-pj-BkF" firstAttribute="top" secondItem="g0P-18-XWP" secondAttribute="bottom" constant="21" id="bZk-Ru-KkK"/>
                             <constraint firstItem="42K-W8-U6F" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="cPY-Bk-HJH"/>
-                            <constraint firstItem="Of7-Pg-FGI" firstAttribute="trailing" secondItem="tQk-bR-hAP" secondAttribute="trailing" id="coR-H5-y7t"/>
                             <constraint firstItem="Glv-on-n9H" firstAttribute="centerY" secondItem="42K-W8-U6F" secondAttribute="centerY" constant="3" id="da2-oq-4wx"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="esH-pj-BkF" secondAttribute="trailing" constant="16" id="ehu-s7-P21"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="oBk-X7-4If" secondAttribute="trailing" constant="133" id="ept-Ii-E73"/>
@@ -200,7 +188,6 @@
                     <connections>
                         <outlet property="addBtn" destination="oBk-X7-4If" id="ETq-Dm-Zi4"/>
                         <outlet property="address" destination="esH-pj-BkF" id="j34-Ka-l7b"/>
-                        <outlet property="chatBtn" destination="Of7-Pg-FGI" id="4eG-9P-n07"/>
                         <outlet property="emergencyDescription" destination="pDL-5B-fjQ" id="U3o-Ud-WTz"/>
                         <outlet property="labelAddress" destination="g0P-18-XWP" id="X9r-JE-XjW"/>
                         <outlet property="labelDescription" destination="lVU-hg-dYx" id="wvY-aV-Ixd"/>
@@ -218,7 +205,6 @@
     <resources>
         <image name="add" width="75" height="75"/>
         <image name="aggiungi" width="26" height="24"/>
-        <image name="chat" width="78" height="78"/>
         <namedColor name="vigilesRed">
             <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
