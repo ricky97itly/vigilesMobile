@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "vigilesMobile/CollectionViewCell.swift"
-            timestampString = "575225390.223738"
+            timestampString = "575425482.3013771"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "CollectionViewCell"
             landmarkType = "3">
          </BreakpointContent>
