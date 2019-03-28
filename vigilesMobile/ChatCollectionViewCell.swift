@@ -9,5 +9,8 @@
 import UIKit
 
 class ChatCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var chatTitle: UILabel!
+    @IBOutlet weak var chatNumber: UILabel!
+    @IBOutlet weak var chatImg: UIImageView!
     
 }

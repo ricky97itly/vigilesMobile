@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
-    @IBOutlet weak var backButton: UIButton!
+class ChatViewController: UIViewController {    
     @IBOutlet weak var chatCV: UICollectionView!
+    @IBOutlet weak var backBtn: UIButton!
+    var chatImg = [UIImage(named: "code"), UIImage(named: "code"), UIImage(named: "code")]
+    var chatTitle = ["Incidente", "Schianto", "Apple Chiusa"]
+    var chatNumber = ["Segnalazione 0001", "Segnalazione 0002", "Segnalazione 0003"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +21,19 @@ class ChatViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return chatTitle.count
     }
-    */
-
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = chatCV.dequeueReusableCell(withReuseIdentifier: "cella", for: indexPath) as? ChatCollectionViewCell
+        cell?.chatTitle.text = chatTitle[indexPath.row]
+        cell?.chatImg.image = chatImg[indexPath.row]
+        cell?.chatNumber.text = chatNumber[indexPath.row]
+        return cell!
+    }
+    
+  
 }

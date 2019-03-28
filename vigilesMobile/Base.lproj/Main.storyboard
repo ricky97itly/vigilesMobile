@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1uB-ca-aHy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1uB-ca-aHy">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="JsF-0G-45S">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Wgg-c3-I8Q" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="main" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wgg-c3-I8Q" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ad1-zs-kr5">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -88,7 +88,6 @@
         <!--LoginView Controller-->
         <scene sceneID="Yy8-0d-LN8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qGv-5K-PiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="1uB-ca-aHy" userLabel="LoginView Controller" customClass="LoginViewController" customModule="vigilesMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qy4-5G-gKy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -165,6 +164,7 @@
                         <outlet property="registerBtn" destination="n06-UG-0PQ" id="3cX-pD-ohV"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGv-5K-PiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1431.2" y="-198.02955665024632"/>
         </scene>
@@ -256,9 +256,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group" width="45" height="45"/>
-        <image name="Rectangle 11" width="45" height="45"/>
-        <image name="VigilesLogoWhite" width="270" height="390"/>
+        <image name="Group" width="15" height="15"/>
+        <image name="Rectangle 11" width="15" height="15"/>
+        <image name="VigilesLogoWhite" width="90" height="130"/>
         <image name="aggiungi" width="26" height="24"/>
         <image name="cerca" width="26" height="24"/>
         <image name="home" width="26" height="24"/>

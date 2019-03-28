@@ -163,13 +163,13 @@
 				21A818D52233C42100F5B1AA /* SearchViewController.swift */,
 				218BD3F52232E7BE0067FE59 /* HomeViewController.swift */,
 				5622B7EA224A5ABC007D5CB6 /* DataCollectionViewCell.swift */,
+				56ACCF31224C2833003F0063 /* CollectionViewCell.swift */,
+				56ACCF33224D16B2003F0063 /* ChatCollectionViewCell.swift */,
 				2161CD85222FF7F2001ABD2E /* Main.storyboard */,
 				2161CD8B222FF7F3001ABD2E /* Assets.xcassets */,
 				2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */,
 				2161CD90222FF7F3001ABD2E /* Info.plist */,
 				2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */,
-				56ACCF31224C2833003F0063 /* CollectionViewCell.swift */,
-				56ACCF33224D16B2003F0063 /* ChatCollectionViewCell.swift */,
 			);
 			path = vigilesMobile;
 			sourceTree = "<group>";
@@ -654,14 +654,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J5P6Z6JAHL;
+				DEVELOPMENT_TEAM = Q84HB5733Y;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = vigilesMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = claudialolli.vigilesMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_REFLECTION_METADATA_LEVEL = none;
@@ -677,14 +677,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J5P6Z6JAHL;
+				DEVELOPMENT_TEAM = Q84HB5733Y;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = vigilesMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = claudialolli.vigilesMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_REFLECTION_METADATA_LEVEL = none;
