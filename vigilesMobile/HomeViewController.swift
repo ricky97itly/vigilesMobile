@@ -113,7 +113,7 @@ extension HomeViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let center = getCenterLocation(for: mapView)
-//        Per convertire latitudine e longitudine 
+//        Per convertire latitudine e longitudine
         let geoCoder = CLGeocoder()
         
         guard let previousLocation = self.previousLocation else { return }
