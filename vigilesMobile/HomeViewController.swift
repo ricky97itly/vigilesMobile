@@ -34,8 +34,6 @@ class HomeViewController: UIViewController{
 //        self.navigationItem.rightBarButtonItem = findUserLocation;
     }
     
-
-    
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
