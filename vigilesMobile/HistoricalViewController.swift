@@ -47,6 +47,7 @@ class HistoricalViewController: UIViewController {
             cell?.image.image = testCode[indexPath.row]
             cell?.address.text = testAddress[indexPath.row]
             cell?.id.text = testId[indexPath.row]
+            cell?.layer.cornerRadius = 15
             
             return cell!
         }

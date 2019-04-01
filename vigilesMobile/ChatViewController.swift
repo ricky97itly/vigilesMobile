@@ -24,6 +24,9 @@ class ChatViewController: UIViewController {
 }
 
 extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return chatTitle.count
     }
@@ -32,6 +35,7 @@ extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell?.chatTitle.text = chatTitle[indexPath.row]
         cell?.chatImg.image = chatImg[indexPath.row]
         cell?.chatNumber.text = chatNumber[indexPath.row]
+        cell?.layer.cornerRadius = 15
         return cell!
     }
     

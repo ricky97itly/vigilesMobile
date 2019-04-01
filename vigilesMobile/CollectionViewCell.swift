@@ -14,5 +14,5 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var image: UIImageView!
-    
+        
 }

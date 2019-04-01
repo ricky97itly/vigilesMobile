@@ -93,7 +93,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f5z-k6-pfd" colorLabel="IBBuiltInLabel-Gray">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f5z-k6-pfd" colorLabel="IBBuiltInLabel-Gray">
                                 <rect key="frame" x="48" y="348" width="279" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
@@ -102,7 +102,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCr-Ud-rQO" colorLabel="IBBuiltInLabel-Gray">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCr-Ud-rQO" colorLabel="IBBuiltInLabel-Gray">
                                 <rect key="frame" x="48" y="418" width="279" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
@@ -176,66 +176,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydy-az-6C2" userLabel="Name" colorLabel="IBBuiltInLabel-Gray">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydy-az-6C2" userLabel="Name" colorLabel="IBBuiltInLabel-Gray">
                                 <rect key="frame" x="48" y="265" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dOA-1t-Ji0"/>
+                                    <constraint firstAttribute="height" constant="30" id="NfQ-vJ-tXZ"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cognome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z8K-Z5-csW" userLabel="Surname" colorLabel="IBBuiltInLabel-Gray">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cognome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z8K-Z5-csW" userLabel="Surname" colorLabel="IBBuiltInLabel-Gray">
                                 <rect key="frame" x="48" y="329" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="xAd-sj-xMb"/>
-                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JOT-Yz-blM" colorLabel="IBBuiltInLabel-Gray">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JOT-Yz-blM" colorLabel="IBBuiltInLabel-Gray">
                                 <rect key="frame" x="48" y="391" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="13M-ma-xgN"/>
-                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wh8-3W-dEd" colorLabel="IBBuiltInLabel-Gray">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wh8-3W-dEd" colorLabel="IBBuiltInLabel-Gray">
                                 <rect key="frame" x="48" y="449" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8Ia-DB-gGB"/>
-                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password">
+                                    <passwordRules key="passwordRules" passwordRulesDescriptor="required"/>
+                                </textInputTraits>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ripeti Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DO5-Nl-wpg" userLabel="Repeat Password" colorLabel="IBBuiltInLabel-Gray">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ripeti Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DO5-Nl-wpg" userLabel="Repeat Password" colorLabel="IBBuiltInLabel-Gray">
                                 <rect key="frame" x="48" y="511" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2V0-su-DrV"/>
-                                </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indirizzo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U9D-4g-vxT" userLabel="Address" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="48" y="575" width="280" height="30"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="address-line1"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VigilesLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="43d-Na-yJz">
-                                <rect key="frame" x="67" y="96" width="241" height="128"/>
+                                <rect key="frame" x="67" y="96" width="241" height="130"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-fS-V4O" userLabel="Register Btn">
-                                <rect key="frame" x="128" y="593" width="119" height="30"/>
+                                <rect key="frame" x="136" y="642" width="103" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Registrati">
@@ -248,32 +246,35 @@
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <constraints>
-                            <constraint firstItem="JOT-Yz-blM" firstAttribute="top" secondItem="z8K-Z5-csW" secondAttribute="bottom" constant="32" id="29C-qM-JDl"/>
-                            <constraint firstItem="ydy-az-6C2" firstAttribute="top" secondItem="43d-Na-yJz" secondAttribute="bottom" constant="41" id="2Jq-y9-IdR"/>
-                            <constraint firstItem="ydy-az-6C2" firstAttribute="leading" secondItem="z8K-Z5-csW" secondAttribute="leading" id="3oT-fX-Q0b"/>
-                            <constraint firstItem="43d-Na-yJz" firstAttribute="leading" secondItem="lfo-sx-pJS" secondAttribute="leading" constant="67" id="3vD-i6-RdJ"/>
-                            <constraint firstItem="wh8-3W-dEd" firstAttribute="leading" secondItem="DO5-Nl-wpg" secondAttribute="leading" id="6ZM-O4-k8T"/>
-                            <constraint firstItem="lfo-sx-pJS" firstAttribute="bottom" secondItem="0gA-fS-V4O" secondAttribute="bottom" constant="155" id="If1-5k-vX5"/>
-                            <constraint firstItem="wh8-3W-dEd" firstAttribute="top" secondItem="JOT-Yz-blM" secondAttribute="bottom" constant="28" id="KhQ-wZ-TIh"/>
-                            <constraint firstItem="43d-Na-yJz" firstAttribute="top" secondItem="lfo-sx-pJS" secondAttribute="top" constant="52" id="PLG-k5-fBJ"/>
-                            <constraint firstItem="0gA-fS-V4O" firstAttribute="centerX" secondItem="ydy-az-6C2" secondAttribute="centerX" id="X96-0z-rIY"/>
-                            <constraint firstItem="JOT-Yz-blM" firstAttribute="leading" secondItem="wh8-3W-dEd" secondAttribute="leading" id="aqy-eE-oBF"/>
-                            <constraint firstItem="0gA-fS-V4O" firstAttribute="centerX" secondItem="DO5-Nl-wpg" secondAttribute="centerX" id="bAR-Bn-JI3"/>
-                            <constraint firstItem="z8K-Z5-csW" firstAttribute="leading" secondItem="JOT-Yz-blM" secondAttribute="leading" id="e7b-gb-DRR"/>
-                            <constraint firstItem="0gA-fS-V4O" firstAttribute="centerX" secondItem="JOT-Yz-blM" secondAttribute="centerX" id="hNf-7L-qnS"/>
-                            <constraint firstItem="ydy-az-6C2" firstAttribute="leading" secondItem="lfo-sx-pJS" secondAttribute="leading" constant="48" id="kaJ-A0-lXw"/>
-                            <constraint firstItem="0gA-fS-V4O" firstAttribute="centerX" secondItem="Y4h-4I-81Z" secondAttribute="centerX" id="kib-oM-k0P"/>
-                            <constraint firstItem="0gA-fS-V4O" firstAttribute="leading" secondItem="lfo-sx-pJS" secondAttribute="leading" constant="128" id="tIZ-cT-4Vs"/>
-                            <constraint firstItem="0gA-fS-V4O" firstAttribute="centerX" secondItem="z8K-Z5-csW" secondAttribute="centerX" id="tWh-v0-aph"/>
-                            <constraint firstItem="0gA-fS-V4O" firstAttribute="top" secondItem="DO5-Nl-wpg" secondAttribute="bottom" constant="52" id="uq1-WT-H8Z"/>
-                            <constraint firstItem="0gA-fS-V4O" firstAttribute="centerX" secondItem="43d-Na-yJz" secondAttribute="centerX" id="w6n-rh-MWB"/>
-                            <constraint firstItem="z8K-Z5-csW" firstAttribute="top" secondItem="ydy-az-6C2" secondAttribute="bottom" constant="34" id="x1C-FO-uKw"/>
-                            <constraint firstItem="0gA-fS-V4O" firstAttribute="centerX" secondItem="wh8-3W-dEd" secondAttribute="centerX" id="zrt-T0-LjN"/>
-                            <constraint firstItem="JOT-Yz-blM" firstAttribute="centerY" secondItem="Y4h-4I-81Z" secondAttribute="centerY" id="zxS-Hl-3Iv"/>
+                            <constraint firstItem="U9D-4g-vxT" firstAttribute="top" secondItem="DO5-Nl-wpg" secondAttribute="bottom" constant="34" id="7LG-FS-Hrf"/>
+                            <constraint firstItem="ydy-az-6C2" firstAttribute="centerX" secondItem="Y4h-4I-81Z" secondAttribute="centerX" id="8Pp-8m-z8f"/>
+                            <constraint firstItem="z8K-Z5-csW" firstAttribute="leading" secondItem="JOT-Yz-blM" secondAttribute="leading" id="8r0-Ef-rYn"/>
+                            <constraint firstItem="ydy-az-6C2" firstAttribute="top" secondItem="43d-Na-yJz" secondAttribute="bottom" constant="39" id="9lO-DL-vir"/>
+                            <constraint firstItem="43d-Na-yJz" firstAttribute="leading" secondItem="lfo-sx-pJS" secondAttribute="leading" constant="67" id="AZd-DH-E8k"/>
+                            <constraint firstItem="U9D-4g-vxT" firstAttribute="leading" secondItem="DO5-Nl-wpg" secondAttribute="leading" id="EtM-sc-30c"/>
+                            <constraint firstItem="43d-Na-yJz" firstAttribute="centerX" secondItem="ydy-az-6C2" secondAttribute="centerX" id="FTC-rE-7yW"/>
+                            <constraint firstItem="z8K-Z5-csW" firstAttribute="trailing" secondItem="ydy-az-6C2" secondAttribute="trailing" id="GJy-Om-khk"/>
+                            <constraint firstItem="0gA-fS-V4O" firstAttribute="leading" secondItem="lfo-sx-pJS" secondAttribute="leading" constant="136" id="Ov3-Dx-h7m"/>
+                            <constraint firstItem="wh8-3W-dEd" firstAttribute="leading" secondItem="JOT-Yz-blM" secondAttribute="leading" id="RMo-f7-mqd"/>
+                            <constraint firstItem="DO5-Nl-wpg" firstAttribute="top" secondItem="wh8-3W-dEd" secondAttribute="bottom" constant="32" id="TRO-Wf-iN6"/>
+                            <constraint firstItem="z8K-Z5-csW" firstAttribute="leading" secondItem="ydy-az-6C2" secondAttribute="leading" id="aBw-dv-5jX"/>
+                            <constraint firstItem="U9D-4g-vxT" firstAttribute="centerX" secondItem="43d-Na-yJz" secondAttribute="centerX" id="aSy-rc-U9Z"/>
+                            <constraint firstItem="JOT-Yz-blM" firstAttribute="centerY" secondItem="Y4h-4I-81Z" secondAttribute="centerY" id="atz-BR-zvo"/>
+                            <constraint firstItem="0gA-fS-V4O" firstAttribute="centerX" secondItem="U9D-4g-vxT" secondAttribute="centerX" id="bNg-J0-BaQ"/>
+                            <constraint firstItem="wh8-3W-dEd" firstAttribute="top" secondItem="JOT-Yz-blM" secondAttribute="bottom" constant="28" id="cx6-dC-MiI"/>
+                            <constraint firstItem="43d-Na-yJz" firstAttribute="top" secondItem="lfo-sx-pJS" secondAttribute="top" constant="52" id="ech-QD-j4U"/>
+                            <constraint firstItem="DO5-Nl-wpg" firstAttribute="trailing" secondItem="wh8-3W-dEd" secondAttribute="trailing" id="hPs-m8-NCw"/>
+                            <constraint firstItem="0gA-fS-V4O" firstAttribute="top" secondItem="U9D-4g-vxT" secondAttribute="bottom" constant="37" id="lqD-tu-tOd"/>
+                            <constraint firstItem="wh8-3W-dEd" firstAttribute="trailing" secondItem="JOT-Yz-blM" secondAttribute="trailing" id="oM5-iy-dsc"/>
+                            <constraint firstItem="ydy-az-6C2" firstAttribute="leading" secondItem="lfo-sx-pJS" secondAttribute="leading" constant="48" id="oqH-Vy-10U"/>
+                            <constraint firstItem="JOT-Yz-blM" firstAttribute="top" secondItem="z8K-Z5-csW" secondAttribute="bottom" constant="32" id="rGe-pg-dY5"/>
+                            <constraint firstItem="z8K-Z5-csW" firstAttribute="trailing" secondItem="JOT-Yz-blM" secondAttribute="trailing" id="tbd-Is-kSe"/>
+                            <constraint firstItem="DO5-Nl-wpg" firstAttribute="leading" secondItem="wh8-3W-dEd" secondAttribute="leading" id="uN1-7y-yip"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lfo-sx-pJS"/>
                     </view>
                     <connections>
+                        <outlet property="address" destination="U9D-4g-vxT" id="lSj-mo-cmb"/>
                         <outlet property="email" destination="JOT-Yz-blM" id="ml3-hw-YjZ"/>
                         <outlet property="name" destination="ydy-az-6C2" id="7Xz-JW-L51"/>
                         <outlet property="password" destination="wh8-3W-dEd" id="WlA-q8-G7u"/>
@@ -301,6 +302,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="esF-7f-SES"/>
+        <segue reference="SXW-0g-Ywx"/>
     </inferredMetricsTieBreakers>
 </document>

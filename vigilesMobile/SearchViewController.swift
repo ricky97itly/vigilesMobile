@@ -71,6 +71,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         cell?.codeImg.image = testImg[indexPath.row]
         cell?.emergencyAddress.text = testAddress[indexPath.row]
         cell?.emergencyDescription.text = testDescription[indexPath.row]
+        cell?.layer.cornerRadius = 15
         return cell!
     }
 }
