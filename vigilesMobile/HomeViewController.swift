@@ -53,7 +53,9 @@ class HomeViewController: UIViewController{
             setupLocationManager()
             checkLocationAuthorization()
         } else {
-            // Mostra alert dicendo all'utente di abilitare (alert da mettere)
+            let alert = UIAlertController(title: "Attenzione", message: "Devi consentire a Vigiles di seguire la tua posizione.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -63,12 +65,16 @@ class HomeViewController: UIViewController{
         case .authorizedWhenInUse:
             startTackingUserLocation()
         case .denied:
-            // Mostra alert dicendo all'utente di abilitare (alert da mettere)
+            let alert = UIAlertController(title: "Attenzione", message: "Devi consentire a Vigiles di seguire la tua posizione.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
-            // Mostra alert dicendo cosa succede (controllo parentale)
+            let alert = UIAlertController(title: "Attenzione", message: "Potrebbe essere attivo il controllo parentale, disabilitalo per avere accesso alle funzioni di Vigiles", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             break
         case .authorizedAlways:
             break
@@ -123,12 +129,16 @@ extension HomeViewController: MKMapViewDelegate {
             guard let self = self else { return }
             
             if let _ = error {
-                //Alert per informare utente
+                let alert = UIAlertController(title: "Attenzione", message: "Non è possibile stabilire dove è posizionato il puntatore.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
                 return
             }
             
             guard let placemark = placemarks?.first else {
-                //Alert per informare utente
+                let alert = UIAlertController(title: "Attenzione", message: "Non è possibile stabilire dove è posizionato il puntatore.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
                 return
             }
             
