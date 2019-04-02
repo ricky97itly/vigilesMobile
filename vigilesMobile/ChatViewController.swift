@@ -25,8 +25,6 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return chatTitle.count
     }

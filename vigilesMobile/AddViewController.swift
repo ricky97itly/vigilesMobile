@@ -23,6 +23,8 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mediaBtn: UIButton!
     @IBOutlet weak var tag: UITextField!
     @IBOutlet weak var locationBtn: UIButton!
+    var myNumber: String = ""
+    var myAddress: String = ""
     
     
     
@@ -65,7 +67,8 @@ class AddViewController: UIViewController, UITextFieldDelegate {
 }
 
     extension AddViewController: CLLocationManagerDelegate, MKMapViewDelegate {
-
+        
+        
         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             let locationManager = CLLocationManager()
             locationManager.delegate = self
@@ -84,15 +87,18 @@ class AddViewController: UIViewController, UITextFieldDelegate {
                     if pm.count > 0 {
                         let pm = placemarks![0]
                         let streetNumber = pm.subThoroughfare ?? ""
-                        let streetName = pm.thoroughfare ?? ""
+                        self.myAddress = pm.thoroughfare ?? ""
                         let locality =  pm.locality ?? ""
-                        self.address.text = "\(streetName) \(streetNumber)"
+//                        self.address.text = "\(streetName) \(streetNumber) \(locality)"
                         print(streetNumber)
                         manager.stopUpdatingLocation()
                     }
                 }
             })
+        }
+        @IBAction func userPosition(_ sender:Any) {
+            print("porco due")
+            self.address.text = "\(myAddress)"
             
         }
-       
 }

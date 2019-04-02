@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class HomeViewController: UIViewController{
+class HomeViewController: UIViewController {
      
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
@@ -146,8 +146,8 @@ extension HomeViewController: MKMapViewDelegate {
             }
             
 //            Il primo è per numero civico, il secondo per nome via
-            let streetNumber = placemark.subThoroughfare ?? ""
             let streetName = placemark.thoroughfare ?? ""
+            let streetNumber = placemark.subThoroughfare ?? ""
             
 //            Per velocizzare esecuzione, esegue azioni in parallelo
             DispatchQueue.main.async {
