@@ -4,7 +4,7 @@
 //
 //  Created by Riccardo Mores on 08/03/2019.
 //  Copyright © 2019 Riccardo Mores. All rights reserved.
-//
+
 
 import UIKit
 import MapKit
@@ -78,6 +78,9 @@ class HomeViewController: UIViewController{
             break
         case .authorizedAlways:
             break
+//            Per modifiche future, è funzione di Swift 5 (AGGIORNATE)
+        @unknown default:
+            print("modifica")
         }
     }
     

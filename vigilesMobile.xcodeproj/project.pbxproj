@@ -401,13 +401,16 @@
 				TargetAttributes = {
 					2161CD7D222FF7F2001ABD2E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					2161CD94222FF7F3001ABD2E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 2161CD7D222FF7F2001ABD2E;
 					};
 					2161CD9F222FF7F3001ABD2E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 2161CD7D222FF7F2001ABD2E;
 					};
 				};
@@ -783,7 +786,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_REFLECTION_METADATA_LEVEL = none;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -806,7 +809,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_REFLECTION_METADATA_LEVEL = none;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -827,7 +830,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobileTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vigilesMobile.app/vigilesMobile";
 			};
@@ -849,7 +852,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobileTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vigilesMobile.app/vigilesMobile";
 			};
@@ -870,7 +873,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobileUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = vigilesMobile;
 			};
@@ -891,7 +894,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = riccardomores.vigilesMobileUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = vigilesMobile;
 			};

@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
+import AddressBookUI
 
 class AddViewController: UIViewController, UITextFieldDelegate {
 
@@ -19,7 +22,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var mediaBtn: UIButton!
     @IBOutlet weak var tag: UITextField!
-    @IBOutlet weak var chatBtn: UIButton!
+    @IBOutlet weak var locationBtn: UIButton!
     
     
     
@@ -37,6 +40,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         self.address.delegate = self
         self.name.delegate = self
         self.emergencyDescription.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
@@ -56,15 +60,39 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         print("Tap button")
     }
     
+  
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    extension AddViewController: CLLocationManagerDelegate, MKMapViewDelegate {
 
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            let locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            let locat = manager.location
+            let geocoder: CLGeocoder = CLGeocoder()
+            geocoder.reverseGeocodeLocation(locat!, completionHandler: {
+                (placemarks, error) in
+                if (error != nil) {
+                    //geocoding failed
+                } else {
+                    let pm = placemarks! as [CLPlacemark]
+                    
+                    if pm.count > 0 {
+                        let pm = placemarks![0]
+                        let streetNumber = pm.subThoroughfare ?? ""
+                        let streetName = pm.thoroughfare ?? ""
+                        let locality =  pm.locality ?? ""
+                        self.address.text = "\(streetName) \(streetNumber)"
+                        print(streetNumber)
+                        manager.stopUpdatingLocation()
+                    }
+                }
+            })
+            
+        }
+       
 }
