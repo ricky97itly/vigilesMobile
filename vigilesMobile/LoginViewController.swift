@@ -10,13 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
-
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var enterBtn: UIButton!
     @IBOutlet weak var registerBtn: UIButton!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +28,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.password.layer.cornerRadius = 15
         self.password.layer.borderWidth = 2
         self.password.layer.borderColor = UIColor.white.cgColor
-        
         // Do any additional setup after loading the view.
     }
     
@@ -44,6 +40,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         password.resignFirstResponder()
         return (true)
     }
+    
     @IBAction func checkBox(_ sender: UIButton) {
         if sender.isSelected {
             sender.isSelected = false

@@ -145,7 +145,7 @@ extension HomeViewController: MKMapViewDelegate {
                 return
             }
             
-//            Il primo è per numero civico, il secondo per nome via
+//            Il primo è per nome via, il secondo per numero civico
             let streetName = placemark.thoroughfare ?? ""
             let streetNumber = placemark.subThoroughfare ?? ""
             

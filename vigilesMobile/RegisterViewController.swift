@@ -50,7 +50,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     // hide keyboard when I press return
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         name.resignFirstResponder()
         surname.resignFirstResponder()

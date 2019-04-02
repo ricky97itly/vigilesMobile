@@ -64,7 +64,6 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     extension AddViewController: CLLocationManagerDelegate {
         
         @IBAction func userPosition(_ sender:Any) {
-            print(locationManager.startUpdatingLocation())
             locationManager.startUpdatingLocation()
             print("VAI CAZZO")
         }
@@ -82,14 +81,13 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
                 }
                 else {
                     let pm = placemarks! as [CLPlacemark]
-                    
                     if pm.count > 0 {
                         let pm = placemarks![0]
                         let streetNumber = pm.subThoroughfare ?? ""
                         let streetName = pm.thoroughfare ?? ""
                         let locality =  pm.locality ?? ""
                         self.address.text = "\(streetName) \(streetNumber) \(locality)"
-                        print(streetNumber)
+                        print(streetName, streetNumber, locality)
                         manager.stopUpdatingLocation()
                     }
                 }
