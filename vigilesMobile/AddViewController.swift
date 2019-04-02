@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import AddressBookUI
 
-class AddViewController: UIViewController, UITextFieldDelegate {
+class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var address: UITextField!
@@ -23,11 +23,8 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mediaBtn: UIButton!
     @IBOutlet weak var tag: UITextField!
     @IBOutlet weak var locationBtn: UIButton!
-    var myNumber: String = ""
-    var myAddress: String = ""
-    
-    
-    
+    let locationManager = CLLocationManager()
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addBtn.layer.cornerRadius = 15
@@ -42,6 +39,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         self.address.delegate = self
         self.name.delegate = self
         self.emergencyDescription.delegate = self
+        self.locationManager.delegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -61,17 +59,17 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBAction func addEmergency() {
         print("Tap button")
     }
-    
-  
-
 }
 
-    extension AddViewController: CLLocationManagerDelegate, MKMapViewDelegate {
+    extension AddViewController: CLLocationManagerDelegate {
         
+        @IBAction func userPosition(_ sender:Any) {
+            print(locationManager.startUpdatingLocation())
+            locationManager.startUpdatingLocation()
+            print("VAI CAZZO")
+        }
         
         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            let locationManager = CLLocationManager()
-            locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
@@ -80,25 +78,21 @@ class AddViewController: UIViewController, UITextFieldDelegate {
             geocoder.reverseGeocodeLocation(locat!, completionHandler: {
                 (placemarks, error) in
                 if (error != nil) {
-                    //geocoding failed
-                } else {
+                    print("SEI STRONZO PERCHÉ NON VAI")
+                }
+                else {
                     let pm = placemarks! as [CLPlacemark]
                     
                     if pm.count > 0 {
                         let pm = placemarks![0]
                         let streetNumber = pm.subThoroughfare ?? ""
-                        self.myAddress = pm.thoroughfare ?? ""
+                        let streetName = pm.thoroughfare ?? ""
                         let locality =  pm.locality ?? ""
-//                        self.address.text = "\(streetName) \(streetNumber) \(locality)"
+                        self.address.text = "\(streetName) \(streetNumber) \(locality)"
                         print(streetNumber)
                         manager.stopUpdatingLocation()
                     }
                 }
             })
-        }
-        @IBAction func userPosition(_ sender:Any) {
-            print("porco due")
-            self.address.text = "\(myAddress)"
-            
         }
 }
