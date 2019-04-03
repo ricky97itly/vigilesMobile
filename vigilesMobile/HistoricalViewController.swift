@@ -9,19 +9,22 @@
 import UIKit
 import CoreLocation
 
+var testTitle = [""]
+var testAddress = [""]
+
 class HistoricalViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+
+    @IBOutlet weak var todayTableView: UITableView!
     @IBOutlet weak var yesterdayCollectionView: UICollectionView!
-    
-    var testTitle = ["ciao", "boh", "mena"]
     var testImg = [UIImage(named: "infantes"), UIImage(named: "tony"), UIImage(named: "solcia")]
     var testCode = [UIImage(named: "infantes"), UIImage(named: "tony"), UIImage(named: "solcia")]
-    var testAddress = ["ciao", "prova", "claudia"]
+    
     var testId = ["000001", "000002", "000003"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        todayTableView.separatorColor = UIColor(white: 1, alpha: 1)
         // Do any additional setup after loading the view.
     }
 
@@ -44,5 +47,33 @@ class HistoricalViewController: UIViewController {
         }
 
     }
+
+extension HistoricalViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return testTitle.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cella")
+        cell.textLabel?.text = testTitle[indexPath.row]
+        cell.detailTextLabel?.text = testAddress[indexPath.row]
+        cell.layer.cornerRadius = 15
+        cell.contentView.backgroundColor = UIColor(white: 1, alpha: 1)
+        return (cell)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            testTitle.remove(at: indexPath.row)
+            todayTableView.reloadData()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        todayTableView.reloadData()
+    }
+}
+
+
 
 

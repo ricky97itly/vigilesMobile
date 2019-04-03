@@ -27,10 +27,6 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     @IBOutlet weak var locationBtn: UIButton!
     let locationManager = CLLocationManager()
     
-    var copyEmgTitle : NSArray = NSArray()
-    var copyEmgAddress : NSArray = NSArray()
-    var copyEmgMedia : NSArray = NSArray()
- 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addBtn.layer.cornerRadius = 15
@@ -46,10 +42,9 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         self.name.delegate = self
         self.emergencyDescription.delegate = self
         self.locationManager.delegate = self
-        var copiedEmgTitle : emergencyTitle = emergencyTitle()
-        var copiedEmgAddress : emergencyAddress = emergencyAddress()
-        var copiedEmgMedia : emergencyMedia = emergencyMedia()
-        copyEmgTitle = copiedEmgTitle.emergencyTitle
+//        copyEmgTitle = copiedEmgTitle.emergencyTitle
+//        copyChipOptions = copiedChipOptions.chipoptions
+//        copyDrinkOptions = copiedDrinkOptions.drinkoptions
  
         
         // Do any additional setup after loading the view.
@@ -68,7 +63,16 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     }
     
     @IBAction func addEmergency() {
-        print(copyEmgTitle)
+        if (name.text != "") {
+            testTitle.append(name.text!)
+            testAddress.append(address.text!)
+            name.text = ""
+            address.text = ""
+        }
+        else {
+            print("non è stato aggiunto nulla")
+        }
+        
         
     }
     

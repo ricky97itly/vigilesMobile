@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		086EE0C457ABFCA06CA1D96D /* Pods_vigilesMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */; };
 		2114AA20223FDF5A006E23C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */; };
-		212B192E2254C3920067ECE4 /* EmergencyTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B192D2254C3920067ECE4 /* EmergencyTitle.swift */; };
-		212B19302254E9B10067ECE4 /* EmergencyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B192F2254E9B10067ECE4 /* EmergencyAddress.swift */; };
-		212B19322254EA140067ECE4 /* EmergencyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B19312254EA140067ECE4 /* EmergencyDescription.swift */; };
-		212B19342254EA3A0067ECE4 /* EmergencyMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B19332254EA3A0067ECE4 /* EmergencyMedia.swift */; };
+		212B193B22552CC40067ECE4 /* TableViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B193A22552CC40067ECE4 /* TableViewDesign.swift */; };
+		212B193D225534680067ECE4 /* HistoricalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */; };
 		212FA1852252314D00FD9917 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212FA16F2252314D00FD9917 /* IQTextView.swift */; };
 		212FA1862252314D00FD9917 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212FA1712252314D00FD9917 /* IQPreviousNextView.swift */; };
 		212FA1872252314D00FD9917 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212FA1722252314D00FD9917 /* IQTitleBarButtonItem.swift */; };
@@ -77,10 +75,8 @@
 
 /* Begin PBXFileReference section */
 		2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		212B192D2254C3920067ECE4 /* EmergencyTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmergencyTitle.swift; path = vigilesMobile/EmergencyTitle.swift; sourceTree = SOURCE_ROOT; };
-		212B192F2254E9B10067ECE4 /* EmergencyAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAddress.swift; sourceTree = "<group>"; };
-		212B19312254EA140067ECE4 /* EmergencyDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyDescription.swift; sourceTree = "<group>"; };
-		212B19332254EA3A0067ECE4 /* EmergencyMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyMedia.swift; sourceTree = "<group>"; };
+		212B193A22552CC40067ECE4 /* TableViewDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewDesign.swift; path = vigilesMobile/TableViewDesign.swift; sourceTree = SOURCE_ROOT; };
+		212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalTableViewCell.swift; path = vigilesMobile/HistoricalTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		212FA16F2252314D00FD9917 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
 		212FA1712252314D00FD9917 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
 		212FA1722252314D00FD9917 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
@@ -169,17 +165,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		212B19352254EA5D0067ECE4 /* Info */ = {
-			isa = PBXGroup;
-			children = (
-				212B192D2254C3920067ECE4 /* EmergencyTitle.swift */,
-				212B19332254EA3A0067ECE4 /* EmergencyMedia.swift */,
-				212B19312254EA140067ECE4 /* EmergencyDescription.swift */,
-				212B192F2254E9B10067ECE4 /* EmergencyAddress.swift */,
-			);
-			name = Info;
-			sourceTree = "<group>";
-		};
 		212FA16D2252314D00FD9917 /* IQKeyboardManagerSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,9 +257,10 @@
 			children = (
 				212FA16D2252314D00FD9917 /* IQKeyboardManagerSwift */,
 				218BD3E42232DAE90067FE59 /* Storyboards */,
-				212B19352254EA5D0067ECE4 /* Info */,
 				56ACCF35224D16FE003F0063 /* ChatViewController.swift */,
 				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
+				212B193A22552CC40067ECE4 /* TableViewDesign.swift */,
+				212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */,
 				21791B13224283960008B28C /* RegisterViewController.swift */,
 				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
 				56FD53F42243133A006C9533 /* LoginViewController.swift */,
@@ -592,20 +578,19 @@
 				21791B14224283960008B28C /* RegisterViewController.swift in Sources */,
 				212FA18F2252314D00FD9917 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				21A818D62233C42100F5B1AA /* SearchViewController.swift in Sources */,
-				212B19342254EA3A0067ECE4 /* EmergencyMedia.swift in Sources */,
 				212FA1892252314D00FD9917 /* IQToolbar.swift in Sources */,
 				212FA18C2252314D00FD9917 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				56ACCF34224D16B2003F0063 /* ChatCollectionViewCell.swift in Sources */,
 				56ACCF32224C2833003F0063 /* CollectionViewCell.swift in Sources */,
-				212B192E2254C3920067ECE4 /* EmergencyTitle.swift in Sources */,
 				212FA1862252314D00FD9917 /* IQPreviousNextView.swift in Sources */,
-				212B19322254EA140067ECE4 /* EmergencyDescription.swift in Sources */,
 				2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */,
 				212FA1852252314D00FD9917 /* IQTextView.swift in Sources */,
 				212FA1912252314E00FD9917 /* IQUIScrollView+Additions.swift in Sources */,
 				212FA1922252314E00FD9917 /* IQUIViewController+Additions.swift in Sources */,
+				212B193D225534680067ECE4 /* HistoricalTableViewCell.swift in Sources */,
 				21A818D82233C48A00F5B1AA /* AddViewController.swift in Sources */,
 				212FA18B2252314D00FD9917 /* IQInvocation.swift in Sources */,
+				212B193B22552CC40067ECE4 /* TableViewDesign.swift in Sources */,
 				5622B7EB224A5ABC007D5CB6 /* DataCollectionViewCell.swift in Sources */,
 				212FA1942252314E00FD9917 /* IQUIView+Hierarchy.swift in Sources */,
 				2161CD84222FF7F2001ABD2E /* ViewController.swift in Sources */,
@@ -620,7 +605,6 @@
 				212FA1952252314E00FD9917 /* IQNSArray+Sort.swift in Sources */,
 				212FA18A2252314D00FD9917 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				212FA1932252314E00FD9917 /* IQUITextFieldView+Additions.swift in Sources */,
-				212B19302254E9B10067ECE4 /* EmergencyAddress.swift in Sources */,
 				218BD3F62232E7BE0067FE59 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

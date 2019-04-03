@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  tableViewDesign.swift
 //  vigilesMobile
 //
 //  Created by Riccardo Mores on 03/04/2019.
@@ -7,8 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
-class emergencyTitle: NSObject {
+@IBDesignable class TableDesignView : UIView {
     
-    var emgTitle : NSArray = []
 }
