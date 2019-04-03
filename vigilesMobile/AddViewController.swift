@@ -26,6 +26,10 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     @IBOutlet weak var tag: UITextField!
     @IBOutlet weak var locationBtn: UIButton!
     let locationManager = CLLocationManager()
+    
+    var copyEmgTitle : NSArray = NSArray()
+    var copyEmgAddress : NSArray = NSArray()
+    var copyEmgMedia : NSArray = NSArray()
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +46,11 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         self.name.delegate = self
         self.emergencyDescription.delegate = self
         self.locationManager.delegate = self
+        var copiedEmgTitle : emergencyTitle = emergencyTitle()
+        var copiedEmgAddress : emergencyAddress = emergencyAddress()
+        var copiedEmgMedia : emergencyMedia = emergencyMedia()
+        copyEmgTitle = copiedEmgTitle.emergencyTitle
+ 
         
         // Do any additional setup after loading the view.
     }
@@ -59,8 +68,10 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     }
     
     @IBAction func addEmergency() {
-        print("Tap button")
+        print(copyEmgTitle)
+        
     }
+    
 }
 
     extension AddViewController: CLLocationManagerDelegate {

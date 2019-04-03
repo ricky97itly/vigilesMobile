@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+class emergencyTitle: NSObject {
+    
+    var emgTitle : NSArray = []
+}
