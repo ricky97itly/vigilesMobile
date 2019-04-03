@@ -10,8 +10,9 @@ import UIKit
 import CoreLocation
 
 class HistoricalViewController: UIViewController {
-    @IBOutlet weak var chatBtn: UIButton!
+
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var yesterdayCollectionView: UICollectionView!
     
     var testTitle = ["ciao", "boh", "mena"]
     var testImg = [UIImage(named: "infantes"), UIImage(named: "tony"), UIImage(named: "solcia")]
