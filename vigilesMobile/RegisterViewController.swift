@@ -61,6 +61,4 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         repeatPassword.resignFirstResponder()
         return (true)
     }
-
-
 }
