@@ -20,8 +20,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Vigiles ha bisogno di accedere ai tuoi media</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Vigiles ha bisogno di accedere alla fotocamera</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Vigiles ha bisogno della tua posizione per utilizzare le funzioni della mappa.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Vigiles ha bisogno di accedere alla liberia fotografica</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

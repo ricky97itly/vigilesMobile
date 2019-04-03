@@ -47,7 +47,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sua-cm-l68">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sua-cm-l68">
                                 <rect key="frame" x="73" y="319" width="232" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="Bb1-dL-sTW"/>
@@ -56,6 +56,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozm-ji-Gga">
+                                <rect key="frame" x="164" y="435" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="logoutBtn:" destination="fuX-IA-k5O" eventType="touchUpInside" id="Af3-2w-fk6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,6 +94,7 @@
                     <tabBarItem key="tabBarItem" title="Profilo" image="profilo" id="Mlk-X9-Pwj"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="logoutBtn" destination="Ozm-ji-Gga" id="wkE-Gf-KW8"/>
                         <outlet property="name" destination="thC-Yc-5JA" id="MPG-Az-A6N"/>
                         <outlet property="numberOfSegnalations" destination="Sua-cm-l68" id="osB-Mq-5rH"/>
                         <outlet property="profilePic" destination="PzJ-1q-dLS" id="JK8-f7-uZS"/>

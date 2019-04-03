@@ -88,7 +88,7 @@
         <!--LoginView Controller-->
         <scene sceneID="Yy8-0d-LN8">
             <objects>
-                <viewController id="1uB-ca-aHy" userLabel="LoginView Controller" customClass="LoginViewController" customModule="vigilesMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1uB-ca-aHy" userLabel="LoginView Controller" customClass="LoginViewController" customModule="vigilesMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qy4-5G-gKy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,7 +293,7 @@
         <image name="Rectangle 11" width="15" height="15"/>
         <image name="VigilesLogoWhite" width="90" height="130"/>
         <image name="aggiungi" width="26" height="24"/>
-        <image name="cerca" width="26" height="24"/>
+        <image name="cerca" width="30" height="28"/>
         <image name="home" width="26" height="24"/>
         <image name="profilo" width="26" height="24"/>
         <image name="storico" width="26" height="24"/>
@@ -302,6 +302,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SXW-0g-Ywx"/>
+        <segue reference="esF-7f-SES"/>
     </inferredMetricsTieBreakers>
 </document>

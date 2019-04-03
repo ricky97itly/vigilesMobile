@@ -15,11 +15,18 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var numberOfSegnalations: UILabel!
+    @IBOutlet weak var logoutBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        profilePic.layer.borderWidth = 1
+        profilePic.layer.masksToBounds = false
+        profilePic.layer.borderColor = UIColor.black.cgColor
+        profilePic.layer.cornerRadius = profilePic.frame.height/2.1
+        profilePic.clipsToBounds = true
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func logoutBtn(_ sender: UIButton) {
     }
     
 

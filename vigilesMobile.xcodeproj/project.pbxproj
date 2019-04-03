@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		086EE0C457ABFCA06CA1D96D /* Pods_vigilesMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */; };
 		2114AA20223FDF5A006E23C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */; };
+		212B192E2254C3920067ECE4 /* EmergencyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B192D2254C3920067ECE4 /* EmergencyInfo.swift */; };
 		212FA1852252314D00FD9917 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212FA16F2252314D00FD9917 /* IQTextView.swift */; };
 		212FA1862252314D00FD9917 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212FA1712252314D00FD9917 /* IQPreviousNextView.swift */; };
 		212FA1872252314D00FD9917 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212FA1722252314D00FD9917 /* IQTitleBarButtonItem.swift */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		212B192D2254C3920067ECE4 /* EmergencyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmergencyInfo.swift; path = vigilesMobile/EmergencyInfo.swift; sourceTree = SOURCE_ROOT; };
 		212FA16F2252314D00FD9917 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
 		212FA1712252314D00FD9917 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
 		212FA1722252314D00FD9917 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				21791B13224283960008B28C /* RegisterViewController.swift */,
 				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
 				56FD53F42243133A006C9533 /* LoginViewController.swift */,
+				212B192D2254C3920067ECE4 /* EmergencyInfo.swift */,
 				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
 				2161CD83222FF7F2001ABD2E /* ViewController.swift */,
 				21A818D72233C48A00F5B1AA /* AddViewController.swift */,
@@ -341,7 +344,6 @@
 				2161CD7B222FF7F2001ABD2E /* Frameworks */,
 				2161CD7C222FF7F2001ABD2E /* Resources */,
 				74DFA94B232E3AC3E1AAC199 /* [CP] Copy Pods Resources */,
-				21DB9DED22549101009D2900 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -470,23 +472,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		21DB9DED22549101009D2900 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi its path.\n";
-		};
 		74DFA94B232E3AC3E1AAC199 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -594,6 +579,7 @@
 				212FA18C2252314D00FD9917 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				56ACCF34224D16B2003F0063 /* ChatCollectionViewCell.swift in Sources */,
 				56ACCF32224C2833003F0063 /* CollectionViewCell.swift in Sources */,
+				212B192E2254C3920067ECE4 /* EmergencyInfo.swift in Sources */,
 				212FA1862252314D00FD9917 /* IQPreviousNextView.swift in Sources */,
 				2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */,
 				212FA1852252314D00FD9917 /* IQTextView.swift in Sources */,
