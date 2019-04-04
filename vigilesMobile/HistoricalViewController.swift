@@ -27,6 +27,7 @@ class HistoricalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         todayTableView.separatorColor = UIColor(white: 1, alpha: 1)
+//        todayTableView.backgroundColor = UIColo
         // Do any additional setup after loading the view.
     }
 
