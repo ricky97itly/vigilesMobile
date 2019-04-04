@@ -9,6 +9,8 @@
 import UIKit
 import CoreLocation
 
+// Array globale, si può richiamare ovunque :-) 
+
 var testTitle = [String]()
 var testAddress = [String]()
 

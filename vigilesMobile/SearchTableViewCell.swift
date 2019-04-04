@@ -1,15 +1,23 @@
 //
-//  TableViewCellDesign.swift
+//  SearchTableViewCell.swift
 //  vigilesMobile
 //
-//  Created by Riccardo Mores on 04/04/2019.
+//  Created by Claudia Lolli on 04/04/2019.
 //  Copyright © 2019 Riccardo Mores. All rights reserved.
 //
 
 import UIKit
 
-class TableViewCellDesign: UITableViewCell {
+class SearchTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var codeImg: UIImageView!
+    @IBOutlet weak var codeTitle: UILabel!
+    @IBOutlet weak var codeAddress: UILabel!
+    @IBOutlet weak var codeDescription: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
