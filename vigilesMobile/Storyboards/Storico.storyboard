@@ -144,10 +144,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="80.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGW-Da-hnK" customClass="TableDesignView" customModule="vigilesMobile" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="80.666666666666671"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HlM-Ao-JJ7">
                                                     <rect key="frame" x="10" y="10" width="40" height="29"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -155,9 +151,9 @@
                                                         <constraint firstAttribute="width" secondItem="HlM-Ao-JJ7" secondAttribute="height" multiplier="40:29" id="BKC-Mc-peX"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fPp-tn-ByE">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="code" translatesAutoresizingMaskIntoConstraints="NO" id="fPp-tn-ByE">
                                                     <rect key="frame" x="257" y="9.9999999999999964" width="67" height="60.666666666666657"/>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="67" id="XxC-Xh-5dG"/>
                                                     </constraints>
@@ -192,12 +188,8 @@
                                                 <constraint firstAttribute="bottom" secondItem="HlM-Ao-JJ7" secondAttribute="bottom" constant="41.670000000000002" id="EEV-BE-rsW"/>
                                                 <constraint firstItem="fPp-tn-ByE" firstAttribute="leading" secondItem="ahu-a6-9mC" secondAttribute="trailing" constant="176" id="GK2-gN-jxi"/>
                                                 <constraint firstItem="ahu-a6-9mC" firstAttribute="top" secondItem="SUf-Ae-sUC" secondAttribute="bottom" constant="8" id="Hqz-9x-4v1"/>
-                                                <constraint firstItem="uGW-Da-hnK" firstAttribute="top" secondItem="TMS-rI-T5H" secondAttribute="top" id="J7h-cK-P7C"/>
-                                                <constraint firstAttribute="trailing" secondItem="uGW-Da-hnK" secondAttribute="trailing" id="L9j-Hm-0jg"/>
-                                                <constraint firstItem="uGW-Da-hnK" firstAttribute="leading" secondItem="TMS-rI-T5H" secondAttribute="leading" id="Mep-Ia-OnP"/>
                                                 <constraint firstItem="JlX-aZ-xc2" firstAttribute="top" secondItem="fPp-tn-ByE" secondAttribute="top" id="Xys-wN-EQR"/>
                                                 <constraint firstItem="JlX-aZ-xc2" firstAttribute="leading" secondItem="SUf-Ae-sUC" secondAttribute="leading" id="c8C-Oo-c1A"/>
-                                                <constraint firstItem="uGW-Da-hnK" firstAttribute="centerY" secondItem="fPp-tn-ByE" secondAttribute="centerY" id="deM-jZ-oEx"/>
                                                 <constraint firstItem="JlX-aZ-xc2" firstAttribute="top" secondItem="HlM-Ao-JJ7" secondAttribute="top" id="dyr-AM-Pr4"/>
                                                 <constraint firstItem="HlM-Ao-JJ7" firstAttribute="leading" secondItem="TMS-rI-T5H" secondAttribute="leading" constant="10" id="gD1-eR-zRw"/>
                                                 <constraint firstItem="JlX-aZ-xc2" firstAttribute="leading" secondItem="HlM-Ao-JJ7" secondAttribute="trailing" constant="18" id="hCD-7t-bhc"/>
@@ -256,6 +248,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="code" width="40" height="40"/>
         <image name="storico" width="26" height="24"/>
         <namedColor name="vigilesRed">
             <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

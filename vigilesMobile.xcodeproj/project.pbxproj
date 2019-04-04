@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		086EE0C457ABFCA06CA1D96D /* Pods_vigilesMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */; };
 		2114AA20223FDF5A006E23C1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */; };
-		212B193B22552CC40067ECE4 /* TableViewDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B193A22552CC40067ECE4 /* TableViewDesign.swift */; };
 		212B193D225534680067ECE4 /* HistoricalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */; };
+		212B193F2255EDD80067ECE4 /* TableViewCellDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212B193E2255EDD80067ECE4 /* TableViewCellDesign.swift */; };
 		212FA1852252314D00FD9917 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212FA16F2252314D00FD9917 /* IQTextView.swift */; };
 		212FA1862252314D00FD9917 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212FA1712252314D00FD9917 /* IQPreviousNextView.swift */; };
 		212FA1872252314D00FD9917 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212FA1722252314D00FD9917 /* IQTitleBarButtonItem.swift */; };
@@ -75,8 +75,8 @@
 
 /* Begin PBXFileReference section */
 		2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		212B193A22552CC40067ECE4 /* TableViewDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewDesign.swift; path = vigilesMobile/TableViewDesign.swift; sourceTree = SOURCE_ROOT; };
 		212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalTableViewCell.swift; path = vigilesMobile/HistoricalTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		212B193E2255EDD80067ECE4 /* TableViewCellDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellDesign.swift; sourceTree = "<group>"; };
 		212FA16F2252314D00FD9917 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
 		212FA1712252314D00FD9917 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
 		212FA1722252314D00FD9917 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 				218BD3E42232DAE90067FE59 /* Storyboards */,
 				56ACCF35224D16FE003F0063 /* ChatViewController.swift */,
 				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
-				212B193A22552CC40067ECE4 /* TableViewDesign.swift */,
+				212B193E2255EDD80067ECE4 /* TableViewCellDesign.swift */,
 				212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */,
 				21791B13224283960008B28C /* RegisterViewController.swift */,
 				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
@@ -590,12 +590,12 @@
 				212B193D225534680067ECE4 /* HistoricalTableViewCell.swift in Sources */,
 				21A818D82233C48A00F5B1AA /* AddViewController.swift in Sources */,
 				212FA18B2252314D00FD9917 /* IQInvocation.swift in Sources */,
-				212B193B22552CC40067ECE4 /* TableViewDesign.swift in Sources */,
 				5622B7EB224A5ABC007D5CB6 /* DataCollectionViewCell.swift in Sources */,
 				212FA1942252314E00FD9917 /* IQUIView+Hierarchy.swift in Sources */,
 				2161CD84222FF7F2001ABD2E /* ViewController.swift in Sources */,
 				21A818DA2233C4E800F5B1AA /* HistoricalViewController.swift in Sources */,
 				212FA1902252314E00FD9917 /* IQKeyboardManager.swift in Sources */,
+				212B193F2255EDD80067ECE4 /* TableViewCellDesign.swift in Sources */,
 				2161CD82222FF7F2001ABD2E /* AppDelegate.swift in Sources */,
 				212FA1882252314D00FD9917 /* IQBarButtonItem.swift in Sources */,
 				56ACCF36224D16FE003F0063 /* ChatViewController.swift in Sources */,

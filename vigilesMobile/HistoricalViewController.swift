@@ -9,8 +9,8 @@
 import UIKit
 import CoreLocation
 
-var testTitle = [""]
-var testAddress = [""]
+var testTitle = [String]()
+var testAddress = [String]()
 
 class HistoricalViewController: UIViewController {
 
@@ -54,12 +54,12 @@ extension HistoricalViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cella")
-        cell.textLabel?.text = testTitle[indexPath.row]
-        cell.detailTextLabel?.text = testAddress[indexPath.row]
-        cell.layer.cornerRadius = 15
-        cell.contentView.backgroundColor = UIColor(white: 1, alpha: 1)
-        return (cell)
+//        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cella")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cella", for: indexPath) as? HistoricalTableViewCell
+        cell?.emergencyTitle.text = testTitle[indexPath.row]
+        cell?.emergencyAddress.text = testAddress[indexPath.row]
+        cell?.layer.cornerRadius = 15
+        return (cell!)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
