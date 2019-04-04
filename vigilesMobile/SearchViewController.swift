@@ -12,8 +12,9 @@ var titleSearch = ["boh"]
 var addressSearch = ["Prova"]
 var descriptionSearch = ["funziona coglione della merda"]
 
-class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet weak var tableView: UITableView!
+class SearchViewController: UIViewController, UISearchBarDelegate {
+
+    @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -40,29 +41,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         searchBar.resignFirstResponder()
         return (true)
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (titleSearch.count)
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchTableViewCell
-        cell.codeTitle.text = titleSearch[indexPath.row]
-        cell.codeAddress.text = addressSearch[indexPath.row]
-        cell.codeDescription.text = descriptionSearch[indexPath.row]
-        cell.layer.cornerRadius = 15
-        
-        return(cell)
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == UITableViewCell.EditingStyle.delete {
-            titleSearch.remove(at: indexPath.row)
-            tableView.reloadData()
-        }
-    }
 }
 
 extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -79,8 +57,33 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         cell?.layer.cornerRadius = 15
         return cell!
     }
+}
 
-
+extension SearchViewController: UITabBarDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return titleSearch.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cella")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cella", for: indexPath) as? SearchTableViewCell
+        cell?.searchTitle.text = titleSearch[indexPath.row]
+        cell?.searchAddress.text = addressSearch[indexPath.row]
+        cell?.searchDescription.text = descriptionSearch[indexPath.row]
+        cell?.layer.cornerRadius = 15
+        return (cell!)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            testTitle.remove(at: indexPath.row)
+            searchTableView.reloadData()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        searchTableView.reloadData()
+    }
     
 }
 
