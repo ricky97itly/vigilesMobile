@@ -68,6 +68,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
             testAddress.append(address.text!)
             name.text = ""
             address.text = ""
+            print("ricevuto, capo")
         }
         else {
             print("non è stato aggiunto nulla")
