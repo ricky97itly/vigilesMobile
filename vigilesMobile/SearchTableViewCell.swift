@@ -11,9 +11,10 @@ import UIKit
 class SearchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var codeImg: UIImageView!
-    @IBOutlet weak var searchTitle: UILabel!
+    @IBOutlet weak var searchName: UILabel!
     @IBOutlet weak var searchAddress: UILabel!
     @IBOutlet weak var searchDescription: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
