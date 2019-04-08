@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var findUserLocation: UIButton!
     @IBOutlet weak var chatBtn: NSLayoutConstraint!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var infoView: UIView!
     let locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 20
     let annotation = MKPointAnnotation()
@@ -30,8 +32,19 @@ class HomeViewController: UIViewController {
         ied.subtitle = "Dove studiamo"
         ied.coordinate = CLLocationCoordinate2D(latitude: 45.461035, longitude: 9.210483)
         mapView.addAnnotation(ied)
+        self.infoView.layer.cornerRadius = 15
+        self.infoView.layer.shadowColor = UIColor.black.cgColor
+        self.infoView.layer.shadowOpacity = 0.3
+        self.infoView.layer.shadowOffset = CGSize.zero
+        self.infoView.layer.shadowRadius = 5
+//        ombra viene messa nella cache, evita rallentamenti nell'app
+        self.infoView.layer.shouldRasterize = true
 //        MKUserTrackingBarButtonItem *findUserLocation = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.map];
 //        self.navigationItem.rightBarButtonItem = findUserLocation;
+    }
+    
+    @IBAction func onPressed(_ sender: Any) {
+        bottomConstraint.constant = 10
     }
     
     func setupLocationManager() {
