@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var chatBtn: NSLayoutConstraint!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var infoImg: UIImageView!
     let locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 1000
     let annotation = MKPointAnnotation()
@@ -37,12 +38,13 @@ class HomeViewController: UIViewController {
         self.infoView.layer.shadowOpacity = 0.3
         self.infoView.layer.shadowOffset = CGSize.zero
         self.infoView.layer.shadowRadius = 5
-//        ombra viene messa nella cache, evita rallentamenti nell'app così non si devono ricreare sempre
+//     ombra viene messa nella cache, evita rallentamenti nell'app così non si devono ricreare    sempre
         self.infoView.layer.shouldRasterize = true
 //        MKUserTrackingBarButtonItem *findUserLocation = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.map];
 //        self.navigationItem.rightBarButtonItem = findUserLocation;
     }
     
+//    Button info, al click appare view
     @IBAction func onPressed(_ sender: Any) {
         bottomConstraint.constant = 10
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
@@ -50,8 +52,9 @@ class HomeViewController: UIViewController {
         }, completion: nil)
     }
     
+//    Button dentro la view, al click si chiude
     @IBAction func dismissView(_ sender: Any) {
-        bottomConstraint.constant = -200
+        bottomConstraint.constant = -220
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
