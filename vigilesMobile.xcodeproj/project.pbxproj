@@ -126,7 +126,7 @@
 		56ACCF31224C2833003F0063 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		56ACCF33224D16B2003F0063 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		56ACCF35224D16FE003F0063 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = vigilesMobile/ChatViewController.swift; sourceTree = SOURCE_ROOT; };
-		56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		56FD53F42243133A006C9533 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = vigilesMobile/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		7EB2FA954C38D63C577560DB /* Pods_vigilesMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vigilesMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vigilesMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };

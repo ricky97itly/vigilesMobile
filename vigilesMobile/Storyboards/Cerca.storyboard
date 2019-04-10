@@ -32,24 +32,24 @@
                                 <rect key="frame" x="16" y="203" width="343" height="509"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="k4R-wu-O0W" secondAttribute="height" multiplier="343:509" id="J3A-AA-Qa0"/>
+                                    <constraint firstAttribute="width" secondItem="k4R-wu-O0W" secondAttribute="height" multiplier="343:509" constant="10" id="J3A-AA-Qa0"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cella" rowHeight="96" id="MUA-29-vTb" customClass="SearchTableViewCell" customModule="vigilesMobile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="96"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cella" rowHeight="44" id="MUA-29-vTb" customClass="SearchTableViewCell" customModule="vigilesMobile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MUA-29-vTb" id="rOt-cp-Nva">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="96"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FZE-t8-ZDB">
-                                                    <rect key="frame" x="15" y="11" width="37" height="33"/>
+                                                    <rect key="frame" x="14.999999999999998" y="11.000000000000002" width="25.333333333333329" height="22.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="FZE-t8-ZDB" secondAttribute="height" multiplier="37:33" id="Zlb-cu-9Lq"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indirizzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkZ-68-Wdo">
-                                                    <rect key="frame" x="187" y="11" width="141" height="21"/>
+                                                    <rect key="frame" x="166.66666666666666" y="11" width="101.99999999999997" height="14.333333333333336"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="mkZ-68-Wdo" secondAttribute="height" multiplier="41:7" constant="18.000000000000014" id="klq-v6-Prc"/>
                                                     </constraints>
@@ -58,7 +58,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrizione" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZf-yA-5Sx">
-                                                    <rect key="frame" x="60" y="49" width="268" height="36"/>
+                                                    <rect key="frame" x="48.333333333333329" y="45" width="220.33333333333337" height="29.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="wZf-yA-5Sx" secondAttribute="height" multiplier="67:9" id="qAH-V1-nPr"/>
                                                     </constraints>
@@ -67,7 +67,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCv-GY-KBs">
-                                                    <rect key="frame" x="60" y="11" width="108" height="21"/>
+                                                    <rect key="frame" x="48.333333333333336" y="11" width="99.333333333333314" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="LCv-GY-KBs" secondAttribute="height" multiplier="15:7" constant="63" id="5jc-Ff-ZNI"/>
                                                     </constraints>
@@ -91,6 +91,7 @@
                                                 <constraint firstItem="mkZ-68-Wdo" firstAttribute="top" secondItem="rOt-cp-Nva" secondAttribute="topMargin" id="zhS-fs-1F6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="20" leading="8" bottom="20" trailing="8"/>
                                         <connections>
                                             <outlet property="codeImg" destination="FZE-t8-ZDB" id="VSN-I8-V5V"/>
                                             <outlet property="searchAddress" destination="mkZ-68-Wdo" id="SsI-VP-6zU"/>
@@ -127,6 +128,7 @@
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="cJO-mP-zRo" firstAttribute="bottom" secondItem="k4R-wu-O0W" secondAttribute="bottom" constant="17" id="6Ge-Zd-Bae"/>
                             <constraint firstItem="k4R-wu-O0W" firstAttribute="leading" secondItem="cJO-mP-zRo" secondAttribute="leading" constant="16" id="E8B-Gm-yMh"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="bottom" secondItem="k4R-wu-O0W" secondAttribute="bottom" constant="17" id="GYg-7Z-Maw"/>
                             <constraint firstItem="4tg-Ii-CcF" firstAttribute="leading" secondItem="cJO-mP-zRo" secondAttribute="leading" constant="16" id="IRe-Bn-5Et"/>
@@ -136,7 +138,9 @@
                             <constraint firstItem="U33-50-LTm" firstAttribute="top" secondItem="cJO-mP-zRo" secondAttribute="top" id="TE3-5d-m8b"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="U33-50-LTm" secondAttribute="trailing" constant="152" id="cVz-00-KHt"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="4tg-Ii-CcF" secondAttribute="trailing" constant="16" id="gDs-bL-yJ4"/>
+                            <constraint firstItem="4tg-Ii-CcF" firstAttribute="centerX" secondItem="8v5-ZZ-9lY" secondAttribute="centerX" id="lgX-Fp-GCr"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="k4R-wu-O0W" secondAttribute="trailing" constant="16" id="ngT-wO-YI3"/>
+                            <constraint firstItem="cJO-mP-zRo" firstAttribute="bottom" secondItem="k4R-wu-O0W" secondAttribute="bottom" constant="30" id="vCV-6A-CJX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cJO-mP-zRo"/>
                         <connections>

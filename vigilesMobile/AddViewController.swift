@@ -29,19 +29,19 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addBtn.layer.cornerRadius = 15
-        self.addBtn.layer.borderWidth = 1
         self.addBtn.layer.borderColor = UIColor.white.cgColor
+        self.addBtn.layer.borderWidth = 1
+        self.addBtn.layer.cornerRadius = 15
         self.addBtn.clipsToBounds = true
-        self.mediaBtn.layer.cornerRadius = 15
         self.address.layer.cornerRadius = 15
-        self.name.layer.cornerRadius = 15
-        self.emergencyDescription.layer.cornerRadius = 15
-        self.tag.layer.cornerRadius = 15
         self.address.delegate = self
-        self.name.delegate = self
         self.emergencyDescription.delegate = self
+        self.emergencyDescription.layer.cornerRadius = 15
         self.locationManager.delegate = self
+        self.mediaBtn.layer.cornerRadius = 15
+        self.name.delegate = self
+        self.name.layer.cornerRadius = 15
+        self.tag.layer.cornerRadius = 15
 //        copyEmgTitle = copiedEmgTitle.emergencyTitle
 //        copyChipOptions = copiedChipOptions.chipoptions
 //        copyDrinkOptions = copiedDrinkOptions.drinkoptions

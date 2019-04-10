@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var infoView: UIView!
     let locationManager = CLLocationManager()
-    let regionRadius: CLLocationDistance = 20
+    let regionRadius: CLLocationDistance = 1000
     let annotation = MKPointAnnotation()
     let ied = MKPointAnnotation()
     
