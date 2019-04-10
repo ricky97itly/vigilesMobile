@@ -53,24 +53,26 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ew-lA-D5u">
-                                <rect key="frame" x="9" y="670" width="358" height="171"/>
+                                <rect key="frame" x="9" y="645" width="358" height="196"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LA-2W-nYl">
+                                        <rect key="frame" x="317" y="8" width="33" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="33" id="XOq-fh-trA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="close"/>
+                                        <connections>
+                                            <action selector="dismissView:" destination="al6-vH-7u9" eventType="touchUpInside" id="ojI-uv-tVO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="171" id="7fF-he-por"/>
+                                    <constraint firstItem="2LA-2W-nYl" firstAttribute="top" secondItem="5Ew-lA-D5u" secondAttribute="topMargin" id="73o-rP-jRM"/>
+                                    <constraint firstAttribute="height" constant="196" id="7fF-he-por"/>
+                                    <constraint firstItem="2LA-2W-nYl" firstAttribute="trailing" secondItem="5Ew-lA-D5u" secondAttribute="trailingMargin" id="HzR-b1-qPm"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6o-2H-7KO">
-                                <rect key="frame" x="164" y="139" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="onPressed:" destination="al6-vH-7u9" eventType="touchUpInside" id="TN5-Lq-mub"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LA-2W-nYl">
-                                <rect key="frame" x="316" y="632" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,15 +85,12 @@
                             <constraint firstItem="cgN-e9-AdT" firstAttribute="trailing" secondItem="Z2t-b0-lUu" secondAttribute="trailing" id="FQm-g9-AFD"/>
                             <constraint firstAttribute="trailing" secondItem="Z2t-b0-lUu" secondAttribute="trailing" id="GEB-m7-noe"/>
                             <constraint firstItem="LOt-bv-v7e" firstAttribute="bottom" secondItem="Wif-Se-XfL" secondAttribute="bottom" constant="293" id="RKK-P2-VGm"/>
-                            <constraint firstItem="2LA-2W-nYl" firstAttribute="leading" secondItem="LOt-bv-v7e" secondAttribute="leading" constant="316" id="Swg-OC-loO"/>
                             <constraint firstItem="Wif-Se-XfL" firstAttribute="leading" secondItem="LOt-bv-v7e" secondAttribute="leading" constant="164" id="Wyh-kV-OdU"/>
                             <constraint firstItem="cgN-e9-AdT" firstAttribute="leading" secondItem="Z2t-b0-lUu" secondAttribute="leading" id="bDP-FI-C5l"/>
                             <constraint firstItem="cgN-e9-AdT" firstAttribute="top" secondItem="UWw-12-UHa" secondAttribute="topMargin" constant="-1" id="e3Z-cs-fYU"/>
                             <constraint firstItem="Z2t-b0-lUu" firstAttribute="top" secondItem="LOt-bv-v7e" secondAttribute="top" constant="38" id="fFV-B8-Few"/>
                             <constraint firstItem="LOt-bv-v7e" firstAttribute="trailing" secondItem="Zj0-Mu-yHW" secondAttribute="trailing" constant="22" id="kwT-BN-iEv"/>
                             <constraint firstItem="LOt-bv-v7e" firstAttribute="bottom" secondItem="Zj0-Mu-yHW" secondAttribute="bottom" constant="33" id="mGB-vs-cTV"/>
-                            <constraint firstItem="LOt-bv-v7e" firstAttribute="trailing" secondItem="2LA-2W-nYl" secondAttribute="trailing" constant="13" id="p96-TQ-ZPQ"/>
-                            <constraint firstItem="5Ew-lA-D5u" firstAttribute="top" secondItem="2LA-2W-nYl" secondAttribute="bottom" constant="8" id="q7D-a0-ys6"/>
                             <constraint firstItem="LOt-bv-v7e" firstAttribute="bottom" secondItem="5Ew-lA-D5u" secondAttribute="bottom" constant="-200" id="vJs-lD-jSV"/>
                             <constraint firstItem="Z2t-b0-lUu" firstAttribute="leading" secondItem="UWw-12-UHa" secondAttribute="leading" id="ykY-d4-OF0"/>
                             <constraint firstItem="LOt-bv-v7e" firstAttribute="trailing" secondItem="Wif-Se-XfL" secondAttribute="trailing" constant="171" id="yxV-Qx-fVf"/>
@@ -100,6 +99,17 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="01z-VF-M4H"/>
                     <navigationItem key="navigationItem" title="Home" id="JSC-wR-KHf">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="mIl-KV-Y0t">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o36-WK-B8d">
+                                <rect key="frame" x="16" y="8" width="33" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="info"/>
+                                <connections>
+                                    <action selector="onPressed:" destination="al6-vH-7u9" eventType="touchUpInside" id="H1k-C1-KyH"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="D6o-0X-aSL">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bbo-zP-8O7">
                                 <rect key="frame" x="327" y="7" width="32" height="30"/>
@@ -258,8 +268,10 @@
         <image name="Pin" width="26" height="26"/>
         <image name="back" width="526" height="994"/>
         <image name="chat" width="26" height="26"/>
+        <image name="close" width="28" height="28"/>
         <image name="currentPosition" width="52" height="52"/>
         <image name="home" width="26" height="24"/>
+        <image name="info" width="27" height="28"/>
         <namedColor name="vigilesRed">
             <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

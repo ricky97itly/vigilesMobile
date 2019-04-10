@@ -45,6 +45,16 @@ class HomeViewController: UIViewController {
     
     @IBAction func onPressed(_ sender: Any) {
         bottomConstraint.constant = 10
+        UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+    }
+    
+    @IBAction func dismissView(_ sender: Any) {
+        bottomConstraint.constant = -200
+        UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
     }
     
     func setupLocationManager() {
