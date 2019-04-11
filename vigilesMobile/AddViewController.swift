@@ -98,9 +98,9 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
                         let pm = placemarks![0]
                         let streetNumber = pm.subThoroughfare ?? ""
                         let streetName = pm.thoroughfare ?? ""
-                        let locality =  pm.locality ?? ""
-                        self.address.text = "\(streetName) \(streetNumber) \(locality)"
-                        print(streetName, streetNumber, locality)
+//                        let locality =  pm.locality ?? ""
+                        self.address.text = "\(streetName) \(streetNumber)"
+                        print(streetName, streetNumber)
                         manager.stopUpdatingLocation()
                     }
                 }
