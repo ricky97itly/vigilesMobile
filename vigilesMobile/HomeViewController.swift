@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var infoImg: UIImageView!
     let locationManager = CLLocationManager()
+//    Zoom iniziale su posizione utente
     let regionRadius: CLLocationDistance = 1000
     let annotation = MKPointAnnotation()
     let ied = MKPointAnnotation()
@@ -29,6 +30,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
+//        Creazione marker
         ied.title = "IED"
         ied.subtitle = "Dove studiamo"
         ied.coordinate = CLLocationCoordinate2D(latitude: 45.461035, longitude: 9.210483)
@@ -59,6 +61,7 @@ class HomeViewController: UIViewController {
         }, completion: nil)
     }
     
+//    Per migliore localizzazione
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -83,17 +86,22 @@ class HomeViewController: UIViewController {
         }
     }
     
+//    Switch per controllare ogni singolo caso di autorizzazione localizzazione
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
+//            Solo se mentre app è in uso
         case .authorizedWhenInUse:
             startTackingUserLocation()
+//            Rifiutato
         case .denied:
             let alert = UIAlertController(title: "Attenzione", message: "Devi consentire a Vigiles di seguire la tua posizione.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             break
+//            Non presente una scelta
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
+//            Se controllo parentale attivo
         case .restricted:
             let alert = UIAlertController(title: "Attenzione", message: "Potrebbe essere attivo il controllo parentale, disabilitalo per avere accesso alle funzioni di Vigiles", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
