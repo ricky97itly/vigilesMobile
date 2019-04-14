@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aggiungi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWU-rl-8H8">
-                                <rect key="frame" x="135" y="45" width="105" height="30"/>
+                                <rect key="frame" x="135" y="44" width="105" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -154,7 +154,7 @@
                             <constraint firstItem="Re5-aW-loP" firstAttribute="top" secondItem="sVa-Vf-IIx" secondAttribute="top" constant="72" id="7Ro-JB-Xkl"/>
                             <constraint firstItem="vWU-rl-8H8" firstAttribute="centerX" secondItem="JJJ-ar-pfL" secondAttribute="centerX" id="A7T-lY-F1c"/>
                             <constraint firstItem="tQk-bR-hAP" firstAttribute="top" secondItem="Re5-aW-loP" secondAttribute="bottom" constant="18" id="Boq-Iy-Izm"/>
-                            <constraint firstItem="vWU-rl-8H8" firstAttribute="top" secondItem="sVa-Vf-IIx" secondAttribute="top" constant="1" id="CRs-MD-10O"/>
+                            <constraint firstItem="vWU-rl-8H8" firstAttribute="top" secondItem="sVa-Vf-IIx" secondAttribute="top" id="CRs-MD-10O"/>
                             <constraint firstItem="pDL-5B-fjQ" firstAttribute="top" secondItem="ROH-ab-pJN" secondAttribute="bottom" constant="18" id="Cwz-i2-qD9"/>
                             <constraint firstItem="MCs-4b-8w5" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="DYB-Bz-6pt"/>
                             <constraint firstItem="42K-W8-U6F" firstAttribute="top" secondItem="YWF-um-eZ9" secondAttribute="bottom" constant="15" id="DtT-E3-ix4"/>
