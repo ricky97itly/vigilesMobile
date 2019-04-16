@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var numberOfSegnalations: UILabel!
     @IBOutlet weak var logoutBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        profilePic.layer.borderWidth = 1
@@ -26,9 +27,14 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func logoutBtn(_ sender: UIButton) {
+//        performSegue(withIdentifier: "Main.storyboard", sender: self)
     }
     
+        
+    }
+
 
     /*
     // MARK: - Navigation
@@ -40,4 +46,3 @@ class ProfileViewController: UIViewController {
     }
     */
 
-}

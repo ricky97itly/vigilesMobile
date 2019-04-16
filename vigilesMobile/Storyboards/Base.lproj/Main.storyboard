@@ -85,6 +85,55 @@
             </objects>
             <point key="canvasLocation" x="-1078" y="200"/>
         </scene>
+        <!--Forgotten Password Controller-->
+        <scene sceneID="HxI-ng-76G">
+            <objects>
+                <viewController id="46b-yp-spc" customClass="ForgottenPasswordController" customModule="vigilesMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Tk-hW-xCW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bwl-qJ-kf9">
+                                <rect key="frame" x="48.666666666666657" y="364" width="278" height="30"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="278" id="DwG-WX-QAa"/>
+                                </constraints>
+                                <color key="textColor" red="0.93722015619999999" green="0.91336667540000005" blue="0.93333619830000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgb-oM-G7J">
+                                <rect key="frame" x="135.66666666666666" y="434" width="104" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="OJf-r3-jq8"/>
+                                </constraints>
+                                <state key="normal" title="Invia email">
+                                    <color key="titleColor" red="0.93722015619999999" green="0.91336667540000005" blue="0.93333619830000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1uB-ca-aHy" kind="show" id="lnm-jl-kpd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="vigilesRed"/>
+                        <constraints>
+                            <constraint firstItem="Bwl-qJ-kf9" firstAttribute="top" secondItem="DUc-5R-2sc" secondAttribute="top" constant="320" id="ESt-Iy-GwA"/>
+                            <constraint firstItem="Dgb-oM-G7J" firstAttribute="top" secondItem="Bwl-qJ-kf9" secondAttribute="bottom" constant="40" id="NWP-BW-1Zt"/>
+                            <constraint firstItem="Bwl-qJ-kf9" firstAttribute="centerX" secondItem="5Tk-hW-xCW" secondAttribute="centerX" id="Wtq-3A-nFB"/>
+                            <constraint firstItem="Dgb-oM-G7J" firstAttribute="centerX" secondItem="5Tk-hW-xCW" secondAttribute="centerX" id="csM-qE-tF3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DUc-5R-2sc"/>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="Bwl-qJ-kf9" id="VMU-9y-fEe"/>
+                        <outlet property="sendBtn" destination="Dgb-oM-G7J" id="kMr-wJ-anc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAK-WR-4iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1431.2" y="489.90147783251234"/>
+        </scene>
         <!--LoginView Controller-->
         <scene sceneID="Yy8-0d-LN8">
             <objects>
@@ -94,7 +143,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f5z-k6-pfd" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="48" y="348" width="279" height="30"/>
+                                <rect key="frame" x="48" y="318" width="279" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -105,7 +154,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCr-Ud-rQO" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="48" y="398" width="279" height="30"/>
+                                <rect key="frame" x="48" y="368" width="279" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -116,7 +165,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="name"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n06-UG-0PQ" userLabel="Register">
-                                <rect key="frame" x="52.666666666666657" y="560" width="270" height="30"/>
+                                <rect key="frame" x="52.666666666666657" y="530" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="J7F-hw-Iik"/>
                                 </constraints>
@@ -128,7 +177,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VigilesLogoWhite" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D44-AD-obh">
-                                <rect key="frame" x="52.666666666666657" y="134" width="270" height="124"/>
+                                <rect key="frame" x="52.666666666666657" y="104" width="270" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="hiS-c7-Arv"/>
                                     <constraint firstAttribute="height" constant="124" id="j6Q-tP-ArZ"/>
@@ -136,7 +185,7 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pac-NC-QnM">
-                                <rect key="frame" x="118" y="468" width="139" height="22"/>
+                                <rect key="frame" x="118" y="438" width="139" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resta collegato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-R8-9zf">
                                         <rect key="frame" x="33" y="0.0" width="106" height="22"/>
@@ -165,7 +214,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKf-xf-FsO" userLabel="Enter Btn">
-                                <rect key="frame" x="145" y="630" width="85" height="30"/>
+                                <rect key="frame" x="145" y="600" width="85" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="85" id="cTC-JD-REK"/>
@@ -178,18 +227,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux8-iI-6BZ">
-                                <rect key="frame" x="80" y="510" width="215" height="30"/>
+                                <rect key="frame" x="80" y="480" width="215" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="215" id="UzL-pd-NMT"/>
                                 </constraints>
                                 <state key="normal" title="Password dimenticata?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="46b-yp-spc" kind="show" id="Zno-oq-dg0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <constraints>
-                            <constraint firstItem="D44-AD-obh" firstAttribute="top" secondItem="uf1-5g-6Il" secondAttribute="top" constant="90" id="BzR-xd-lDE"/>
+                            <constraint firstItem="D44-AD-obh" firstAttribute="top" secondItem="uf1-5g-6Il" secondAttribute="top" constant="60" id="BzR-xd-lDE"/>
                             <constraint firstItem="f5z-k6-pfd" firstAttribute="centerX" secondItem="Qy4-5G-gKy" secondAttribute="centerX" id="Cre-rE-pF0"/>
                             <constraint firstItem="ux8-iI-6BZ" firstAttribute="centerX" secondItem="Qy4-5G-gKy" secondAttribute="centerX" id="N1w-Bj-AGn"/>
                             <constraint firstItem="f5z-k6-pfd" firstAttribute="top" secondItem="D44-AD-obh" secondAttribute="bottom" constant="90" id="NFu-eW-jhV"/>
@@ -294,7 +346,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="address-line1"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-fS-V4O" userLabel="Register Btn">
-                                <rect key="frame" x="136" y="624" width="104" height="30"/>
+                                <rect key="frame" x="135.66666666666666" y="624" width="104" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="aNQ-NO-0Jx"/>
