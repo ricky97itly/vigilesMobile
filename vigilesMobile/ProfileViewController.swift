@@ -19,6 +19,10 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.logoutBtn.layer.cornerRadius = 15
+        self.logoutBtn.layer.borderWidth = 2.5
+        self.logoutBtn.layer.borderColor = UIColor.white.cgColor
+        self.logoutBtn.clipsToBounds = true
 //        profilePic.layer.borderWidth = 1
         profilePic.layer.masksToBounds = false
         profilePic.layer.borderColor = UIColor.black.cgColor

@@ -24,7 +24,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.registerBtn.layer.borderWidth = 1
         self.registerBtn.layer.borderColor = UIColor.white.cgColor
         self.registerBtn.clipsToBounds = true
-        self.registerBtn.layer.cornerRadius = 15
         self.name.layer.borderWidth = 1
         self.name.layer.cornerRadius = 15
         self.name.layer.borderColor = UIColor.white.cgColor

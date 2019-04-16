@@ -21,7 +21,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.enterBtn.layer.borderWidth = 2.5
         self.enterBtn.layer.borderColor = UIColor.white.cgColor
         self.enterBtn.clipsToBounds = true
-        self.enterBtn.layer.cornerRadius = 15
         self.email.layer.borderWidth = 2
         self.email.layer.cornerRadius = 15
         self.email.layer.borderColor = UIColor.white.cgColor
