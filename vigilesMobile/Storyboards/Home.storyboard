@@ -46,6 +46,8 @@
                                 <rect key="frame" x="325" y="582" width="28" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Zj0-Mu-yHW" secondAttribute="height" multiplier="14:13" id="AqK-B0-nL2"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="crL-YX-rac"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="uXH-Cb-vJx"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="currentPosition"/>
                                 <connections>
@@ -312,6 +314,7 @@
                         <color key="backgroundColor" name="vigilesRed"/>
                         <constraints>
                             <constraint firstItem="pqS-dd-l5U" firstAttribute="top" secondItem="m4z-Lt-L1P" secondAttribute="bottom" constant="26" id="0oa-gF-Dg6"/>
+                            <constraint firstItem="pqS-dd-l5U" firstAttribute="centerX" secondItem="e4f-OY-Ic2" secondAttribute="centerX" id="3mC-De-ZJf"/>
                             <constraint firstItem="m4z-Lt-L1P" firstAttribute="leading" secondItem="e4f-OY-Ic2" secondAttribute="leadingMargin" id="5g8-uz-6tx"/>
                             <constraint firstItem="pqS-dd-l5U" firstAttribute="trailing" secondItem="e4f-OY-Ic2" secondAttribute="trailingMargin" id="9kW-IH-9cK"/>
                             <constraint firstAttribute="bottomMargin" secondItem="pqS-dd-l5U" secondAttribute="bottom" id="S3k-Dy-I3Q"/>

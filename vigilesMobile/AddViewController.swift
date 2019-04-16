@@ -13,18 +13,18 @@ import AddressBookUI
 import Photos
 import UserNotifications
 
-class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate {
+class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate, UITextViewDelegate {
 
-    @IBOutlet weak var name: UITextField!
     @IBOutlet weak var address: UITextField!
-    @IBOutlet weak var emergencyDescription: UITextField!
+    @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var emergencyDescription: UITextView!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelAddress: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
-    @IBOutlet weak var addBtn: UIButton!
-    @IBOutlet weak var mediaBtn: UIButton!
-    @IBOutlet weak var tag: UITextField!
     @IBOutlet weak var locationBtn: UIButton!
+    @IBOutlet weak var mediaBtn: UIButton!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var tag: UITextField!
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -89,7 +89,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
             geocoder.reverseGeocodeLocation(locat!, completionHandler: {
                 (placemarks, error) in
                 if (error != nil) {
-                    print("SEI STRONZO PERCHÉ NON VAI")
+                    print("PERCHÉ NON VAI")
                 }
                 else {
                     let pm = placemarks! as [CLPlacemark]

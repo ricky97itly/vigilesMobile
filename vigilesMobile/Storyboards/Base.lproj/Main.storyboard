@@ -272,7 +272,7 @@
         <scene sceneID="Cpm-0o-6JU">
             <objects>
                 <viewController id="YA2-kc-dk7" userLabel="RegisterView Controller" customClass="RegisterViewController" customModule="vigilesMobile" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Y4h-4I-81Z">
+                    <view key="view" contentMode="scaleToFill" id="Y4h-4I-81Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -360,7 +360,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="VigilesLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="43d-Na-yJz">
-                                <rect key="frame" x="87.000000000000028" y="144" width="201.99999999999997" height="130"/>
+                                <rect key="frame" x="87" y="144" width="202" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="lBj-7u-Nqf"/>
                                     <constraint firstAttribute="width" constant="202" id="yIg-AR-Fgn"/>
@@ -419,6 +419,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SXW-0g-Ywx"/>
+        <segue reference="esF-7f-SES"/>
     </inferredMetricsTieBreakers>
 </document>
