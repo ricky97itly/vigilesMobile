@@ -85,6 +85,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logoutBtn:" destination="fuX-IA-k5O" eventType="touchUpInside" id="Af3-2w-fk6"/>
+                                    <segue destination="jVi-qT-c2m" kind="show" id="pJ3-Ql-0uN"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afY-mF-unw">
@@ -140,6 +141,14 @@
                 <swipeGestureRecognizer direction="right" id="xcd-K5-OwO"/>
             </objects>
             <point key="canvasLocation" x="-10.4" y="1250.2463054187192"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="0UN-za-k23">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="LoginViewController" id="jVi-qT-c2m" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQI-96-HMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="615" y="1326"/>
         </scene>
     </scenes>
     <resources>
