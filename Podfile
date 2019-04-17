@@ -7,6 +7,7 @@ target 'vigilesMobile' do
 
   # Pods for vigilesMobile
 
+pod 'Alamofire', '~> 4.0'
 pod 'GooglePlaces'
 pod 'GooglePlacePicker'
 pod 'GoogleMaps'
@@ -23,3 +24,4 @@ pod 'Alamofire', '~> 4.7'
   end
 
 end
+

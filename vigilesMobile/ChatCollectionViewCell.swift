@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ChatCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var chatTitle: UILabel!

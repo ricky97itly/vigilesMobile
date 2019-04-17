@@ -12,6 +12,7 @@ import CoreLocation
 import AddressBookUI
 import Photos
 import UserNotifications
+import Alamofire
 
 class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate, UITextViewDelegate {
 

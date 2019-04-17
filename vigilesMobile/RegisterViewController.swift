@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var name: UITextField!
