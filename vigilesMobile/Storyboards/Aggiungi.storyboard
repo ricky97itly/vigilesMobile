@@ -109,7 +109,7 @@
                                     <constraint firstAttribute="width" constant="343" id="ySt-aK-ptL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="location"/>
                             </textView>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CpK-Vz-3Eq" userLabel="MediaView">
                                 <rect key="frame" x="16" y="525" width="60" height="24"/>
