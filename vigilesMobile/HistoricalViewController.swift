@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import Alamofire
 // Array globale, si può richiamare ovunque :-) 
 
 var testTitle = [String]()
@@ -20,15 +21,23 @@ class HistoricalViewController: UIViewController {
     @IBOutlet weak var yesterdayCollectionView: UICollectionView!
     var testImg = [UIImage(named: "infantes"), UIImage(named: "tony"), UIImage(named: "solcia")]
     var testCode = [UIImage(named: "infantes"), UIImage(named: "tony"), UIImage(named: "solcia")]
+    let url = URL(string: "http://vigilesweb.test/api/reports")!
     
     var testId = ["000001", "000002", "000003"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         todayTableView.separatorColor = UIColor(white: 1, alpha: 1)
+        
+            Alamofire.request(url).responseJSON {
+                response in
+                print(response.value!)
+            }
 //        todayTableView.backgroundColor = UIColo
         // Do any additional setup after loading the view.
     }
+    
+    
 
 }
     extension HistoricalViewController: UICollectionViewDataSource, UICollectionViewDelegate {
