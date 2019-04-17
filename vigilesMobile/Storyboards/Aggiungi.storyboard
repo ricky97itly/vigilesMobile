@@ -57,7 +57,7 @@
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MCs-4b-8w5" userLabel="AddressView">
                                 <rect key="frame" x="16" y="218" width="100" height="23"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Indirizzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-18-XWP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indirizzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-18-XWP">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="23"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -85,7 +85,7 @@
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROH-ab-pJN" userLabel="DescriptionView">
                                 <rect key="frame" x="16" y="321" width="120" height="24"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Descrizione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVU-hg-dYx">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrizione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVU-hg-dYx">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -93,11 +93,11 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="lVU-hg-dYx" secondAttribute="trailing" id="HWN-bD-dd5"/>
+                                    <constraint firstItem="lVU-hg-dYx" firstAttribute="top" secondItem="ROH-ab-pJN" secondAttribute="top" id="Ebk-FQ-N5i"/>
+                                    <constraint firstAttribute="trailing" secondItem="lVU-hg-dYx" secondAttribute="trailing" id="Jic-0g-CUh"/>
                                     <constraint firstAttribute="width" constant="120" id="aeP-2o-Ab3"/>
-                                    <constraint firstAttribute="bottom" secondItem="lVU-hg-dYx" secondAttribute="bottom" id="lcl-2n-JKj"/>
-                                    <constraint firstItem="lVU-hg-dYx" firstAttribute="top" secondItem="ROH-ab-pJN" secondAttribute="top" id="m5G-7g-gJr"/>
-                                    <constraint firstItem="lVU-hg-dYx" firstAttribute="leading" secondItem="ROH-ab-pJN" secondAttribute="leading" id="yY9-F0-m6C"/>
+                                    <constraint firstAttribute="bottom" secondItem="lVU-hg-dYx" secondAttribute="bottom" id="ffk-j5-KCz"/>
+                                    <constraint firstItem="lVU-hg-dYx" firstAttribute="leading" secondItem="ROH-ab-pJN" secondAttribute="leading" id="gP4-AJ-ARx"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Os3-6J-pNS">
@@ -109,7 +109,7 @@
                                     <constraint firstAttribute="width" constant="343" id="ySt-aK-ptL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="location"/>
                             </textView>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CpK-Vz-3Eq" userLabel="MediaView">
                                 <rect key="frame" x="16" y="525" width="60" height="24"/>
@@ -202,6 +202,8 @@
                             <constraint firstItem="MCs-4b-8w5" firstAttribute="top" relation="lessThanOrEqual" secondItem="tQk-bR-hAP" secondAttribute="bottom" constant="30" id="DNK-rB-h32"/>
                             <constraint firstItem="MCs-4b-8w5" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="EkZ-8P-KUO"/>
                             <constraint firstItem="tQk-bR-hAP" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="Hj2-Ix-cm0"/>
+                            <constraint firstItem="42K-W8-U6F" firstAttribute="top" secondItem="CpK-Vz-3Eq" secondAttribute="bottom" constant="20" id="LwS-c6-ISg"/>
+                            <constraint firstItem="Os3-6J-pNS" firstAttribute="top" secondItem="A7c-g3-5Pz" secondAttribute="bottom" constant="76" id="NGa-mt-EwP"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="oBk-X7-4If" secondAttribute="bottom" constant="50" id="NPG-tX-35H"/>
                             <constraint firstItem="ROH-ab-pJN" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="NkQ-dD-0qJ"/>
                             <constraint firstItem="oBk-X7-4If" firstAttribute="top" relation="lessThanOrEqual" secondItem="EcU-ee-IL8" secondAttribute="bottom" constant="50" id="O2L-Qm-9Ym"/>

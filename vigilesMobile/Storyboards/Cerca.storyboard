@@ -50,7 +50,7 @@
                                 <rect key="frame" x="16" y="203" width="343" height="509"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="k4R-wu-O0W" secondAttribute="height" multiplier="343:509" constant="10" id="J3A-AA-Qa0"/>
+                                    <constraint firstAttribute="width" secondItem="k4R-wu-O0W" secondAttribute="height" multiplier="343:509" id="J3A-AA-Qa0"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cella" rowHeight="82" id="MUA-29-vTb" customClass="SearchTableViewCell" customModule="vigilesMobile" customModuleProvider="target">
@@ -67,7 +67,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indirizzo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkZ-68-Wdo">
-                                                    <rect key="frame" x="136.66666666666663" y="11.000000000000002" width="191.33333333333337" height="29.666666666666671"/>
+                                                    <rect key="frame" x="136" y="11.000000000000002" width="192" height="29.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="mkZ-68-Wdo" secondAttribute="height" multiplier="41:7" constant="18.000000000000014" id="klq-v6-Prc"/>
                                                     </constraints>
@@ -84,10 +84,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCv-GY-KBs">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCv-GY-KBs">
                                                     <rect key="frame" x="44" y="11" width="73" height="14"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="LCv-GY-KBs" secondAttribute="height" multiplier="15:7" constant="63" id="5jc-Ff-ZNI"/>
+                                                        <constraint firstAttribute="width" secondItem="LCv-GY-KBs" secondAttribute="height" multiplier="15:7" constant="43" id="5jc-Ff-ZNI"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -104,7 +104,7 @@
                                                 <constraint firstItem="wZf-yA-5Sx" firstAttribute="bottom" secondItem="rOt-cp-Nva" secondAttribute="bottomMargin" id="cfN-Lb-WjF"/>
                                                 <constraint firstItem="FZE-t8-ZDB" firstAttribute="leading" secondItem="rOt-cp-Nva" secondAttribute="leadingMargin" id="dEA-Oe-w9J"/>
                                                 <constraint firstItem="LCv-GY-KBs" firstAttribute="top" secondItem="rOt-cp-Nva" secondAttribute="topMargin" id="e9V-UL-lHW"/>
-                                                <constraint firstItem="wZf-yA-5Sx" firstAttribute="top" secondItem="LCv-GY-KBs" secondAttribute="bottom" constant="17" id="o4P-Sa-35Y"/>
+                                                <constraint firstItem="wZf-yA-5Sx" firstAttribute="top" secondItem="LCv-GY-KBs" secondAttribute="bottom" constant="8" id="o4P-Sa-35Y"/>
                                                 <constraint firstItem="wZf-yA-5Sx" firstAttribute="leading" secondItem="LCv-GY-KBs" secondAttribute="leading" id="zGi-Ia-AAT"/>
                                                 <constraint firstItem="mkZ-68-Wdo" firstAttribute="top" secondItem="rOt-cp-Nva" secondAttribute="topMargin" id="zhS-fs-1F6"/>
                                             </constraints>
@@ -140,7 +140,7 @@
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="4tg-Ii-CcF" secondAttribute="trailing" constant="16" id="gDs-bL-yJ4"/>
                             <constraint firstItem="4tg-Ii-CcF" firstAttribute="centerX" secondItem="8v5-ZZ-9lY" secondAttribute="centerX" id="lgX-Fp-GCr"/>
                             <constraint firstItem="cJO-mP-zRo" firstAttribute="trailing" secondItem="k4R-wu-O0W" secondAttribute="trailing" constant="16" id="ngT-wO-YI3"/>
-                            <constraint firstItem="cJO-mP-zRo" firstAttribute="bottom" secondItem="k4R-wu-O0W" secondAttribute="bottom" constant="30" id="vCV-6A-CJX"/>
+                            <constraint firstItem="cJO-mP-zRo" firstAttribute="bottom" secondItem="k4R-wu-O0W" secondAttribute="bottom" constant="17" id="vCV-6A-CJX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cJO-mP-zRo"/>
                         <connections>

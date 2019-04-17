@@ -53,6 +53,7 @@
 		56FD53F52243133A006C9533 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FD53F42243133A006C9533 /* LoginViewController.swift */; };
 		BE3B4FF6A1412A6CD4595E5D /* Pods_vigilesMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2FA954C38D63C577560DB /* Pods_vigilesMobileTests.framework */; };
 		C8D492E4EC223C50C0615350 /* Pods_vigilesMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B16419C71430A4682DD227 /* Pods_vigilesMobileUITests.framework */; };
+		DFA69E142FD2A56D8BEB8D7F /* Pods_vigilesMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA69E142FD2A56D8BEB8D7F /* Pods_vigilesMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +348,7 @@
 				2161CD7B222FF7F2001ABD2E /* Frameworks */,
 				2161CD7C222FF7F2001ABD2E /* Resources */,
 				74DFA94B232E3AC3E1AAC199 /* [CP] Copy Pods Resources */,
+				9DB3333A4D5F2DE56F445D9E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -498,6 +501,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DB3333A4D5F2DE56F445D9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A508361FA124952096C461CC /* [CP] Check Pods Manifest.lock */ = {
