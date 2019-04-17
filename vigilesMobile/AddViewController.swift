@@ -36,7 +36,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         self.addBtn.clipsToBounds = true
         self.address.delegate = self
         self.emergencyDescription.delegate = self
-        self.emergencyDescription.layer.cornerRadius = 10
+        self.emergencyDescription.layer.cornerRadius = 15
         self.locationManager.delegate = self
         self.mediaBtn.layer.cornerRadius = 15
         self.name.delegate = self

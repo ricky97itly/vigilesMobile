@@ -11,7 +11,6 @@ pod 'Alamofire', '~> 4.0'
 pod 'GooglePlaces'
 pod 'GooglePlacePicker'
 pod 'GoogleMaps'
-pod 'Alamofire', '~> 4.7'
 
   target 'vigilesMobileTests' do
     inherit! :search_paths
