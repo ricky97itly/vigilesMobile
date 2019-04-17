@@ -51,6 +51,7 @@
 		56ACCF36224D16FE003F0063 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ACCF35224D16FE003F0063 /* ChatViewController.swift */; };
 		56CB473B22563A8B00311D28 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */; };
 		56FD53F52243133A006C9533 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FD53F42243133A006C9533 /* LoginViewController.swift */; };
+		78902E446F64E823495B5911 /* Pods_vigilesMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */; };
 		BE3B4FF6A1412A6CD4595E5D /* Pods_vigilesMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2FA954C38D63C577560DB /* Pods_vigilesMobileTests.framework */; };
 		C8D492E4EC223C50C0615350 /* Pods_vigilesMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B16419C71430A4682DD227 /* Pods_vigilesMobileUITests.framework */; };
 /* End PBXBuildFile section */
@@ -141,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78902E446F64E823495B5911 /* Pods_vigilesMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +348,7 @@
 				2161CD7B222FF7F2001ABD2E /* Frameworks */,
 				2161CD7C222FF7F2001ABD2E /* Resources */,
 				74DFA94B232E3AC3E1AAC199 /* [CP] Copy Pods Resources */,
+				B6BFCFD100F19DF6FEA4F99E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -520,6 +523,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6BFCFD100F19DF6FEA4F99E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BC9E2DC85D08ADAAF71C232D /* [CP] Check Pods Manifest.lock */ = {

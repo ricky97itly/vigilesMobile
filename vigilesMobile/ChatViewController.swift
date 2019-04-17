@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class ChatViewController: UIViewController {    
     @IBOutlet weak var chatCV: UICollectionView!

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class HistoricalTableViewCell: UITableViewCell {
     @IBOutlet weak var codeImg: UIImageView!

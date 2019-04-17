@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreLocation
-import Alamofire
 // Array globale, si può richiamare ovunque :-) 
 
 var testTitle = [String]()

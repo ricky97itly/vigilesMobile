@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 var titleSearch = ["boh"]
 var addressSearch = ["Prova"]
