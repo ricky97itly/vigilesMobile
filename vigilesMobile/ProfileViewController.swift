@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProfileViewController: UIViewController {
 
@@ -14,8 +15,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var chatBtn: UIButton!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var mail: UILabel!
     @IBOutlet weak var numberOfSegnalations: UILabel!
     @IBOutlet weak var logoutBtn: UIButton!
+    let url = URL(string: "http://vigilesweb.test/api/users")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,10 @@ class ProfileViewController: UIViewController {
         profilePic.layer.borderColor = UIColor.black.cgColor
         profilePic.layer.cornerRadius = profilePic.frame.height/2.1
         profilePic.clipsToBounds = true
+        Alamofire.request(url).responseJSON {
+            response in
+            print(response.value!)
+        }
 
         // Do any additional setup after loading the view.
     }
