@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -14,6 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var enterBtn: UIButton!
     @IBOutlet weak var registerBtn: UIButton!
+    let url = URL(string: "http://vigilesweb.test/api/users")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.password.layer.cornerRadius = 15
         self.password.layer.borderWidth = 2
         self.password.layer.borderColor = UIColor.white.cgColor
+        Alamofire.request(url).responseJSON {
+            response in
+            print(response.value!)
+        }
         // Do any additional setup after loading the view.
     }
     
