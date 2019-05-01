@@ -33,6 +33,7 @@
 		2161CD8F222FF7F3001ABD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */; };
 		2161CD9A222FF7F3001ABD2E /* vigilesMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CD99222FF7F3001ABD2E /* vigilesMobileTests.swift */; };
 		2161CDA5222FF7F3001ABD2E /* vigilesMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161CDA4222FF7F3001ABD2E /* vigilesMobileUITests.swift */; };
+		2170B4EE2279D77D003C4331 /* ReportsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2170B4ED2279D77D003C4331 /* ReportsStruct.swift */; };
 		21791B14224283960008B28C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21791B13224283960008B28C /* RegisterViewController.swift */; };
 		218BD3E62232DB080067FE59 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3E52232DB080067FE59 /* Home.storyboard */; };
 		218BD3E82232DB340067FE59 /* Cerca.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3E72232DB340067FE59 /* Cerca.storyboard */; };
@@ -45,10 +46,7 @@
 		21A818DA2233C4E800F5B1AA /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */; };
 		21A818DC2233C57800F5B1AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818DB2233C57800F5B1AA /* ProfileViewController.swift */; };
 		3AE272882265FCBE003990F2 /* ForgottenPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */; };
-		5622B7EB224A5ABC007D5CB6 /* DataCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622B7EA224A5ABC007D5CB6 /* DataCollectionViewCell.swift */; };
 		567FFFFF22773E9A00E3B4DA /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567FFFFE22773E9A00E3B4DA /* ChatTableViewCell.swift */; };
-		56ACCF32224C2833003F0063 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ACCF31224C2833003F0063 /* CollectionViewCell.swift */; };
-		56ACCF34224D16B2003F0063 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ACCF33224D16B2003F0063 /* ChatCollectionViewCell.swift */; };
 		56ACCF36224D16FE003F0063 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ACCF35224D16FE003F0063 /* ChatViewController.swift */; };
 		56CB473B22563A8B00311D28 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */; };
 		56FD53F52243133A006C9533 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FD53F42243133A006C9533 /* LoginViewController.swift */; };
@@ -76,7 +74,7 @@
 
 /* Begin PBXFileReference section */
 		2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalTableViewCell.swift; path = vigilesMobile/HistoricalTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalTableViewCell.swift; path = vigilesMobile/Historical/HistoricalTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		212FA16F2252314D00FD9917 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
 		212FA1712252314D00FD9917 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
 		212FA1722252314D00FD9917 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
@@ -109,6 +107,7 @@
 		2161CDA0222FF7F3001ABD2E /* vigilesMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vigilesMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2161CDA4222FF7F3001ABD2E /* vigilesMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vigilesMobileUITests.swift; sourceTree = "<group>"; };
 		2161CDA6222FF7F3001ABD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2170B4ED2279D77D003C4331 /* ReportsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsStruct.swift; sourceTree = "<group>"; };
 		21791B13224283960008B28C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		218BD3E52232DB080067FE59 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		218BD3E72232DB340067FE59 /* Cerca.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cerca.storyboard; sourceTree = "<group>"; };
@@ -124,11 +123,8 @@
 		3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordController.swift; sourceTree = "<group>"; };
 		3EF4D51B6C47918F9CAF49AF /* Pods-vigilesMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vigilesMobileUITests.debug.xcconfig"; path = "Target Support Files/Pods-vigilesMobileUITests/Pods-vigilesMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F83C3C4A90BA5068CB6FB9A /* Pods-vigilesMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vigilesMobile.debug.xcconfig"; path = "Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile.debug.xcconfig"; sourceTree = "<group>"; };
-		5622B7EA224A5ABC007D5CB6 /* DataCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCollectionViewCell.swift; sourceTree = "<group>"; };
 		567FFFFE22773E9A00E3B4DA /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
-		56ACCF31224C2833003F0063 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		56ACCF33224D16B2003F0063 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
-		56ACCF35224D16FE003F0063 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = vigilesMobile/ChatViewController.swift; sourceTree = SOURCE_ROOT; };
+		56ACCF35224D16FE003F0063 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = vigilesMobile/Chat/ChatViewController.swift; sourceTree = SOURCE_ROOT; };
 		56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		56FD53F42243133A006C9533 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = vigilesMobile/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		7EB2FA954C38D63C577560DB /* Pods_vigilesMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vigilesMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,22 +255,16 @@
 			children = (
 				212FA16D2252314D00FD9917 /* IQKeyboardManagerSwift */,
 				218BD3E42232DAE90067FE59 /* Storyboards */,
+				2170B4EF2279D9F1003C4331 /* Historical */,
+				2170B4F02279DA27003C4331 /* Chat */,
+				2170B4F12279DA7A003C4331 /* Search */,
 				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
 				21A818D72233C48A00F5B1AA /* AddViewController.swift */,
-				56ACCF33224D16B2003F0063 /* ChatCollectionViewCell.swift */,
-				56ACCF35224D16FE003F0063 /* ChatViewController.swift */,
-				567FFFFE22773E9A00E3B4DA /* ChatTableViewCell.swift */,
-				56ACCF31224C2833003F0063 /* CollectionViewCell.swift */,
-				5622B7EA224A5ABC007D5CB6 /* DataCollectionViewCell.swift */,
 				3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */,
-				212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */,
-				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
 				218BD3F52232E7BE0067FE59 /* HomeViewController.swift */,
 				56FD53F42243133A006C9533 /* LoginViewController.swift */,
 				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
 				21791B13224283960008B28C /* RegisterViewController.swift */,
-				56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */,
-				21A818D52233C42100F5B1AA /* SearchViewController.swift */,
 				2161CD83222FF7F2001ABD2E /* ViewController.swift */,
 				2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */,
 				2161CD90222FF7F3001ABD2E /* Info.plist */,
@@ -301,15 +291,43 @@
 			path = vigilesMobileUITests;
 			sourceTree = "<group>";
 		};
+		2170B4EF2279D9F1003C4331 /* Historical */ = {
+			isa = PBXGroup;
+			children = (
+				218BD3EB2232DB680067FE59 /* Storico.storyboard */,
+				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
+				212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */,
+				2170B4ED2279D77D003C4331 /* ReportsStruct.swift */,
+			);
+			path = Historical;
+			sourceTree = "<group>";
+		};
+		2170B4F02279DA27003C4331 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				56ACCF35224D16FE003F0063 /* ChatViewController.swift */,
+				567FFFFE22773E9A00E3B4DA /* ChatTableViewCell.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		2170B4F12279DA7A003C4331 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				218BD3E72232DB340067FE59 /* Cerca.storyboard */,
+				56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */,
+				21A818D52233C42100F5B1AA /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		218BD3E42232DAE90067FE59 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */,
 				2161CD85222FF7F2001ABD2E /* Main.storyboard */,
 				218BD3E52232DB080067FE59 /* Home.storyboard */,
-				218BD3E72232DB340067FE59 /* Cerca.storyboard */,
 				218BD3E92232DB5B0067FE59 /* Aggiungi.storyboard */,
-				218BD3EB2232DB680067FE59 /* Storico.storyboard */,
 				218BD3ED2232DB750067FE59 /* Profilo.storyboard */,
 			);
 			path = Storyboards;
@@ -538,12 +556,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -604,12 +626,11 @@
 				212FA18D2252314D00FD9917 /* IQKeyboardManagerConstants.swift in Sources */,
 				21791B14224283960008B28C /* RegisterViewController.swift in Sources */,
 				3AE272882265FCBE003990F2 /* ForgottenPasswordController.swift in Sources */,
+				2170B4EE2279D77D003C4331 /* ReportsStruct.swift in Sources */,
 				212FA18F2252314D00FD9917 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				21A818D62233C42100F5B1AA /* SearchViewController.swift in Sources */,
 				212FA1892252314D00FD9917 /* IQToolbar.swift in Sources */,
 				212FA18C2252314D00FD9917 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
-				56ACCF34224D16B2003F0063 /* ChatCollectionViewCell.swift in Sources */,
-				56ACCF32224C2833003F0063 /* CollectionViewCell.swift in Sources */,
 				212FA1862252314D00FD9917 /* IQPreviousNextView.swift in Sources */,
 				2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */,
 				212FA1852252314D00FD9917 /* IQTextView.swift in Sources */,
@@ -619,7 +640,6 @@
 				212B193D225534680067ECE4 /* HistoricalTableViewCell.swift in Sources */,
 				21A818D82233C48A00F5B1AA /* AddViewController.swift in Sources */,
 				212FA18B2252314D00FD9917 /* IQInvocation.swift in Sources */,
-				5622B7EB224A5ABC007D5CB6 /* DataCollectionViewCell.swift in Sources */,
 				212FA1942252314E00FD9917 /* IQUIView+Hierarchy.swift in Sources */,
 				2161CD84222FF7F2001ABD2E /* ViewController.swift in Sources */,
 				21A818DA2233C4E800F5B1AA /* HistoricalViewController.swift in Sources */,
