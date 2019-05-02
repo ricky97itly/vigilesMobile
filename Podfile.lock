@@ -12,6 +12,7 @@ PODS:
     - GooglePlaces (= 3.0.3)
   - GooglePlaces (3.0.3):
     - GoogleMaps/Base (= 3.0.3)
+  - Kingfisher (5.3.1)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
+  - Kingfisher (~> 5.0)
   - SwiftyJSON
 
 SPEC REPOS:
@@ -29,6 +31,7 @@ SPEC REPOS:
     - GoogleMaps
     - GooglePlacePicker
     - GooglePlaces
+    - Kingfisher
     - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -37,8 +40,9 @@ SPEC CHECKSUMS:
   GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
   GooglePlacePicker: 0c90898945f02ef36cce86fc9a107e1c5d3d26b1
   GooglePlaces: f09e76993c9c3ee4af8f4f7f535bb94d6aa3b649
+  Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: f281e5c901ae05b32e8c8fb5636ec66d22d44155
+PODFILE CHECKSUM: de66fd3284bbdb076c234c8590b8a6124d421fda
 
 COCOAPODS: 1.6.0

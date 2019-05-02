@@ -13,6 +13,7 @@ pod 'GooglePlacePicker'
 pod 'GoogleMaps'
 pod 'SwiftyJSON'
 pod 'AlamofireImage'
+pod 'Kingfisher', '~> 5.0'
 
   target 'vigilesMobileTests' do
     inherit! :search_paths

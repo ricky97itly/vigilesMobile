@@ -41,6 +41,7 @@
 		218BD3EC2232DB680067FE59 /* Storico.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3EB2232DB680067FE59 /* Storico.storyboard */; };
 		218BD3EE2232DB750067FE59 /* Profilo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218BD3ED2232DB750067FE59 /* Profilo.storyboard */; };
 		218BD3F62232E7BE0067FE59 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218BD3F52232E7BE0067FE59 /* HomeViewController.swift */; };
+		21954AE7227B466200FBA9C7 /* ReportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21954AE6227B466200FBA9C7 /* ReportsModel.swift */; };
 		21A818D62233C42100F5B1AA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D52233C42100F5B1AA /* SearchViewController.swift */; };
 		21A818D82233C48A00F5B1AA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D72233C48A00F5B1AA /* AddViewController.swift */; };
 		21A818DA2233C4E800F5B1AA /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */; };
@@ -115,6 +116,7 @@
 		218BD3EB2232DB680067FE59 /* Storico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storico.storyboard; sourceTree = "<group>"; };
 		218BD3ED2232DB750067FE59 /* Profilo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profilo.storyboard; sourceTree = "<group>"; };
 		218BD3F52232E7BE0067FE59 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		21954AE6227B466200FBA9C7 /* ReportsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsModel.swift; sourceTree = "<group>"; };
 		21A818D52233C42100F5B1AA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		21A818D72233C48A00F5B1AA /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
 				212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */,
 				2170B4ED2279D77D003C4331 /* ReportsStruct.swift */,
+				21954AE6227B466200FBA9C7 /* ReportsModel.swift */,
 			);
 			path = Historical;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -565,6 +569,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +634,7 @@
 				2170B4EE2279D77D003C4331 /* ReportsStruct.swift in Sources */,
 				212FA18F2252314D00FD9917 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				21A818D62233C42100F5B1AA /* SearchViewController.swift in Sources */,
+				21954AE7227B466200FBA9C7 /* ReportsModel.swift in Sources */,
 				212FA1892252314D00FD9917 /* IQToolbar.swift in Sources */,
 				212FA18C2252314D00FD9917 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				212FA1862252314D00FD9917 /* IQPreviousNextView.swift in Sources */,

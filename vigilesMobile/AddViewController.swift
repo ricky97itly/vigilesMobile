@@ -64,8 +64,8 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     
     @IBAction func addEmergency() {
         if (name.text != "") {
-            testTitle.append(name.text!)
-            testAddress.append(address.text!)
+//            testTitle.append(name.text!)
+//            testAddress.append(address.text!)
             name.text = ""
             address.text = ""
             print("ricevuto, capo")

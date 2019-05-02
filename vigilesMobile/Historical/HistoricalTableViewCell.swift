@@ -28,7 +28,7 @@ class HistoricalTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    //space between cells
+//    Spazio tra le celle
     override var frame: CGRect {
         get {
             return super.frame

@@ -57,22 +57,6 @@ class SearchViewController: UIViewController {
     }
 }
 
-//extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return testTitle.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cella", for: indexPath) as? DataCollectionViewCell
-//        cell?.emergencyTitle.text = testTitle[indexPath.row]
-//        cell?.codeImg.image = testImg[indexPath.row]
-//        cell?.emergencyAddress.text = testAddress[indexPath.row]
-//        cell?.emergencyDescription.text = testDescription[indexPath.row]
-//        cell?.layer.cornerRadius = 15
-//        return cell!
-//    }
-//}
-
 extension SearchViewController: UITabBarDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     func setUpSearchBar() {
