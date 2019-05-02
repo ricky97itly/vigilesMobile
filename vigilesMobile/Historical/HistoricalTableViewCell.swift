@@ -27,5 +27,18 @@ class HistoricalTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    //space between cells
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame =  newFrame
+            frame.origin.y += 10
+            frame.size.height -= 2 * 6
+            super.frame = frame
+        }
+    }
 
 }

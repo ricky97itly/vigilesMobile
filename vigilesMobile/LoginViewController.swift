@@ -29,10 +29,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.password.layer.cornerRadius = 15
         self.password.layer.borderWidth = 2
         self.password.layer.borderColor = UIColor.white.cgColor
-        Alamofire.request(url).responseJSON {
-            response in
-            print(response.value!)
-        }
+//        Alamofire.request(url).responseJSON {
+//            response in
+//            print(response.value!)
+//        }
         // Do any additional setup after loading the view.
     }
     

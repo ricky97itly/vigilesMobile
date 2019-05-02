@@ -255,8 +255,8 @@
 			children = (
 				212FA16D2252314D00FD9917 /* IQKeyboardManagerSwift */,
 				218BD3E42232DAE90067FE59 /* Storyboards */,
-				2170B4EF2279D9F1003C4331 /* Historical */,
 				2170B4F02279DA27003C4331 /* Chat */,
+				2170B4EF2279D9F1003C4331 /* Historical */,
 				2170B4F12279DA7A003C4331 /* Search */,
 				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
 				21A818D72233C48A00F5B1AA /* AddViewController.swift */,
@@ -294,7 +294,6 @@
 		2170B4EF2279D9F1003C4331 /* Historical */ = {
 			isa = PBXGroup;
 			children = (
-				218BD3EB2232DB680067FE59 /* Storico.storyboard */,
 				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
 				212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */,
 				2170B4ED2279D77D003C4331 /* ReportsStruct.swift */,
@@ -314,7 +313,6 @@
 		2170B4F12279DA7A003C4331 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				218BD3E72232DB340067FE59 /* Cerca.storyboard */,
 				56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */,
 				21A818D52233C42100F5B1AA /* SearchViewController.swift */,
 			);
@@ -324,11 +322,13 @@
 		218BD3E42232DAE90067FE59 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				218BD3E92232DB5B0067FE59 /* Aggiungi.storyboard */,
+				218BD3E72232DB340067FE59 /* Cerca.storyboard */,
+				218BD3E52232DB080067FE59 /* Home.storyboard */,
 				2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */,
 				2161CD85222FF7F2001ABD2E /* Main.storyboard */,
-				218BD3E52232DB080067FE59 /* Home.storyboard */,
-				218BD3E92232DB5B0067FE59 /* Aggiungi.storyboard */,
 				218BD3ED2232DB750067FE59 /* Profilo.storyboard */,
+				218BD3EB2232DB680067FE59 /* Storico.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";

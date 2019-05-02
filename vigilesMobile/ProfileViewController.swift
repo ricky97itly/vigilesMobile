@@ -32,10 +32,10 @@ class ProfileViewController: UIViewController {
         profilePic.layer.borderColor = UIColor.black.cgColor
         profilePic.layer.cornerRadius = profilePic.frame.height/2.1
         profilePic.clipsToBounds = true
-        Alamofire.request(url).responseJSON {
-            response in
-            print(response.value!)
-        }
+//        Alamofire.request(url).responseJSON {
+//            response in
+//            print(response.value!)
+//        }
 
         // Do any additional setup after loading the view.
     }

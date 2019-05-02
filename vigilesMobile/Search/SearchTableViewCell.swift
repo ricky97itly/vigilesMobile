@@ -15,7 +15,6 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var searchAddress: UILabel!
     @IBOutlet weak var searchDescription: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +24,19 @@ class SearchTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    //space between cells
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame =  newFrame
+            frame.origin.y += 10
+            frame.size.height -= 2 * 6
+            super.frame = frame
+        }
     }
 
 }
