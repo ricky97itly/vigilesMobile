@@ -297,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
-				218BD3EB2232DB680067FE59 /* Storico.storyboard */,
 				212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */,
 				2170B4ED2279D77D003C4331 /* ReportsStruct.swift */,
 				21954AE6227B466200FBA9C7 /* ReportsModel.swift */,
@@ -332,6 +331,7 @@
 				2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */,
 				2161CD85222FF7F2001ABD2E /* Main.storyboard */,
 				218BD3ED2232DB750067FE59 /* Profilo.storyboard */,
+				218BD3EB2232DB680067FE59 /* Storico.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -838,14 +838,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J5P6Z6JAHL;
+				DEVELOPMENT_TEAM = NHZL573RY4;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = vigilesMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = claudialolli.vigilesMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = saracarnevali.vigilesMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_REFLECTION_METADATA_LEVEL = none;
@@ -861,14 +861,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J5P6Z6JAHL;
+				DEVELOPMENT_TEAM = NHZL573RY4;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = vigilesMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = claudialolli.vigilesMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = saracarnevali.vigilesMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_REFLECTION_METADATA_LEVEL = none;

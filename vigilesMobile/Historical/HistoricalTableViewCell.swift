@@ -36,7 +36,7 @@ class HistoricalTableViewCell: UITableViewCell {
         set (newFrame) {
             var frame =  newFrame
             frame.origin.y += 10
-            frame.size.height -= 2 * 6
+            frame.size.height -= 12
             super.frame = frame
         }
     }

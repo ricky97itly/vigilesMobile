@@ -36,7 +36,7 @@
                                     <constraint firstItem="3hu-n8-oTL" firstAttribute="leading" secondItem="n7W-gL-JlZ" secondAttribute="leading" id="wcs-vs-ciq"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PzJ-1q-dLS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PzJ-1q-dLS">
                                 <rect key="frame" x="127.66666666666669" y="114" width="120" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="width" constant="120" id="srs-CN-p8d"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wvP-K6-w7H" userLabel="UserView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wvP-K6-w7H" userLabel="UserView">
                                 <rect key="frame" x="105.66666666666667" y="274" width="163.66666666666663" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome e Cognome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thC-Yc-5JA">
@@ -61,7 +61,7 @@
                                     <constraint firstAttribute="trailing" secondItem="thC-Yc-5JA" secondAttribute="trailing" id="nqP-Gd-xPR"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASk-Tj-uvu" userLabel="AddressView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASk-Tj-uvu" userLabel="AddressView">
                                 <rect key="frame" x="148.66666666666666" y="318" width="77.666666666666657" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indirizzo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PS-n6-jgm">
@@ -78,7 +78,7 @@
                                     <constraint firstAttribute="bottom" secondItem="6PS-n6-jgm" secondAttribute="bottom" id="Sc5-rU-FWe"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxI-wz-rDV" userLabel="MailView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XxI-wz-rDV" userLabel="MailView">
                                 <rect key="frame" x="168.66666666666666" y="362" width="38" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxM-FB-8vx">
@@ -95,7 +95,7 @@
                                     <constraint firstAttribute="trailing" secondItem="dxM-FB-8vx" secondAttribute="trailing" id="sV8-YI-qj8"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8u-wX-FJX" userLabel="ReportsView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8u-wX-FJX" userLabel="ReportsView">
                                 <rect key="frame" x="121.33333333333333" y="426" width="132.33333333333337" height="26"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segnalazioni" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMB-D1-itp">
@@ -112,7 +112,7 @@
                                     <constraint firstAttribute="trailing" secondItem="eMB-D1-itp" secondAttribute="trailing" id="htA-Fz-Q2Q"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If9-cL-SJ0" userLabel="NumberView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="If9-cL-SJ0" userLabel="NumberView">
                                 <rect key="frame" x="174" y="472" width="27" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sua-cm-l68">
@@ -155,7 +155,7 @@
                             <constraint firstItem="XxI-wz-rDV" firstAttribute="top" secondItem="ASk-Tj-uvu" secondAttribute="bottom" constant="20" id="KTv-aB-Mni"/>
                             <constraint firstItem="n7W-gL-JlZ" firstAttribute="centerX" secondItem="fc8-RI-gqe" secondAttribute="centerX" id="P3v-GT-biP"/>
                             <constraint firstItem="wvP-K6-w7H" firstAttribute="top" secondItem="PzJ-1q-dLS" secondAttribute="bottom" constant="40" id="Rf7-BD-ecb"/>
-                            <constraint firstItem="PzJ-1q-dLS" firstAttribute="top" secondItem="n7W-gL-JlZ" secondAttribute="bottom" constant="40" id="SKK-YC-4mT"/>
+                            <constraint firstItem="PzJ-1q-dLS" firstAttribute="top" relation="lessThanOrEqual" secondItem="n7W-gL-JlZ" secondAttribute="bottom" constant="40" id="SKK-YC-4mT"/>
                             <constraint firstItem="n7W-gL-JlZ" firstAttribute="top" secondItem="cdz-w5-JYQ" secondAttribute="top" id="Xrh-fN-B3m"/>
                             <constraint firstItem="PzJ-1q-dLS" firstAttribute="centerX" secondItem="fc8-RI-gqe" secondAttribute="centerX" id="Ywj-Nt-Vou"/>
                             <constraint firstItem="Ozm-ji-Gga" firstAttribute="centerX" secondItem="fc8-RI-gqe" secondAttribute="centerX" id="Ztz-Y6-wKC"/>

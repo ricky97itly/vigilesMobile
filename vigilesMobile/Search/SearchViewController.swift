@@ -63,7 +63,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         })
         print(reports)
         print(selectedReports)
-        print("claudia hai rotto il cazzo ma tvb")
+        print("tvb")
         searchTableView.reloadData()
     }
     

@@ -26,7 +26,7 @@ class SearchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    //space between cells
+//    Spazio tra le celle
     override var frame: CGRect {
         get {
             return super.frame
@@ -34,7 +34,7 @@ class SearchTableViewCell: UITableViewCell {
         set (newFrame) {
             var frame =  newFrame
             frame.origin.y += 10
-            frame.size.height -= 2 * 6
+            frame.size.height -= 12
             super.frame = frame
         }
     }

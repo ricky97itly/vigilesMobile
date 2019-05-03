@@ -24,4 +24,17 @@ class ChatTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    //    Spazio tra le celle
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame =  newFrame
+            frame.origin.y += 10
+            frame.size.height -= 12
+            super.frame = frame
+        }
+    }
+    
 }
