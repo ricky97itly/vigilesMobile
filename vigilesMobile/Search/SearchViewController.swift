@@ -15,7 +15,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     var reports = [Reports]()
-    var originalReports = [Reports]()
+//    var originalReports = [Reports]()
     var selectedReports = [Reports]()
     var reportImgs = [UIImageView]()
     
@@ -24,7 +24,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         searchBar.self.delegate = self
         self.searchBar.layer.cornerRadius = 20
         self.searchBar.clipsToBounds = true
-        originalReports = reports
         selectedReports = reports
         ReportsModel().fetchEvents(complete: {
             (reports) in self.reports = reports
@@ -52,7 +51,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("mortacci tua")
-        originalReports = reports
         guard !searchText.isEmpty
             else {
                 print("mena")
@@ -60,7 +58,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
                 return
         }
         print("taralli")
-        originalReports = reports
         selectedReports = reports.filter({
             reports -> Bool in (reports.address?.lowercased().contains(searchText.lowercased()))!
         })
