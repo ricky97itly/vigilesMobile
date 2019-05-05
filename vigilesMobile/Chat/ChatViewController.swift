@@ -12,6 +12,7 @@ import Alamofire
 var testChat = [String]()
 
 class ChatViewController: UIViewController {    
+    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var chatCV: UICollectionView!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var chatTV: UITableView!
