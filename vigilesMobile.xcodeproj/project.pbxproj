@@ -53,6 +53,8 @@
 		56ACCF36224D16FE003F0063 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ACCF35224D16FE003F0063 /* ChatViewController.swift */; };
 		56CB473B22563A8B00311D28 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */; };
 		56FD53F52243133A006C9533 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FD53F42243133A006C9533 /* LoginViewController.swift */; };
+		6CBFC511227F3AB800E0CB96 /* UserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFC510227F3AB800E0CB96 /* UserStruct.swift */; };
+		6CBFC513227F3D4500E0CB96 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFC512227F3D4500E0CB96 /* UserModel.swift */; };
 		78902E446F64E823495B5911 /* Pods_vigilesMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */; };
 		BE3B4FF6A1412A6CD4595E5D /* Pods_vigilesMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB2FA954C38D63C577560DB /* Pods_vigilesMobileTests.framework */; };
 		C8D492E4EC223C50C0615350 /* Pods_vigilesMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B16419C71430A4682DD227 /* Pods_vigilesMobileUITests.framework */; };
@@ -133,6 +135,8 @@
 		56ACCF35224D16FE003F0063 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = vigilesMobile/Chat/ChatViewController.swift; sourceTree = SOURCE_ROOT; };
 		56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		56FD53F42243133A006C9533 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = vigilesMobile/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		6CBFC510227F3AB800E0CB96 /* UserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStruct.swift; sourceTree = "<group>"; };
+		6CBFC512227F3D4500E0CB96 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7EB2FA954C38D63C577560DB /* Pods_vigilesMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vigilesMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vigilesMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADA1ADDB5A174F3353F971F /* Pods-vigilesMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vigilesMobileTests.release.xcconfig"; path = "Target Support Files/Pods-vigilesMobileTests/Pods-vigilesMobileTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 				3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */,
 				218BD3F52232E7BE0067FE59 /* HomeViewController.swift */,
 				56FD53F42243133A006C9533 /* LoginViewController.swift */,
+				6CBFC510227F3AB800E0CB96 /* UserStruct.swift */,
+				6CBFC512227F3D4500E0CB96 /* UserModel.swift */,
 				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
 				21791B13224283960008B28C /* RegisterViewController.swift */,
 				2161CD83222FF7F2001ABD2E /* ViewController.swift */,
@@ -650,9 +656,11 @@
 				21A818D62233C42100F5B1AA /* SearchViewController.swift in Sources */,
 				21954AE7227B466200FBA9C7 /* ReportsModel.swift in Sources */,
 				212FA1892252314D00FD9917 /* IQToolbar.swift in Sources */,
+				6CBFC513227F3D4500E0CB96 /* UserModel.swift in Sources */,
 				212FA18C2252314D00FD9917 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				212FA1862252314D00FD9917 /* IQPreviousNextView.swift in Sources */,
 				2161CD8A222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld in Sources */,
+				6CBFC511227F3AB800E0CB96 /* UserStruct.swift in Sources */,
 				212FA1852252314D00FD9917 /* IQTextView.swift in Sources */,
 				212FA1912252314E00FD9917 /* IQUIScrollView+Additions.swift in Sources */,
 				212FA1922252314E00FD9917 /* IQUIViewController+Additions.swift in Sources */,
@@ -854,14 +862,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NHZL573RY4;
+				DEVELOPMENT_TEAM = XCN8ASQHPS;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = vigilesMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = saracarnevali.vigilesMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = alessandro.palumbo.vigilesMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_REFLECTION_METADATA_LEVEL = none;
@@ -877,14 +885,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NHZL573RY4;
+				DEVELOPMENT_TEAM = XCN8ASQHPS;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = vigilesMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = saracarnevali.vigilesMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = alessandro.palumbo.vigilesMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_REFLECTION_METADATA_LEVEL = none;

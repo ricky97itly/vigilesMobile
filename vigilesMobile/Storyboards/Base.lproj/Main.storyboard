@@ -239,7 +239,7 @@
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Wgg-c3-I8Q" kind="show" id="esF-7f-SES"/>
+                                    <action selector="loginButton:" destination="1uB-ca-aHy" eventType="touchUpInside" id="d6P-Fn-RwV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux8-iI-6BZ">
@@ -455,6 +455,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Leq-D7-zut"/>
-        <segue reference="SXW-0g-Ywx"/>
     </inferredMetricsTieBreakers>
 </document>

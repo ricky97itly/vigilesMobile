@@ -15,7 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var enterBtn: UIButton!
     @IBOutlet weak var registerBtn: UIButton!
-    let url = URL(string: "http://vigilesweb.test/api/users")!
+    var user = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +29,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.password.layer.cornerRadius = 15
         self.password.layer.borderWidth = 2
         self.password.layer.borderColor = UIColor.white.cgColor
-//        Alamofire.request(url).responseJSON {
-//            response in
-//            print(response.value!)
-//        }
-        // Do any additional setup after loading the view.
+        
+        UserModel().fetchEvents(complete: {
+            (user) in self.user = user
+        })
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -56,28 +55,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
 
+    @IBAction func loginButton(_ sender: Any) {
+        
     }
-    
-
-//    @IBAction func EnterBtn(_ sender: Any) {
-//        let email =_email.text
-//        let password =_password.text
-//
-//       if(email == "" || password == "") {
-//            return
-//    }
-//
-//        DoLogin(email!, password!)
-//    }
-//
-//    func DoLogin(_ email:String, _ psw:String) {
-//       let url = URL (string: "")
-//       let session = URLSession.shared
-//   
-//       let request = NSMutableURLRequest(url: url)
-//
-//    }
-//    
-//}
-
-
+}
