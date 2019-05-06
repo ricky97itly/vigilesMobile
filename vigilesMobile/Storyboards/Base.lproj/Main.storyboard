@@ -298,7 +298,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ydy-az-6C2" userLabel="Name" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="48.666666666666657" y="328" width="278" height="30"/>
+                                <rect key="frame" x="48" y="328" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -309,7 +309,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cognome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z8K-Z5-csW" userLabel="Surname" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="48.666666666666657" y="378" width="278" height="30"/>
+                                <rect key="frame" x="48" y="378" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -320,7 +320,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JOT-Yz-blM" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="48.666666666666657" y="428" width="278" height="30"/>
+                                <rect key="frame" x="48" y="428" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -331,7 +331,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wh8-3W-dEd" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="48.666666666666657" y="478" width="278" height="30"/>
+                                <rect key="frame" x="48" y="478" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -344,7 +344,7 @@
                                 </textInputTraits>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ripeti Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DO5-Nl-wpg" userLabel="Repeat Password" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="48.666666666666657" y="528" width="278" height="30"/>
+                                <rect key="frame" x="48" y="528" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -355,7 +355,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indirizzo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U9D-4g-vxT" userLabel="Address" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="48.666666666666657" y="578" width="278" height="30"/>
+                                <rect key="frame" x="48" y="578" width="278" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -366,7 +366,7 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="address-line1"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-fS-V4O" userLabel="Register Btn">
-                                <rect key="frame" x="135.66666666666666" y="648" width="104" height="30"/>
+                                <rect key="frame" x="135" y="648" width="104" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="aNQ-NO-0Jx"/>
@@ -388,7 +388,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CON-ye-J03">
-                                <rect key="frame" x="141" y="748" width="93" height="30"/>
+                                <rect key="frame" x="141" y="748" width="92" height="30"/>
                                 <state key="normal" title="Torna al login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>

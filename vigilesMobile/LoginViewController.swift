@@ -15,7 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var enterBtn: UIButton!
     @IBOutlet weak var registerBtn: UIButton!
-    var user = [User]()
+//    var user = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +29,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.password.layer.cornerRadius = 15
         self.password.layer.borderWidth = 2
         self.password.layer.borderColor = UIColor.white.cgColor
-        
-        UserModel().fetchEvents(complete: {
-            (user) in self.user = user
-        })
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -56,6 +52,44 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func loginButton(_ sender: Any) {
-        
+        let postDict:[String:String] = ["email" : "\(email.text!)", "password" : "\(password.text!)"]
+        let url = URL(string: "http://vigilesweb.test/api/login")!
+        Alamofire.request(url, method: .post, parameters: postDict).responseJSON { response in
+            // Dio qualcosa
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)")
+                
+                guard response.error == nil
+                    else {
+                        print(response.error!)
+                        return
+                }
+                
+                guard (response.value as? [String:Any]) != nil
+                    else {
+                        if let error = response.error {
+                            print("ERRORE: \(error)")
+                        }
+                        return
+                }
+                
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let postData = try jsonDecoder.decode(User.self, from: response.data!)
+                    User.user = postData as AnyObject
+                    print(postData, "BOH")
+                    
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homeView") as? HomeViewController
+                    if let nextVC = nextViewController {
+                        self.present(nextVC, animated:true, completion:nil)
+                    }
+                }
+                catch {
+                    print("JSONSerialization error:", error)
+                }
+            }
+        }
     }
 }

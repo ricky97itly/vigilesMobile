@@ -14,7 +14,7 @@
         <!--HomeViewController-->
         <scene sceneID="xpj-NT-4Vu">
             <objects>
-                <viewController id="al6-vH-7u9" userLabel="HomeViewController" customClass="HomeViewController" customModule="vigilesMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeView" id="al6-vH-7u9" userLabel="HomeViewController" customClass="HomeViewController" customModule="vigilesMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UWw-12-UHa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
