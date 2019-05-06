@@ -14,7 +14,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="JsF-0G-45S">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wgg-c3-I8Q" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Enter" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Wgg-c3-I8Q" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ad1-zs-kr5">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

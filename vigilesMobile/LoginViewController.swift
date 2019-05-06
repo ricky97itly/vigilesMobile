@@ -9,13 +9,14 @@
 import UIKit
 import Alamofire
 
+
+
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var enterBtn: UIButton!
     @IBOutlet weak var registerBtn: UIButton!
-//    var user = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,13 +79,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     let postData = try jsonDecoder.decode(User.self, from: response.data!)
                     User.user = postData as AnyObject
                     print(postData, "BOH")
-                    
-                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                    
-                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "homeView") as? HomeViewController
-                    if let nextVC = nextViewController {
-                        self.present(nextVC, animated:true, completion:nil)
-                    }
+                    let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
+                    self.present(nextViewController, animated:true, completion:nil)
                 }
                 catch {
                     print("JSONSerialization error:", error)
