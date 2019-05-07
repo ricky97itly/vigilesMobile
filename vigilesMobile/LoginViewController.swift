@@ -74,18 +74,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         return
                 }
                 
-                do {
-                    let jsonDecoder = JSONDecoder()
-                    let postData = try jsonDecoder.decode(User.self, from: response.data!)
-                    User.user = postData as AnyObject
-                    print(postData, "BOH")
-                    let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
-                    self.present(nextViewController, animated:true, completion:nil)
-                }
-                catch {
-                    print("JSONSerialization error:", error)
-                }
+                
+                    if response.response?.statusCode == 401 {
+                        let alert = UIAlertController(title: "Attenzione", message: "Username o password non sono corretti", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    else if response.response?.statusCode == 200 {
+                        do {
+                            let jsonDecoder = JSONDecoder()
+                            let postData = try jsonDecoder.decode(User.self, from: response.data!)
+                            User.user = postData as AnyObject
+                            print(postData, "BOH")
+                            let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+                            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
+                            self.present(nextViewController, animated:true, completion:nil)
+                        }
+                        catch {
+                            print("JSONSerialization error:", error)
+                        }
+                    }
             }
         }
     }

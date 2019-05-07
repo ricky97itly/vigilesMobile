@@ -21,7 +21,6 @@ struct User: Codable {
 
 class UserData: Codable {
     var data: [User]?
-    
     init(data: [User]) {
         self.data = data
     }

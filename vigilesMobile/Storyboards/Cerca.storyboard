@@ -42,7 +42,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="S5p-Eg-QOV"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="vigilesRed"/>
                                 <color key="barTintColor" name="vigilesRed"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
