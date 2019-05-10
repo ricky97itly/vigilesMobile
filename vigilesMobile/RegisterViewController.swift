@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var name: UITextField!
@@ -60,4 +61,60 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         repeatPassword.resignFirstResponder()
         return (true)
     }
-}
+    @IBAction func registerBtn(_ sender: Any) {
+        
+        if name.text == nil || (name.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Attenzione", message: "Inserire nome", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        if surname.text == nil || (surname.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Attenzione", message: "Inserire cognome", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+            
+        }
+        if email.text == nil || (email.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Attenzione", message: "Inserire mail", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        if password.text == nil || (password.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Attenzione", message: "Inserire password", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        if repeatPassword.text != password.text {
+            let alert = UIAlertController(title: "Attenzione", message: "La password non corrisponde", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        if repeatPassword.text!.isEmpty {
+            let alert = UIAlertController(title: "Attenzione", message: "Inserire conferma password", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        if address.text == nil || (address.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Attenzione", message: "Inserire indirizzo", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        let params = ["name": name.text!,
+                     "surname": surname.text!,
+                     "email": email.text!,
+                     "password": password.text!,
+                     "confirm_password": repeatPassword.text!,
+                     "address": address.text!] as [String : Any]
+        
+        let url = "http://vigilesweb.test/api/users" //<-Set your endpoint here
+                
+                }
+            }

@@ -17,6 +17,8 @@ struct User: Codable {
     let street_number: Int?
     let avatar: String?
     let is_admin: Bool?
+    let password: String?
+    let confirm_password: String?
 }
 
 class UserData: Codable {

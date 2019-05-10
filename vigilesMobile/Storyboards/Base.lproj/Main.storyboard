@@ -387,7 +387,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Wgg-c3-I8Q" kind="show" id="SXW-0g-Ywx"/>
+                                    <action selector="registerBtn:" destination="YA2-kc-dk7" eventType="touchUpInside" id="T4w-yG-Ygn"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VigilesLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="43d-Na-yJz">

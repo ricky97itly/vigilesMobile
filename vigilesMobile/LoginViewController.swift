@@ -9,8 +9,6 @@
 import UIKit
 import Alamofire
 
-
-
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var email: UITextField!
@@ -53,9 +51,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBAction func loginButton(_ sender: Any) {
-        let postDict:[String:String] = ["email" : "\(email.text!)", "password" : "\(password.text!)"]
+        let params:[String:String] = ["email" : "\(email.text!)", "password" : "\(password.text!)"]
         let url = URL(string: "http://vigilesweb.test/api/login")!
-        Alamofire.request(url, method: .post, parameters: postDict).responseJSON { response in
+        Alamofire.request(url, method: .post, parameters: params).responseJSON { response in
             // Dio qualcosa
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                 print("Data: \(utf8Text)")
@@ -73,8 +71,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         }
                         return
                 }
-                
-                
+            
                     if response.response?.statusCode == 401 {
                         let alert = UIAlertController(title: "Attenzione", message: "Username o password non sono corretti", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
