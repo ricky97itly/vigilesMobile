@@ -14,7 +14,6 @@ class ForgottenPasswordController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var sendBtn: UIButton!
     
-
         override func viewDidLoad() {
         super.viewDidLoad()
         self.sendBtn.layer.borderWidth = 2.5

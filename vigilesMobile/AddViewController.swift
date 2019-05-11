@@ -73,10 +73,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         else {
             print("non è stato aggiunto nulla")
         }
-        
-        
     }
-    
 }
 
     extension AddViewController: CLLocationManagerDelegate {

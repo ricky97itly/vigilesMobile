@@ -74,7 +74,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
-            
+
         }
         if email.text == nil || (email.text?.isEmpty)! {
             let alert = UIAlertController(title: "Attenzione", message: "Inserire mail", preferredStyle: UIAlertController.Style.alert)
@@ -107,14 +107,49 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let params = ["name": name.text!,
-                     "surname": surname.text!,
-                     "email": email.text!,
-                     "password": password.text!,
-                     "confirm_password": repeatPassword.text!,
-                     "address": address.text!] as [String : Any]
+        let params:[String:String] = ["name": "\(name.text!)", "surname": "\(surname.text!)", "email" : "\(email.text!)", "password" : "\(password.text!)", "address" : "\(address.text!)"]
         
-        let url = "http://vigilesweb.test/api/users" //<-Set your endpoint here
+        let url = "http://vigilesweb.test/api/users"
+        Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
+            // Dio qualcosa
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)")
+                
+                guard response.error == nil
+                    else {
+                        print(response.error!)
+                        return
+                }
+                
+                guard (response.value as? [String:Any]) != nil
+                    else {
+                        if let error = response.error {
+                            print("ERRORE: \(error)")
+                        }
+                        return
+                }
+                
+                if response.response?.statusCode == 401 {
+                    let alert = UIAlertController(title: "Attenzione", message: "Username o password non sono corretti", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                else if response.response?.statusCode == 200 {
+                    do {
+                        let jsonDecoder = JSONDecoder()
+                        let postData = try jsonDecoder.decode(User.self, from: response.data!)
+                        User.user = postData as AnyObject
+                        print(postData, "BOH")
+//                        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+//                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
+//                        self.present(nextViewController, animated:true, completion:nil)
+                    }
+                    catch {
+                        print("JSONSerialization error:", error)
+                    }
+                }
+            }
+        }
                 
                 }
             }

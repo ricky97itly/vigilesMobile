@@ -134,7 +134,7 @@
 		56A8ECC7227F55B800299242 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		56ACCF35224D16FE003F0063 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = vigilesMobile/Chat/ChatViewController.swift; sourceTree = SOURCE_ROOT; };
 		56CB473A22563A8B00311D28 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
-		56FD53F42243133A006C9533 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = vigilesMobile/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		56FD53F42243133A006C9533 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "vigilesMobile/User, Login, Register/LoginViewController.swift"; sourceTree = SOURCE_ROOT; };
 		6CBFC510227F3AB800E0CB96 /* UserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStruct.swift; sourceTree = "<group>"; };
 		6CBFC512227F3D4500E0CB96 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7EB2FA954C38D63C577560DB /* Pods_vigilesMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vigilesMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -268,17 +268,13 @@
 				2170B4F02279DA27003C4331 /* Chat */,
 				2170B4EF2279D9F1003C4331 /* Historical */,
 				2170B4F12279DA7A003C4331 /* Search */,
-				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
-				21A818D72233C48A00F5B1AA /* AddViewController.swift */,
-				56A8ECC5227F53E000299242 /* ChatControllerViewController.swift */,
-				56A8ECC7227F55B800299242 /* Message.swift */,
+				217B1CEC2286D23400AACC07 /* Reports */,
+				217B1CED2286D24800AACC07 /* User, Login, Register */,
 				3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */,
+				21A818D72233C48A00F5B1AA /* AddViewController.swift */,
 				218BD3F52232E7BE0067FE59 /* HomeViewController.swift */,
-				56FD53F42243133A006C9533 /* LoginViewController.swift */,
-				6CBFC510227F3AB800E0CB96 /* UserStruct.swift */,
-				6CBFC512227F3D4500E0CB96 /* UserModel.swift */,
 				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
-				21791B13224283960008B28C /* RegisterViewController.swift */,
+				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
 				2161CD83222FF7F2001ABD2E /* ViewController.swift */,
 				2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */,
 				2161CD90222FF7F3001ABD2E /* Info.plist */,
@@ -310,8 +306,6 @@
 			children = (
 				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
 				212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */,
-				2170B4ED2279D77D003C4331 /* ReportsStruct.swift */,
-				21954AE6227B466200FBA9C7 /* ReportsModel.swift */,
 			);
 			path = Historical;
 			sourceTree = "<group>";
@@ -319,8 +313,10 @@
 		2170B4F02279DA27003C4331 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				56A8ECC5227F53E000299242 /* ChatControllerViewController.swift */,
 				56ACCF35224D16FE003F0063 /* ChatViewController.swift */,
 				567FFFFE22773E9A00E3B4DA /* ChatTableViewCell.swift */,
+				56A8ECC7227F55B800299242 /* Message.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -334,16 +330,36 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		217B1CEC2286D23400AACC07 /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				2170B4ED2279D77D003C4331 /* ReportsStruct.swift */,
+				21954AE6227B466200FBA9C7 /* ReportsModel.swift */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		217B1CED2286D24800AACC07 /* User, Login, Register */ = {
+			isa = PBXGroup;
+			children = (
+				6CBFC510227F3AB800E0CB96 /* UserStruct.swift */,
+				6CBFC512227F3D4500E0CB96 /* UserModel.swift */,
+				56FD53F42243133A006C9533 /* LoginViewController.swift */,
+				21791B13224283960008B28C /* RegisterViewController.swift */,
+			);
+			path = "User, Login, Register";
+			sourceTree = "<group>";
+		};
 		218BD3E42232DAE90067FE59 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				218BD3E92232DB5B0067FE59 /* Aggiungi.storyboard */,
-				218BD3E72232DB340067FE59 /* Cerca.storyboard */,
 				218BD3E52232DB080067FE59 /* Home.storyboard */,
 				2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */,
 				2161CD85222FF7F2001ABD2E /* Main.storyboard */,
-				218BD3ED2232DB750067FE59 /* Profilo.storyboard */,
+				218BD3E72232DB340067FE59 /* Cerca.storyboard */,
 				218BD3EB2232DB680067FE59 /* Storico.storyboard */,
+				218BD3ED2232DB750067FE59 /* Profilo.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";

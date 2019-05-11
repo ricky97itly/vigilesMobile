@@ -17,7 +17,6 @@ struct Reports: Codable {
     let street_number: Int?
     let description: String?
     let media: String?
-    
 }
 
 // Gestiamo i dati facendo riferimento alla struct precedente. In questo caso usiamo una classe per evitare rallentamenti gestendo ora la quantità di dati presente nel json
