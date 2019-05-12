@@ -63,16 +63,58 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     }
     
     @IBAction func addEmergency() {
-        if (name.text != "") {
-//            testTitle.append(name.text!)
-//            testAddress.append(address.text!)
-            name.text = ""
-            address.text = ""
-            print("ricevuto, capo")
+        let params:[String:String] = ["title" : "\(name.text!)", "address": "\(address.text!)" ,"description" : "\(emergencyDescription.text!)", "tags": "\(tag.text!)" ]
+        let url = URL(string: "http://vigilesweb.test/api/reports")!
+        Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
+            // Dio qualcosa
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)")
+                
+                guard response.error == nil
+                    else {
+                        print(response.error!)
+                        return
+                }
+                
+                guard (response.value as? [String:Any]) != nil
+                    else {
+                        if let error = response.error {
+                            print("ERRORE: \(error)")
+                        }
+                        return
+                }
+                
+                if response.response?.statusCode == 401 {
+                    let alert = UIAlertController(title: "Attenzione", message: "Non è possibile eseguire la richiesta", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                else if response.response?.statusCode == 200 {
+                    do {
+                        let jsonDecoder = JSONDecoder()
+                        let postData = try jsonDecoder.decode(Reports.self, from: response.data!)
+                        Reports.report = postData as AnyObject
+                        print(postData, "BOH")
+//                        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+//                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
+//                        self.present(nextViewController, animated:true, completion:nil)
+                    }
+                    catch {
+                        print("JSONSerialization error:", error)
+                    }
+                }
+            }
         }
-        else {
-            print("non è stato aggiunto nulla")
-        }
+//        if (name.text != "") {
+////            testTitle.append(name.text!)
+////            testAddress.append(address.text!)
+//            name.text = ""
+//            address.text = ""
+//            print("ricevuto, capo")
+//        }
+//        else {
+//            print("non è stato aggiunto nulla")
+//        }
     }
 }
 

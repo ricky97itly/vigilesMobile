@@ -53,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func loginButton(_ sender: Any) {
         let params:[String:String] = ["email" : "\(email.text!)", "password" : "\(password.text!)"]
         let url = URL(string: "http://vigilesweb.test/api/login")!
-        Alamofire.request(url, method: .post, parameters: params).responseJSON { response in
+        Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
             // Dio qualcosa
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                 print("Data: \(utf8Text)")
