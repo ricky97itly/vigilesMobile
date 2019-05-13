@@ -14,10 +14,11 @@ struct User: Codable {
     let surname: String?
     let email: String?
     let address: String?
+    let is_admin: Int?
     let street_number: Int?
     let avatar: String?
-    let is_admin: Bool?
     let password: String?
+    let confirm_password: String?
 }
 
 class UserData: Codable {

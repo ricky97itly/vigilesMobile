@@ -60,6 +60,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 guard response.error == nil
                     else {
+                        let alert = UIAlertController(title: "Attenzione", message: "Username o password non sono corretti", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
                         print(response.error!)
                         return
                 }
@@ -72,12 +75,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         return
                 }
             
-                    if response.response?.statusCode == 401 {
-                        let alert = UIAlertController(title: "Attenzione", message: "Username o password non sono corretti", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                        self.present(alert, animated: true, completion: nil)
-                    }
-                    else if response.response?.statusCode == 200 {
                         do {
                             let jsonDecoder = JSONDecoder()
                             let postData = try jsonDecoder.decode(User.self, from: response.data!)
@@ -94,4 +91,3 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-}

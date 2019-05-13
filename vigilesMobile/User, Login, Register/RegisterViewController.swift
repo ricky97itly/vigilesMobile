@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var repeatPassword: UITextField!
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var address: UITextField!
+    @IBOutlet weak var street_number: UITextField!
     
     
     override func viewDidLoad() {
@@ -43,6 +44,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.address.layer.borderWidth = 1
         self.address.layer.cornerRadius = 15
         self.address.layer.borderColor = UIColor.white.cgColor
+        self.street_number.layer.borderWidth = 1
+        self.street_number.layer.cornerRadius = 15
+        self.street_number.layer.borderColor = UIColor.white.cgColor
        
         // Do any additional setup after loading the view.
     }
@@ -106,10 +110,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             self.present(alert, animated: true, completion: nil)
             return
         }
+        if street_number.text == nil || (street_number.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Attenzione", message: "Inserire indirizzo", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         
-        let params:[String:String] = ["name": "\(name.text!)", "surname": "\(surname.text!)", "email" : "\(email.text!)", "password" : "\(password.text!)", "address" : "\(address.text!)"]
+        let params:[String:String] = ["name": "\(name.text!)", "surname": "\(surname.text!)", "email" : "\(email.text!)", "password" : "\(password.text!)", "confirm_password" : "\(repeatPassword.text!)", "address" : "\(address.text!)", "street_number": "\(street_number.text!)"]
         
-        let url = "http://vigilesweb.test/api/users"
+        let url = URL(string: "http://vigilesweb.test/api/register")!
         Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
             // Dio qualcosa
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
@@ -130,7 +140,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 }
                 
                 if response.response?.statusCode == 401 {
-                    let alert = UIAlertController(title: "Attenzione", message: "Username o password non sono corretti", preferredStyle: UIAlertController.Style.alert)
+                    let alert = UIAlertController(title: "Attenzione", message: "NON FUNZIONA CAZZO", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 }
@@ -140,9 +150,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         let postData = try jsonDecoder.decode(User.self, from: response.data!)
                         User.user = postData as AnyObject
                         print(postData, "BOH")
-//                        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-//                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
-//                        self.present(nextViewController, animated:true, completion:nil)
+                        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
+                        self.present(nextViewController, animated:true, completion:nil)
                     }
                     catch {
                         print("JSONSerialization error:", error)
@@ -150,6 +160,5 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-                
-                }
-            }
+    }
+    }

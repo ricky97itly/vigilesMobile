@@ -365,11 +365,11 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Indirizzo" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U9D-4g-vxT" userLabel="Address" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="48.666666666666657" y="532" width="278" height="30"/>
+                                <rect key="frame" x="49" y="532" width="185" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="278" id="aEd-j5-0Bm"/>
+                                    <constraint firstAttribute="width" constant="185" id="aEd-j5-0Bm"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -406,6 +406,17 @@
                                     <segue destination="1uB-ca-aHy" kind="show" id="Leq-D7-zut"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Numero " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kcf-03-k1R" userLabel="Address" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="242" y="532" width="85" height="30"/>
+                                <color key="backgroundColor" name="vigilesRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="RvJ-mx-Bbl"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" textContentType="address-line1"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <constraints>
@@ -413,7 +424,7 @@
                             <constraint firstItem="wh8-3W-dEd" firstAttribute="centerX" secondItem="Y4h-4I-81Z" secondAttribute="centerX" id="9bA-IM-HtE"/>
                             <constraint firstItem="wh8-3W-dEd" firstAttribute="top" secondItem="JOT-Yz-blM" secondAttribute="bottom" constant="20" id="BpJ-mq-H07"/>
                             <constraint firstItem="DO5-Nl-wpg" firstAttribute="centerX" secondItem="Y4h-4I-81Z" secondAttribute="centerX" id="Ez3-PS-2zD"/>
-                            <constraint firstItem="U9D-4g-vxT" firstAttribute="centerX" secondItem="Y4h-4I-81Z" secondAttribute="centerX" id="L0k-Ba-Xz3"/>
+                            <constraint firstItem="U9D-4g-vxT" firstAttribute="centerX" secondItem="Y4h-4I-81Z" secondAttribute="centerX" constant="-46" id="L0k-Ba-Xz3"/>
                             <constraint firstItem="ydy-az-6C2" firstAttribute="centerX" secondItem="Y4h-4I-81Z" secondAttribute="centerX" id="Nc6-Dr-Hix"/>
                             <constraint firstItem="CON-ye-J03" firstAttribute="centerX" secondItem="Y4h-4I-81Z" secondAttribute="centerX" id="Ox6-0H-DSh"/>
                             <constraint firstItem="JOT-Yz-blM" firstAttribute="centerX" secondItem="Y4h-4I-81Z" secondAttribute="centerX" id="RHL-ir-QY5"/>
@@ -423,8 +434,10 @@
                             <constraint firstItem="CON-ye-J03" firstAttribute="bottom" secondItem="lfo-sx-pJS" secondAttribute="bottom" id="UyJ-Ex-jKK"/>
                             <constraint firstItem="0gA-fS-V4O" firstAttribute="top" secondItem="U9D-4g-vxT" secondAttribute="bottom" constant="52" id="a04-dL-DpW"/>
                             <constraint firstItem="lfo-sx-pJS" firstAttribute="trailing" secondItem="43d-Na-yJz" secondAttribute="trailing" constant="87" id="aJL-h2-rWP"/>
+                            <constraint firstItem="Kcf-03-k1R" firstAttribute="leading" secondItem="U9D-4g-vxT" secondAttribute="trailing" constant="8" symbolic="YES" id="irf-Ta-G2e"/>
                             <constraint firstItem="43d-Na-yJz" firstAttribute="leading" secondItem="lfo-sx-pJS" secondAttribute="leading" constant="86" id="kPC-D4-z1l"/>
                             <constraint firstItem="43d-Na-yJz" firstAttribute="top" secondItem="lfo-sx-pJS" secondAttribute="top" constant="62" id="ks3-zJ-NKy"/>
+                            <constraint firstItem="Kcf-03-k1R" firstAttribute="baseline" secondItem="U9D-4g-vxT" secondAttribute="baseline" id="mdr-ak-HPz"/>
                             <constraint firstItem="U9D-4g-vxT" firstAttribute="top" secondItem="DO5-Nl-wpg" secondAttribute="bottom" constant="20" id="qbx-jk-Eqa"/>
                             <constraint firstItem="CON-ye-J03" firstAttribute="leading" secondItem="lfo-sx-pJS" secondAttribute="leading" constant="141" id="rjH-kP-r2Y"/>
                             <constraint firstItem="ydy-az-6C2" firstAttribute="top" secondItem="43d-Na-yJz" secondAttribute="bottom" constant="46" id="vbr-p0-k0Z"/>
@@ -440,6 +453,7 @@
                         <outlet property="password" destination="wh8-3W-dEd" id="WlA-q8-G7u"/>
                         <outlet property="registerBtn" destination="0gA-fS-V4O" id="nQD-8D-i7w"/>
                         <outlet property="repeatPassword" destination="DO5-Nl-wpg" id="Gxe-Ku-4U4"/>
+                        <outlet property="street_number" destination="Kcf-03-k1R" id="PjP-fp-EVQ"/>
                         <outlet property="surname" destination="z8K-Z5-csW" id="g0l-NK-aPH"/>
                     </connections>
                 </viewController>
