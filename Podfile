@@ -14,7 +14,7 @@ pod 'GoogleMaps'
 pod 'SwiftyJSON'
 pod 'AlamofireImage'
 pod 'Kingfisher', '~> 5.0'
-pod 'MessageKit'
+pod 'MessageKit', '~> 3.0.0-swift5'
 pod 'Scaledrone', '~> 0.5.0'
 
   target 'vigilesMobileTests' do

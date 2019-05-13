@@ -20,6 +20,7 @@ class ChatControllerViewController: MessagesViewController {
         messagesCollectionView.messagesLayoutDelegate = self
         messageInputBar.delegate = self
         messagesCollectionView.messagesDisplayDelegate = self
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -45,7 +46,7 @@ extension ChatControllerViewController: MessagesDataSource {
     
     func numberOfSections(
         in messagesCollectionView: MessagesCollectionView) -> Int {
-        print("GIGGI")
+        print("GIGGI\(messages.count)")
         return messages.count
     }
     
@@ -98,15 +99,15 @@ extension ChatControllerViewController: MessagesDisplayDelegate {
 }
 
 extension ChatControllerViewController: MessageInputBarDelegate {
-    func messageInputBar(
-        _ inputBar: MessageInputBar,
-        didPressSendButtonWith text: String) {
+    
+    func inputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        print(text)
         
         let newMessage = Message(
             member: member,
             text: text,
             messageId: UUID().uuidString)
-
+        
         messages.append(newMessage)
         inputBar.inputTextView.text = ""
         messagesCollectionView.reloadData()

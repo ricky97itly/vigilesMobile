@@ -28,7 +28,7 @@ DEPENDENCIES:
   - GooglePlacePicker
   - GooglePlaces
   - Kingfisher (~> 5.0)
-  - MessageKit
+  - MessageKit (~> 3.0.0-swift5)
   - Scaledrone (~> 0.5.0)
   - SwiftyJSON
 
@@ -59,6 +59,6 @@ SPEC CHECKSUMS:
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 80ce4621af9fb32db55e453992daa2c4ac5866d0
+PODFILE CHECKSUM: fbdc9a082364452f245cf61c777728401fada773
 
 COCOAPODS: 1.6.1
