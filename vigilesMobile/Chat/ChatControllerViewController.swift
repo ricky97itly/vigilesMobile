@@ -13,14 +13,21 @@ class ChatControllerViewController: MessagesViewController {
     
     var messages: [Message] = []
     var member: Member!
+    var chatService: ChatService!
     
     override func viewDidLoad() {
-        member = Member(name: "bluemoon", color: .blue)
+        member = Member(name: .randomName, color: .random)
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messageInputBar.delegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        
+        chatService = ChatService(member: member, onRecievedMessage: {
+            [weak self] message in
+            self?.messages.append(message)
+            self?.messagesCollectionView.reloadData()
+            self?.messagesCollectionView.scrollToBottom(animated: true)
+        })
+        chatService.connect()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -101,8 +108,8 @@ extension ChatControllerViewController: MessagesDisplayDelegate {
 extension ChatControllerViewController: MessageInputBarDelegate {
     
     func inputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-        print(text)
-        
+        chatService.sendMessage(text)
+        inputBar.inputTextView.text = ""
         let newMessage = Message(
             member: member,
             text: text,
