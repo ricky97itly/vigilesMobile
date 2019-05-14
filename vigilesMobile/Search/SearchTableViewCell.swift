@@ -9,24 +9,13 @@
 import UIKit
 
 class SearchTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var codeImg: UIImageView!
     @IBOutlet weak var searchName: UILabel!
     @IBOutlet weak var searchAddress: UILabel!
     @IBOutlet weak var searchDescription: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-//    Spazio tra le celle
+    //    Spazio tra le celle
     override var frame: CGRect {
         get {
             return super.frame
@@ -38,5 +27,5 @@ class SearchTableViewCell: UITableViewCell {
             super.frame = frame
         }
     }
-
+    
 }

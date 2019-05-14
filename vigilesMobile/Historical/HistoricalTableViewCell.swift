@@ -17,18 +17,7 @@ class HistoricalTableViewCell: UITableViewCell {
     @IBOutlet weak var streetNumber: UILabel!
     @IBOutlet weak var emergencyDescription: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-//    Spazio tra le celle
+    //    Spazio tra le celle
     override var frame: CGRect {
         get {
             return super.frame
@@ -40,5 +29,4 @@ class HistoricalTableViewCell: UITableViewCell {
             super.frame = frame
         }
     }
-
 }

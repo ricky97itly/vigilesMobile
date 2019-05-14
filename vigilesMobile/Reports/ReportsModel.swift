@@ -12,8 +12,8 @@ import SwiftyJSON
 
 class ReportsModel: NSObject {
     
-//    Escaping viene richiamato dopo l'esecuzione della funzione, facendola quindi "vivere più a lungo"
-//    Closure, possiamo passarlo nel codice (abbiamo "assegnato" result a Reports)
+    //    Escaping viene richiamato dopo l'esecuzione della funzione, facendola quindi "vivere più a lungo"
+    //    Closure, possiamo passarlo nel codice (abbiamo "assegnato" result a Reports)
     func fetchEvents(complete: @escaping (_ result: [Reports]) -> ()) {
         let url = URL(string: "http://vigilesweb.test/api/reports")!
         print("prova")
@@ -21,7 +21,7 @@ class ReportsModel: NSObject {
         Alamofire.request(url, method: .get).validate().responseJSON {
             response in
             print("Inizio film")
-//            Verifichiamo errori, guard permette di performare un’azione solo quando la sua condizione non è verificata (quindi falsa)
+            //            Verifichiamo errori, guard permette di performare un’azione solo quando la sua condizione non è verificata (quindi falsa)
             guard response.error == nil
                 else {
                     print("errore")
@@ -29,7 +29,7 @@ class ReportsModel: NSObject {
                     return
             }
             print("Ci sono, forse")
-//            Se la risposta non è di tipo stringa attiva errore
+            //            Se la risposta non è di tipo stringa attiva errore
             guard (response.value as? [String: Any]) != nil
                 else {
                     if let error = response.error {
@@ -39,12 +39,12 @@ class ReportsModel: NSObject {
                     return
             }
             print("Thanos")
-//            Do esegue il codice per decodificare json chiedendo risposta dai dati presenti al suo interno. In caso di errore viene passato e "preso" dal catch
+            //            Do esegue il codice per decodificare json chiedendo risposta dai dati presenti al suo interno. In caso di errore viene passato e               "preso" dal catch
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let reports = try decoder.decode(ReportsData.self, from: response.data!)
-//                Si mandano i dati recuperati a HistoricalViewController
+                //                Si mandano i dati recuperati a HistoricalViewController
                 complete(reports.data!)
                 print("Vai stronzo")
             }

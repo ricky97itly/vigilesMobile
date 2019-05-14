@@ -12,7 +12,7 @@ import CoreLocation
 import Alamofire
 
 class HomeViewController: UIViewController {
-     
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var findUserLocation: UIButton!
@@ -21,17 +21,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var infoImg: UIImageView!
     let locationManager = CLLocationManager()
-//    Zoom iniziale su posizione utente
+    //    Zoom iniziale su posizione utente
     let regionRadius: CLLocationDistance = 1000
     let annotation = MKPointAnnotation()
     let ied = MKPointAnnotation()
-    
     var previousLocation: CLLocation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
-//        Creazione marker
+        //        Creazione marker
         ied.title = "IED"
         ied.subtitle = "Dove studiamo"
         ied.coordinate = CLLocationCoordinate2D(latitude: 45.461035, longitude: 9.210483)
@@ -41,12 +40,9 @@ class HomeViewController: UIViewController {
         self.infoView.layer.shadowOpacity = 0.3
         self.infoView.layer.shadowOffset = CGSize.zero
         self.infoView.layer.shadowRadius = 5
-
-//        MKUserTrackingBarButtonItem *findUserLocation = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.map];
-//        self.navigationItem.rightBarButtonItem = findUserLocation;
     }
     
-//    Button info, al click appare view
+    //    Button info, al click appare view
     @IBAction func onPressed(_ sender: Any) {
         bottomConstraint.constant = 10
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
@@ -54,7 +50,7 @@ class HomeViewController: UIViewController {
         }, completion: nil)
     }
     
-//    Button dentro la view, al click si chiude
+    //    Button dentro la view, al click si chiude
     @IBAction func dismissView(_ sender: Any) {
         bottomConstraint.constant = -220
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
@@ -62,13 +58,13 @@ class HomeViewController: UIViewController {
         }, completion: nil)
     }
     
-//    Per migliore localizzazione
+    //    Per migliore localizzazione
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-//   Zoom su utente
+    //   Zoom su utente
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
@@ -80,53 +76,48 @@ class HomeViewController: UIViewController {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
             checkLocationAuthorization()
-        } else {
-            let alert = UIAlertController(title: "Attenzione", message: "Devi consentire a Vigiles di seguire la tua posizione.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+            Alert.showAlert(on: self, with: "Attenzione", message: "Devi consentire a Vigiles di seguire la tua posizione")
         }
     }
     
-//    Switch per controllare ogni singolo caso di autorizzazione localizzazione
+    //    Switch per controllare ogni singolo caso di autorizzazione localizzazione
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
-//            Solo se mentre app è in uso
+        //            Solo se mentre app è in uso
         case .authorizedWhenInUse:
             startTackingUserLocation()
-//            Rifiutato
+        //            Rifiutato
         case .denied:
-            let alert = UIAlertController(title: "Attenzione", message: "Devi consentire a Vigiles di seguire la tua posizione.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "Devi consentire a Vigiles di seguire la tua posizione")
             break
-//            Non presente una scelta
+        //            Non presente una scelta
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
-//            Se controllo parentale attivo
+        //            Se controllo parentale attivo
         case .restricted:
-            let alert = UIAlertController(title: "Attenzione", message: "Potrebbe essere attivo il controllo parentale, disabilitalo per avere accesso alle funzioni di Vigiles", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "Potrebbe essere attivo il controllo parentale, disabilitalo per avere accesso alle funzioni di Vigiles")
             break
         case .authorizedAlways:
             break
-//            Per modifiche future, è funzione di Swift 5 (AGGIORNATE)
+        //            Per modifiche future, è funzione di Swift 5 (AGGIORNATE)
         @unknown default:
             print("modifica")
         }
     }
     
-//    Per trovare utente
+    //    Per trovare utente
     func startTackingUserLocation() {
         mapView.showsUserLocation = true
-//        Centra utente
+        //        Centra utente
         centerViewOnUserLocation()
-//        Aggiorna posizione in movimento
+        //        Aggiorna posizione in movimento
         locationManager.startUpdatingLocation()
         previousLocation = getCenterLocation(for: mapView)
     }
     
-//    Ottengo lat e long utente
+    //    Ottengo lat e long utente
     func getCenterLocation(for mapView: MKMapView) -> CLLocation {
         let latitude = mapView.centerCoordinate.latitude
         let longitude = mapView.centerCoordinate.longitude
@@ -134,7 +125,7 @@ class HomeViewController: UIViewController {
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     
-//    Al click sul button torna alla posizione dell'utente
+    //    Al click sul button torna alla posizione dell'utente
     @IBAction func centerMapOnUserButtonClicked() {
         mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
     }
@@ -152,7 +143,7 @@ extension HomeViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let center = getCenterLocation(for: mapView)
-//        Per convertire latitudine e longitudine
+        //        Per convertire latitudine e longitudine
         let geoCoder = CLGeocoder()
         
         guard let previousLocation = self.previousLocation else { return }
@@ -164,24 +155,21 @@ extension HomeViewController: MKMapViewDelegate {
             guard let self = self else { return }
             
             if let _ = error {
-                let alert = UIAlertController(title: "Attenzione", message: "Non è possibile stabilire dove è posizionato il puntatore.", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                Alert.showAlert(on: self, with: "Attenzione", message: "Non è possibile stabilire dove è posizionato il puntatore")
                 return
             }
             
-            guard let placemark = placemarks?.first else {
-                let alert = UIAlertController(title: "Attenzione", message: "Non è possibile stabilire dove è posizionato il puntatore.", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-                return
+            guard let placemark = placemarks?.first
+                else {
+                    Alert.showAlert(on: self, with: "Attenzione", message: "Non è possibile stabilire dove è posizionato il puntatore")
+                    return
             }
             
-//            Il primo è per nome via, il secondo per numero civico
+            //            Il primo è per nome via, il secondo per numero civico
             let streetName = placemark.thoroughfare ?? ""
             let streetNumber = placemark.subThoroughfare ?? ""
             
-//            Per velocizzare esecuzione, esegue azioni in parallelo
+            //            Per velocizzare esecuzione, esegue azioni in parallelo
             DispatchQueue.main.async {
                 self.addressLabel.text = "\(streetName) \(streetNumber)"
             }

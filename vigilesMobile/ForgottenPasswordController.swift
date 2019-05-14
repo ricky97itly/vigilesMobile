@@ -14,13 +14,12 @@ class ForgottenPasswordController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var sendBtn: UIButton!
     
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.sendBtn.layer.borderWidth = 2.5
         self.sendBtn.layer.borderColor = UIColor.white.cgColor
         self.sendBtn.layer.cornerRadius = 15
         self.sendBtn.clipsToBounds = true
-        
         self.email.layer.borderWidth = 2
         self.email.layer.borderColor = UIColor.white.cgColor
         self.email.layer.cornerRadius = 15

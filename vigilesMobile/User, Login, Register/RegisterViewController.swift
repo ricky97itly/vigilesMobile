@@ -47,7 +47,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.street_number.layer.borderWidth = 1
         self.street_number.layer.cornerRadius = 15
         self.street_number.layer.borderColor = UIColor.white.cgColor
-       
+        
         // Do any additional setup after loading the view.
     }
     
@@ -65,55 +65,39 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         repeatPassword.resignFirstResponder()
         return (true)
     }
+    
     @IBAction func registerBtn(_ sender: Any) {
         
         if name.text == nil || (name.text?.isEmpty)! {
-            let alert = UIAlertController(title: "Attenzione", message: "Inserire nome", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire nome")
             return
         }
         if surname.text == nil || (surname.text?.isEmpty)! {
-            let alert = UIAlertController(title: "Attenzione", message: "Inserire cognome", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire cognome")
             return
-
         }
         if email.text == nil || (email.text?.isEmpty)! {
-            let alert = UIAlertController(title: "Attenzione", message: "Inserire mail", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire mail")
             return
         }
         if password.text == nil || (password.text?.isEmpty)! {
-            let alert = UIAlertController(title: "Attenzione", message: "Inserire password", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire password")
             return
         }
         if repeatPassword.text != password.text {
-            let alert = UIAlertController(title: "Attenzione", message: "La password non corrisponde", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "La password non corrisponde")
             return
         }
         if repeatPassword.text!.isEmpty {
-            let alert = UIAlertController(title: "Attenzione", message: "Inserire conferma password", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire conferma password")
             return
         }
         if address.text == nil || (address.text?.isEmpty)! {
-            let alert = UIAlertController(title: "Attenzione", message: "Inserire indirizzo", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire indirizzo")
             return
         }
         if street_number.text == nil || (street_number.text?.isEmpty)! {
-            let alert = UIAlertController(title: "Attenzione", message: "Inserire indirizzo", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire numero civico")
             return
         }
         
@@ -121,7 +105,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         let url = URL(string: "http://vigilesweb.test/api/register")!
         Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
-            // Dio qualcosa
+            
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                 print("Data: \(utf8Text)")
                 
@@ -161,4 +145,4 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    }
+}

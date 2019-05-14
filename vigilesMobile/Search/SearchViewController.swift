@@ -10,12 +10,12 @@ import UIKit
 import Kingfisher
 
 class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     var reports = [Reports]()
-//    var originalReports = [Reports]()
+    //    var originalReports = [Reports]()
     var selectedReports = [Reports]()
     var reportImgs = [UIImageView]()
     
@@ -37,7 +37,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             })
         })
     }
-
+    
     
     // hide keyboard when I press outside 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -67,21 +67,21 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         searchTableView.reloadData()
     }
     
-//    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-//        switch selectedScope {
-//        case 0:
-//            selectedEmergencyArray = emergencyArray
-//        case 1:
-//            selectedEmergencyArray = selectedEmergencyArray.filter({emergency -> Bool in emergency.code == CodeType.green})
-//        case 2:
-//            selectedEmergencyArray = selectedEmergencyArray.filter({emergency -> Bool in emergency.code == CodeType.yellow})
-//        case 3:
-//            selectedEmergencyArray = selectedEmergencyArray.filter({emergency -> Bool in emergency.code == CodeType.red})
-//        default:
-//            break
-//        }
-//        searchTableView.reloadData()
-//    }
+    //    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+    //        switch selectedScope {
+    //        case 0:
+    //            selectedEmergencyArray = emergencyArray
+    //        case 1:
+    //            selectedEmergencyArray = selectedEmergencyArray.filter({emergency -> Bool in emergency.code == CodeType.green})
+    //        case 2:
+    //            selectedEmergencyArray = selectedEmergencyArray.filter({emergency -> Bool in emergency.code == CodeType.yellow})
+    //        case 3:
+    //            selectedEmergencyArray = selectedEmergencyArray.filter({emergency -> Bool in emergency.code == CodeType.red})
+    //        default:
+    //            break
+    //        }
+    //        searchTableView.reloadData()
+    //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //        Richiama il numero di elementi presenti nel db. Non fate il mio errore di mettere 1 o avrete una sola cella
@@ -105,18 +105,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         cell?.layer.cornerRadius = 15
         return (cell!)
     }
-    
-//    //    Gestisce la cancellazione di una cella
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == UITableViewCell.EditingStyle.delete {
-//            reports.remove(at: indexPath.row)
-//            searchTableView.reloadData()
-//        }
-//    }
-
-    
 }
 
 
-    
+
 

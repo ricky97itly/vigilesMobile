@@ -15,7 +15,7 @@ import UserNotifications
 import Alamofire
 
 class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate, UITextViewDelegate {
-
+    
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var emergencyDescription: UITextView!
@@ -42,10 +42,10 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         self.name.delegate = self
         self.name.layer.cornerRadius = 15
         self.tag.layer.cornerRadius = 15
-//        copyEmgTitle = copiedEmgTitle.emergencyTitle
-//        copyChipOptions = copiedChipOptions.chipoptions
-//        copyDrinkOptions = copiedDrinkOptions.drinkoptions
- 
+        //        copyEmgTitle = copiedEmgTitle.emergencyTitle
+        //        copyChipOptions = copiedChipOptions.chipoptions
+        //        copyDrinkOptions = copiedDrinkOptions.drinkoptions
+        
         
         // Do any additional setup after loading the view.
     }
@@ -66,7 +66,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         let params:[String:String] = ["title" : "\(name.text!)", "address": "\(address.text!)" ,"description" : "\(emergencyDescription.text!)", "tags": "\(tag.text!)" ]
         let url = URL(string: "http://vigilesweb.test/api/reports")!
         Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
-            // Dio qualcosa
+            
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                 print("Data: \(utf8Text)")
                 
@@ -95,9 +95,6 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
                         let postData = try jsonDecoder.decode(Reports.self, from: response.data!)
                         Reports.report = postData as AnyObject
                         print(postData, "BOH")
-//                        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-//                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
-//                        self.present(nextViewController, animated:true, completion:nil)
                     }
                     catch {
                         print("JSONSerialization error:", error)
@@ -105,47 +102,37 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
                 }
             }
         }
-//        if (name.text != "") {
-////            testTitle.append(name.text!)
-////            testAddress.append(address.text!)
-//            name.text = ""
-//            address.text = ""
-//            print("ricevuto, capo")
-//        }
-//        else {
-//            print("non è stato aggiunto nulla")
-//        }
     }
 }
 
-    extension AddViewController: CLLocationManagerDelegate {
-        
-        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestAlwaysAuthorization()
-            locationManager.startUpdatingLocation()
-            let locat = manager.location
-            let geocoder: CLGeocoder = CLGeocoder()
-            geocoder.reverseGeocodeLocation(locat!, completionHandler: {
-                (placemarks, error) in
-                if (error != nil) {
-                    print("PERCHÉ NON VAI")
+extension AddViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        let locat = manager.location
+        let geocoder: CLGeocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(locat!, completionHandler: {
+            (placemarks, error) in
+            if (error != nil) {
+                print("PERCHÉ NON VAI")
+            }
+            else {
+                let pm = placemarks! as [CLPlacemark]
+                if pm.count > 0 {
+                    let pm = placemarks![0]
+                    let streetNumber = pm.subThoroughfare ?? ""
+                    let streetName = pm.thoroughfare ?? ""
+                    //                        let locality =  pm.locality ?? ""
+                    self.address.text = "\(streetName) \(streetNumber)"
+                    print(streetName, streetNumber)
+                    manager.stopUpdatingLocation()
                 }
-                else {
-                    let pm = placemarks! as [CLPlacemark]
-                    if pm.count > 0 {
-                        let pm = placemarks![0]
-                        let streetNumber = pm.subThoroughfare ?? ""
-                        let streetName = pm.thoroughfare ?? ""
-//                        let locality =  pm.locality ?? ""
-                        self.address.text = "\(streetName) \(streetNumber)"
-                        print(streetName, streetNumber)
-                        manager.stopUpdatingLocation()
-                    }
-                }
-            })
-        }
-        
+            }
+        })
+    }
+    
     @IBAction func userPosition(_ sender:Any) {
         locationManager.startUpdatingLocation()
         print("VAI CAZZO")
@@ -153,12 +140,12 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
 }
 
 extension AddViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-//    Alert che verranno mostrati all'utente, action consente di effettuare un'azione
+    //    Alert che verranno mostrati all'utente, action consente di effettuare un'azione
     func displayUploadImageDialog(btnSelected: UIButton) {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
-//        Messaggio per evitare imprevisti con foto poco belle
+        //        Messaggio per evitare imprevisti con foto poco belle
         let alert = UIAlertController(title: "Aggiunta Media", message: "La foto da te scelta sarà visualizzabile agli altri utenti", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Fotocamera", style: .default, handler: {(action: UIAlertAction) in
             self.getImage(fromSourceType: .camera)
@@ -168,18 +155,18 @@ extension AddViewController: UIImagePickerControllerDelegate, UINavigationContro
         }))
         alert.addAction(UIAlertAction(title: "Annulla", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-//        Per verificare su quale dispositivo si sta lavorando
-            if UI_USER_INTERFACE_IDIOM() == .phone {
-//                Per effettuare più operazioni insieme
-                OperationQueue.main.addOperation({() -> Void in
-                    picker.sourceType = .photoLibrary
-                    self.present(picker, animated: true) {() -> Void in }
-                })
-            }
-            else {
+        //        Per verificare su quale dispositivo si sta lavorando
+        if UI_USER_INTERFACE_IDIOM() == .phone {
+            //                Per effettuare più operazioni insieme
+            OperationQueue.main.addOperation({() -> Void in
                 picker.sourceType = .photoLibrary
                 self.present(picker, animated: true) {() -> Void in }
-            }
+            })
+        }
+        else {
+            picker.sourceType = .photoLibrary
+            self.present(picker, animated: true) {() -> Void in }
+        }
     }
     
     func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
@@ -194,22 +181,20 @@ extension AddViewController: UIImagePickerControllerDelegate, UINavigationContro
         }
     }
     
-//    Verifica permessi
+    //    Verifica permessi
     func checkPermission() {
         let authStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         switch authStatus {
         case .authorized:
             self.displayUploadImageDialog(btnSelected: self.mediaBtn)
         case .denied:
-            let alert = UIAlertController(title: "Attenzione", message: "Devi permettere a Vigiles di accedere alla libreria fotografica per aggiungere una foto.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(on: self, with: "Attenzione", message: "Devi permettere a Vigiles di accedere alla libreria fotografica per aggiungere una foto")
         default:
             break
         }
     }
     
-//    Controllo libreria
+    //    Controllo libreria
     func checkLibrary() {
         let photos = PHPhotoLibrary.authorizationStatus()
         if photos == .authorized {
@@ -217,9 +202,7 @@ extension AddViewController: UIImagePickerControllerDelegate, UINavigationContro
             case .authorized:
                 self.displayUploadImageDialog(btnSelected: self.mediaBtn)
             case .denied:
-                let alert = UIAlertController(title: "Attenzione", message: "Non è stato possibile accedere alla libreria.", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                Alert.showAlert(on: self, with: "Attenzione", message: "Non è stato possibile accedere alla libreria")
             default:
                 break
             }
@@ -240,6 +223,4 @@ extension AddViewController: UIImagePickerControllerDelegate, UINavigationContro
         checkLibrary()
         checkPermission()
     }
-
-    
 }

@@ -49,7 +49,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-
+    
     @IBAction func loginButton(_ sender: Any) {
         let params:[String:String] = ["email" : "\(email.text!)", "password" : "\(password.text!)"]
         let url = URL(string: "http://vigilesweb.test/api/login")!
@@ -60,9 +60,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 guard response.error == nil
                     else {
-                        let alert = UIAlertController(title: "Attenzione", message: "Username o password non sono corretti", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                        self.present(alert, animated: true, completion: nil)
+                        Alert.showAlert(on: self, with: "Attenzione", message: "Username o password non sono corretti")
                         print(response.error!)
                         return
                 }
@@ -74,20 +72,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         }
                         return
                 }
-            
-                        do {
-                            let jsonDecoder = JSONDecoder()
-                            let postData = try jsonDecoder.decode(User.self, from: response.data!)
-                            User.user = postData as AnyObject
-                            print(postData, "BOH")
-                            let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-                            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
-                            self.present(nextViewController, animated:true, completion:nil)
-                        }
-                        catch {
-                            print("JSONSerialization error:", error)
-                        }
-                    }
+                
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let postData = try jsonDecoder.decode(User.self, from: response.data!)
+                    User.user = postData as AnyObject
+                    print(postData, "BOH")
+                    let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
+                    self.present(nextViewController, animated:true, completion:nil)
+                }
+                catch {
+                    print("JSONSerialization error:", error)
+                }
             }
         }
     }
+}
