@@ -15,3 +15,5 @@ struct Alert {
         vc.present(alert, animated: true)
     }
 }
+
+print("test")

@@ -29,26 +29,26 @@ class ChatControllerViewController: MessagesViewController {
         })
         chatService.connect()
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension ChatControllerViewController: MessagesDataSource {
     func currentSender() -> SenderType {
-         return Sender(id: member.name, displayName: member.name)
+        return Sender(id: member.name, displayName: member.name)
     }
     
     func numberOfSections(
@@ -68,7 +68,7 @@ extension ChatControllerViewController: MessagesDataSource {
         for message: MessageType,
         at indexPath: IndexPath,
         in messagesCollectionView: MessagesCollectionView) -> CGFloat {
-
+        
         return 12
     }
     
@@ -98,7 +98,7 @@ extension ChatControllerViewController: MessagesDisplayDelegate {
         for message: MessageType,
         at indexPath: IndexPath,
         in messagesCollectionView: MessagesCollectionView) {
-                print("GIGGINO")
+        print("GIGGINO")
         let message = messages[indexPath.section]
         let color = message.member.color
         avatarView.backgroundColor = color
