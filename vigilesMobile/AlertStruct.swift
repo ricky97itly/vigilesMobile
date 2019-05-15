@@ -1,6 +1,6 @@
 //
 //  AlertStruct.swift
-//  
+//
 //
 //  Created by Riccardo Mores on 14/05/2019.
 //
@@ -16,4 +16,3 @@ struct Alert {
     }
 }
 
-print("test")
