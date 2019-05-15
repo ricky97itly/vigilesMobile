@@ -110,14 +110,5 @@ extension ChatControllerViewController: MessageInputBarDelegate {
     func inputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
         chatService.sendMessage(text)
         inputBar.inputTextView.text = ""
-        let newMessage = Message(
-            member: member,
-            text: text,
-            messageId: UUID().uuidString)
-        
-        messages.append(newMessage)
-        inputBar.inputTextView.text = ""
-        messagesCollectionView.reloadData()
-        messagesCollectionView.scrollToBottom(animated: true)
     }
 }
