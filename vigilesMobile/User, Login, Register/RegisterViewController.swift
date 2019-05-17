@@ -67,23 +67,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
 // Per verificare che la mail abbia gli elementi che la compongono
-    func validateMail() {
+   
+    func validateFields() {
         let mail: String = email.text!
         let rule = EmailValidationPredicate()
         let isValidEmail = rule.evaluate(with: mail)
-        
-        if isValidEmail == true {
-            print("Mail valida")
-        }
-        else {
-            Alert.showAlert(on: self, with: "Attenzione", message: "La mail non è valida")
-            print("Mail non valida")
-        }
-    }
-    
-    @IBAction func registerBtn(_ sender: Any) {
-        
-        validateMail()
         
         if name.text == nil || (name.text?.isEmpty)! {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire nome")
@@ -117,6 +105,19 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire numero civico")
             return
         }
+        
+        if isValidEmail == true {
+            print("Mail valida")
+        }
+        else {
+            Alert.showAlert(on: self, with: "Attenzione", message: "La mail non è valida")
+            print("Mail non valida")
+        }
+    }
+    
+    @IBAction func registerBtn(_ sender: Any) {
+        
+        validateFields()
 
         let params:[String:String] = ["name": "\(name.text!)", "surname": "\(surname.text!)", "email" : "\(email.text!)", "password" : "\(password.text!)", "confirm_password" : "\(repeatPassword.text!)", "address" : "\(address.text!)", "street_number": "\(street_number.text!)"]
         
