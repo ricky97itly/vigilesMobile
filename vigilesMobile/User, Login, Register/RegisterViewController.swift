@@ -129,6 +129,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 
                 guard response.error == nil
                     else {
+                        Alert.showAlert(on: self, with: "Attenzione", message: "Non è possibile registrarsi, riprova più tardi")
                         print(response.error!)
                         return
                 }
@@ -141,12 +142,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         return
                 }
                 
-                if response.response?.statusCode == 401 {
-                    let alert = UIAlertController(title: "Attenzione", message: "NON FUNZIONA CAZZO", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                }
-                else if response.response?.statusCode == 200 {
                     do {
                         let jsonDecoder = JSONDecoder()
                         let postData = try jsonDecoder.decode(User.self, from: response.data!)
@@ -163,4 +158,3 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-}
