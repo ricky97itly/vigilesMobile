@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import ValidationComponents
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var name: UITextField!
@@ -18,7 +19,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var street_number: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +47,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.street_number.layer.borderWidth = 1
         self.street_number.layer.cornerRadius = 15
         self.street_number.layer.borderColor = UIColor.white.cgColor
-        
+        self.email.delegate = self
         // Do any additional setup after loading the view.
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
@@ -66,7 +66,24 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         return (true)
     }
     
+// Per verificare che la mail abbia gli elementi che la compongono
+    func validateMail() {
+        let mail: String = email.text!
+        let rule = EmailValidationPredicate()
+        let isValidEmail = rule.evaluate(with: mail)
+        
+        if isValidEmail == true {
+            print("Mail valida")
+        }
+        else {
+            Alert.showAlert(on: self, with: "Attenzione", message: "La mail non è valida")
+            print("Mail non valida")
+        }
+    }
+    
     @IBAction func registerBtn(_ sender: Any) {
+        
+        validateMail()
         
         if name.text == nil || (name.text?.isEmpty)! {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire nome")
@@ -100,7 +117,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire numero civico")
             return
         }
-        
+
         let params:[String:String] = ["name": "\(name.text!)", "surname": "\(surname.text!)", "email" : "\(email.text!)", "password" : "\(password.text!)", "confirm_password" : "\(repeatPassword.text!)", "address" : "\(address.text!)", "street_number": "\(street_number.text!)"]
         
         let url = URL(string: "http://vigilesweb.test/api/register")!

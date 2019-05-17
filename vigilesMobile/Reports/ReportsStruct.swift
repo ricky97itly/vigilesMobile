@@ -27,5 +27,3 @@ class ReportsData: Codable {
         self.data = data
     }
 }
-
-

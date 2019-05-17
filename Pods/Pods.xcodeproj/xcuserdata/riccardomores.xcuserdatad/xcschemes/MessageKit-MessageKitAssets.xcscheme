@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5CC99DE5C97CE5827F07E32FF19AB5DB"
-               BuildableName = "Pods_vigilesMobile.framework"
-               BlueprintName = "Pods-vigilesMobile"
+               BlueprintIdentifier = "41146F268563DD78000D9447FE2F3B1F"
+               BuildableName = "MessageKitAssets.bundle"
+               BlueprintName = "MessageKit-MessageKitAssets"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5CC99DE5C97CE5827F07E32FF19AB5DB"
-            BuildableName = "Pods_vigilesMobile.framework"
-            BlueprintName = "Pods-vigilesMobile"
+            BlueprintIdentifier = "41146F268563DD78000D9447FE2F3B1F"
+            BuildableName = "MessageKitAssets.bundle"
+            BlueprintName = "MessageKit-MessageKitAssets"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
