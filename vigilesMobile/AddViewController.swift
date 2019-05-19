@@ -30,6 +30,11 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UI()
+        // Do any additional setup after loading the view.
+    }
+    
+    func UI() {
         self.addBtn.layer.borderColor = UIColor.white.cgColor
         self.addBtn.layer.borderWidth = 2.5
         self.addBtn.layer.cornerRadius = 15
@@ -42,12 +47,6 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         self.name.delegate = self
         self.name.layer.cornerRadius = 15
         self.tag.layer.cornerRadius = 15
-        //        copyEmgTitle = copiedEmgTitle.emergencyTitle
-        //        copyChipOptions = copiedChipOptions.chipoptions
-        //        copyDrinkOptions = copiedDrinkOptions.drinkoptions
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     // Nasconde tastiera quando premo fuori

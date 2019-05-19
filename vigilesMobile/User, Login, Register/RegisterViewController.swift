@@ -22,6 +22,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.email.delegate = self
+        UI()
+        // Do any additional setup after loading the view.
+    }
+    
+    func UI() {
         self.registerBtn.layer.cornerRadius = 15
         self.registerBtn.layer.borderWidth = 1
         self.registerBtn.layer.borderColor = UIColor.white.cgColor
@@ -47,8 +53,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.street_number.layer.borderWidth = 1
         self.street_number.layer.cornerRadius = 15
         self.street_number.layer.borderColor = UIColor.white.cgColor
-        self.email.delegate = self
-        // Do any additional setup after loading the view.
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

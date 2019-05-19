@@ -18,6 +18,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UI()
+    }
+    
+    func UI() {
         self.enterBtn.layer.cornerRadius = 15
         self.enterBtn.layer.borderWidth = 2.5
         self.enterBtn.layer.borderColor = UIColor.white.cgColor

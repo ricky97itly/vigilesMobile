@@ -16,6 +16,10 @@ class ForgottenPasswordController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UI()
+    }
+    
+    func UI() {
         self.sendBtn.layer.borderWidth = 2.5
         self.sendBtn.layer.borderColor = UIColor.white.cgColor
         self.sendBtn.layer.cornerRadius = 15

@@ -35,6 +35,10 @@ class HomeViewController: UIViewController {
         ied.subtitle = "Dove studiamo"
         ied.coordinate = CLLocationCoordinate2D(latitude: 45.461035, longitude: 9.210483)
         mapView.addAnnotation(ied)
+        UI()
+    }
+    
+    func UI() {
         self.infoView.layer.cornerRadius = 15
         self.infoView.layer.shadowColor = UIColor.black.cgColor
         self.infoView.layer.shadowOpacity = 0.3
