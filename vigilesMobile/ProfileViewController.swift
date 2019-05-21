@@ -8,18 +8,22 @@
 
 import UIKit
 import Alamofire
+import Kingfisher
 
 class ProfileViewController: UIViewController {
-
-
+    
+    
     @IBOutlet weak var chatBtn: UIButton!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var surname: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var mail: UILabel!
     @IBOutlet weak var numberOfSegnalations: UILabel!
+    @IBOutlet weak var street_number: UILabel!
     @IBOutlet weak var logoutBtn: UIButton!
-    let url = URL(string: "http://vigilesweb.test/api/users")!
+    let url = URL(string: "http://vigilesweb.test/api/login")!
+    var profileImg = [UIImageView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,34 +31,20 @@ class ProfileViewController: UIViewController {
         self.logoutBtn.layer.borderWidth = 2.5
         self.logoutBtn.layer.borderColor = UIColor.white.cgColor
         self.logoutBtn.clipsToBounds = true
-//        profilePic.layer.borderWidth = 1
         profilePic.layer.masksToBounds = false
         profilePic.layer.borderColor = UIColor.black.cgColor
         profilePic.layer.cornerRadius = profilePic.frame.height/2.1
         profilePic.clipsToBounds = true
-//        Alamofire.request(url).responseJSON {
-//            response in
-//            print(response.value!)
-//        }
-
-        // Do any additional setup after loading the view.
+        // Richiamo dati dal login
+        name.text = "\(MyUserData.user!.success.name!)"
+        surname.text = "\(MyUserData.user!.success.surname!)"
+        mail.text = "\(MyUserData.user!.success.email!)"
+        address.text = "\(MyUserData.user!.success.address!)"
+        street_number.text = "\(MyUserData.user!.success.street_number!)"
     }
     
     @IBAction func logoutBtn(_ sender: UIButton) {
-//        performSegue(withIdentifier: "Main.storyboard", sender: self)
+        //        performSegue(withIdentifier: "Main.storyboard", sender: self)
     }
-    
-        
-    }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+}
 

@@ -148,8 +148,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 
                     do {
                         let jsonDecoder = JSONDecoder()
-                        let postData = try jsonDecoder.decode(User.self, from: response.data!)
-                        User.user = postData as AnyObject
+                        let postData = try jsonDecoder.decode(MyUserData.self, from: response.data!)
+//                        User.success = postData as AnyObject
+//                        print(MyUserData.succes?.email as Any, "pro")
                         print(postData, "BOH")
                         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
                         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")

@@ -61,7 +61,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             // Dio qualcosa
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                 print("Data: \(utf8Text)")
-                
                 guard response.error == nil
                     else {
                         Alert.showAlert(on: self, with: "Attenzione", message: "Username o password non sono corretti")
@@ -79,8 +78,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 do {
                     let jsonDecoder = JSONDecoder()
-                    let postData = try jsonDecoder.decode(User.self, from: response.data!)
-                    User.user = postData as AnyObject
+                    var postData = try jsonDecoder.decode(MyUserData.self, from: response.data!)
+                    print(postData.success.name as Any)
+//                  Verrà richiamato nel profilo
+                    MyUserData.user = postData
                     print(postData, "BOH")
                     let storyBoard = UIStoryboard(name: "Main", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
@@ -92,4 +93,4 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-}
+  }
