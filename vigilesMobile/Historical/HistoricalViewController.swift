@@ -22,6 +22,10 @@ class HistoricalViewController: UIViewController {
         super.viewDidLoad()
         todayTableView.separatorColor = UIColor(white: 1, alpha: 1)
         //        Riprende i dati in arrivo dalla funzione (vedi complete)
+        modelInvocation()
+    }
+    
+    func modelInvocation() {
         ReportsModel().fetchEvents(complete: {
             (reports) in self.reports = reports
             //            Viene gestita l'esecuzione di più elementi di lavoro
@@ -59,15 +63,15 @@ extension HistoricalViewController: UITableViewDelegate, UITableViewDataSource {
         }
         cell?.layer.cornerRadius = 15
         return (cell!)
-    }
+    } // Fine funzione tableView
     
-    //    Gestisce la cancellazione di una cella
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCell.EditingStyle.delete {
-            reports.remove(at: indexPath.row)
-            todayTableView.reloadData()
-        }
-    }
+    //    Gestisce la cancellazione di una cella (non serve ma lo tengo per il futuro)
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == UITableViewCell.EditingStyle.delete {
+//            reports.remove(at: indexPath.row)
+//            todayTableView.reloadData()
+//        }
+//    }
 }
 
 
