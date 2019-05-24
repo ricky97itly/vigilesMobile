@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         UI()
-    }
+    } 
     
     func UI() {
         self.enterBtn.layer.cornerRadius = 15
@@ -82,7 +82,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     print(postData.success.name as Any)
 //                  Verrà richiamato nel profilo
                     MyUserData.user = postData
-                    print(postData, "BOH")
                     let storyBoard = UIStoryboard(name: "Main", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
                     self.present(nextViewController, animated:true, completion:nil)

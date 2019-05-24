@@ -12,8 +12,8 @@ class MyUserData: Codable {
     var success: User
     static var user: MyUserData?
 }
+
 struct User: Codable {
-//    static var user: AnyObject?
     let id: Int?
     let name: String?
     let surname: String?
@@ -25,10 +25,3 @@ struct User: Codable {
     let password: String?
     let confirm_password: String?
 }
-
-//class UserData: Codable {
-//    var data: [User]?
-//    init(data: [User]) {
-//        self.data = data
-//    }
-//}

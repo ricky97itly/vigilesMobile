@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/riccardomores/Desktop/vigilesMobile/vigilesMobile/AlertStruct.swift">
-   </FileRef>
-   <FileRef
       location = "group:vigilesMobile.xcodeproj">
    </FileRef>
    <FileRef

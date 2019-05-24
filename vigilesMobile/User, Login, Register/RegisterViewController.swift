@@ -89,6 +89,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire mail")
             return
         }
+        
         if password.text == nil || (password.text?.isEmpty)! {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire password")
             return
@@ -110,7 +111,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if isValidEmail == true {
+        if isValidEmail {
             print("Mail valida")
         }
         else {

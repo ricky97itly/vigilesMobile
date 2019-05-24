@@ -45,7 +45,6 @@
 		21A818D82233C48A00F5B1AA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D72233C48A00F5B1AA /* AddViewController.swift */; };
 		21A818DA2233C4E800F5B1AA /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */; };
 		21A818DC2233C57800F5B1AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818DB2233C57800F5B1AA /* ProfileViewController.swift */; };
-		21DBEBD8228BFD9F00B2EC9C /* AlertStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBEBD7228BFD9F00B2EC9C /* AlertStruct.swift */; };
 		3AE272882265FCBE003990F2 /* ForgottenPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */; };
 		561F4FE9228B81B000659C92 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561F4FE8228B81B000659C92 /* Extensions.swift */; };
 		561F4FEB228B841500659C92 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561F4FEA228B841500659C92 /* ChatService.swift */; };
@@ -126,7 +125,6 @@
 		21A818D72233C48A00F5B1AA /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
 		21A818DB2233C57800F5B1AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		21DBEBD7228BFD9F00B2EC9C /* AlertStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertStruct.swift; path = /Users/riccardomores/Desktop/vigilesMobile/vigilesMobile/AlertStruct.swift; sourceTree = "<absolute>"; };
 		364C90B747A133782DBE2414 /* Pods-vigilesMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vigilesMobile.release.xcconfig"; path = "Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile.release.xcconfig"; sourceTree = "<group>"; };
 		3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordController.swift; sourceTree = "<group>"; };
 		3EF4D51B6C47918F9CAF49AF /* Pods-vigilesMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vigilesMobileUITests.debug.xcconfig"; path = "Target Support Files/Pods-vigilesMobileUITests/Pods-vigilesMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 				218BD3F52232E7BE0067FE59 /* HomeViewController.swift */,
 				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
 				56AE4179228BFBB8007AF38C /* AlertStruct.swift */,
-				21DBEBD7228BFD9F00B2EC9C /* AlertStruct.swift */,
 				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
 				2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */,
 				2161CD90222FF7F3001ABD2E /* Info.plist */,
@@ -676,7 +673,6 @@
 			files = (
 				212FA18D2252314D00FD9917 /* IQKeyboardManagerConstants.swift in Sources */,
 				21791B14224283960008B28C /* RegisterViewController.swift in Sources */,
-				21DBEBD8228BFD9F00B2EC9C /* AlertStruct.swift in Sources */,
 				56AE417A228BFBB8007AF38C /* AlertStruct.swift in Sources */,
 				3AE272882265FCBE003990F2 /* ForgottenPasswordController.swift in Sources */,
 				2170B4EE2279D77D003C4331 /* ReportsStruct.swift in Sources */,
