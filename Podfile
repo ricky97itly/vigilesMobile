@@ -17,6 +17,7 @@ pod 'Kingfisher', '~> 5.0'
 pod 'MessageKit', '~> 3.0.0-swift5'
 pod 'Scaledrone', '~> 0.5.0'
 pod 'ValidationComponents'
+pod 'GradientButtonSwift'
 
   target 'vigilesMobileTests' do
     inherit! :search_paths

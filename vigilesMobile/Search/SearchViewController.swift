@@ -66,23 +66,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         print("tvb")
         searchTableView.reloadData()
     }
-    
-    //    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-    //        switch selectedScope {
-    //        case 0:
-    //            selectedEmergencyArray = emergencyArray
-    //        case 1:
-    //            selectedEmergencyArray = selectedEmergencyArray.filter({emergency -> Bool in emergency.code == CodeType.green})
-    //        case 2:
-    //            selectedEmergencyArray = selectedEmergencyArray.filter({emergency -> Bool in emergency.code == CodeType.yellow})
-    //        case 3:
-    //            selectedEmergencyArray = selectedEmergencyArray.filter({emergency -> Bool in emergency.code == CodeType.red})
-    //        default:
-    //            break
-    //        }
-    //        searchTableView.reloadData()
-    //    }
-    
+        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //        Richiama il numero di elementi presenti nel db. Non fate il mio errore di mettere 1 o avrete una sola cella
         return selectedReports.count

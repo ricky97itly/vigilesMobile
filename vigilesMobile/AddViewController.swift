@@ -37,13 +37,11 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     func UI() {
         self.addBtn.layer.borderColor = UIColor.white.cgColor
         self.addBtn.layer.borderWidth = 2.5
-        self.addBtn.layer.cornerRadius = 15
         self.addBtn.clipsToBounds = true
         self.address.delegate = self
         self.emergencyDescription.delegate = self
         self.emergencyDescription.layer.cornerRadius = 10
         self.locationManager.delegate = self
-        self.mediaBtn.layer.cornerRadius = 15
         self.name.delegate = self
         self.name.layer.cornerRadius = 15
         self.tag.layer.cornerRadius = 15

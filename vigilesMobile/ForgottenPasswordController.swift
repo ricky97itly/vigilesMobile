@@ -26,7 +26,6 @@ class ForgottenPasswordController: UIViewController, UITextFieldDelegate {
         self.sendBtn.clipsToBounds = true
         self.email.layer.borderWidth = 2
         self.email.layer.borderColor = UIColor.white.cgColor
-        self.email.layer.cornerRadius = 15
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

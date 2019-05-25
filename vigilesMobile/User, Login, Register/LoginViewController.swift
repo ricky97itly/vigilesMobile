@@ -22,7 +22,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     } 
     
     func UI() {
-        self.enterBtn.layer.cornerRadius = 15
         self.enterBtn.layer.borderWidth = 2.5
         self.enterBtn.layer.borderColor = UIColor.white.cgColor
         self.enterBtn.clipsToBounds = true

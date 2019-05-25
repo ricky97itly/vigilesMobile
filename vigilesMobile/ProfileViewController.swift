@@ -19,7 +19,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var surname: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var mail: UILabel!
-    @IBOutlet weak var numberOfSegnalations: UILabel!
     @IBOutlet weak var street_number: UILabel!
     @IBOutlet weak var logoutBtn: UIButton!
     let url = URL(string: "http://vigilesweb.test/api/login")!
@@ -32,7 +31,6 @@ class ProfileViewController: UIViewController {
     }
     
     func UI() {
-        self.logoutBtn.layer.cornerRadius = 15
         self.logoutBtn.layer.borderWidth = 2.5
         self.logoutBtn.layer.borderColor = UIColor.white.cgColor
         self.logoutBtn.clipsToBounds = true

@@ -103,7 +103,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgb-oM-G7J">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgb-oM-G7J" customClass="GradientButton" customModule="GradientButtonSwift">
                                 <rect key="frame" x="135.66666666666666" y="434" width="104" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="OJf-r3-jq8"/>
@@ -111,6 +111,11 @@
                                 <state key="normal" title="Invia email">
                                     <color key="titleColor" red="0.93722015619999999" green="0.91336667540000005" blue="0.93333619830000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="1uB-ca-aHy" kind="show" id="lnm-jl-kpd"/>
                                 </connections>
@@ -236,7 +241,7 @@
                                     <constraint firstItem="ebK-QU-lcR" firstAttribute="leading" secondItem="Pac-NC-QnM" secondAttribute="leading" id="fCQ-8o-t9U"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKf-xf-FsO" userLabel="Enter Btn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKf-xf-FsO" userLabel="Enter Btn" customClass="GradientButton" customModule="GradientButtonSwift">
                                 <rect key="frame" x="145" y="658" width="85" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -245,6 +250,11 @@
                                 <state key="normal" title="Entra">
                                     <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginButton:" destination="1uB-ca-aHy" eventType="touchUpInside" id="d6P-Fn-RwV"/>
                                 </connections>
@@ -375,7 +385,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="address-line1"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-fS-V4O" userLabel="Register Btn">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-fS-V4O" userLabel="Register Btn" customClass="GradientButton" customModule="GradientButtonSwift">
                                 <rect key="frame" x="135.66666666666666" y="614" width="104" height="30"/>
                                 <color key="backgroundColor" name="vigilesRed"/>
                                 <constraints>
@@ -386,6 +396,11 @@
                                 <state key="normal" title="Registrati">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="registerBtn:" destination="YA2-kc-dk7" eventType="touchUpInside" id="T4w-yG-Ygn"/>
                                 </connections>
@@ -476,6 +491,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Leq-D7-zut"/>
+        <segue reference="Mej-gU-Ttg"/>
     </inferredMetricsTieBreakers>
 </document>

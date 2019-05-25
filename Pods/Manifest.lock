@@ -12,6 +12,7 @@ PODS:
     - GooglePlaces (= 3.1.0)
   - GooglePlaces (3.1.0):
     - GoogleMaps/Base (= 3.1.0)
+  - GradientButtonSwift (1.0.2)
   - InputBarAccessoryView (4.2.2)
   - Kingfisher (5.4.0)
   - MessageKit (3.0.0):
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
+  - GradientButtonSwift
   - Kingfisher (~> 5.0)
   - MessageKit (~> 3.0.0-swift5)
   - Scaledrone (~> 0.5.0)
@@ -43,6 +45,7 @@ SPEC REPOS:
     - GoogleMaps
     - GooglePlacePicker
     - GooglePlaces
+    - GradientButtonSwift
     - InputBarAccessoryView
     - Kingfisher
     - MessageKit
@@ -58,6 +61,7 @@ SPEC CHECKSUMS:
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: 1c60c2a26e9d1e73bcb0c6f89609db8d777d13c1
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
+  GradientButtonSwift: b2231f7ccb0d2c817409ca20634f7a430876f7d5
   InputBarAccessoryView: 2b937602598e2fab3149f37f51dd7ad795653812
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   MessageKit: e892a9ca49ebe6d82684d3a93ad84021fa23e2c6
@@ -67,6 +71,6 @@ SPEC CHECKSUMS:
   ValidationComponents: fad1f9e9d7fbf3e10c893c880ef9d27627e90382
   ValidationToolkit: ce8e9c1a5d49eddc3266a009d46df5ea22042dbc
 
-PODFILE CHECKSUM: 286d85993dd87707b771c2a40f8f327022e0834b
+PODFILE CHECKSUM: 8961165a3ae5266e9a43ce557f3026f66f0a18dc
 
 COCOAPODS: 1.6.0

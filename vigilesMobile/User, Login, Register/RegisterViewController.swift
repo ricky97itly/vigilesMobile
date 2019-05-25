@@ -28,7 +28,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     func UI() {
-        self.registerBtn.layer.cornerRadius = 15
         self.registerBtn.layer.borderWidth = 1
         self.registerBtn.layer.borderColor = UIColor.white.cgColor
         self.registerBtn.clipsToBounds = true

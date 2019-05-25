@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F14FB002A989142292E2C22F2625B7FD"
-               BuildableName = "SwiftyJSON.framework"
-               BlueprintName = "SwiftyJSON"
+               BlueprintIdentifier = "D4AF12ACE830410A934C06C1CEC8D4CA"
+               BuildableName = "GradientButtonSwift.framework"
+               BlueprintName = "GradientButtonSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
