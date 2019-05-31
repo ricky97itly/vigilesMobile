@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var street_number: UITextField!
+    @IBOutlet weak var passwordStrength: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,15 +146,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         }
                         return
                 }
-                
                     do {
                         let jsonDecoder = JSONDecoder()
-                        let postData = try jsonDecoder.decode(MyUserData.self, from: response.data!)
-//                        User.success = postData as AnyObject
-//                        print(MyUserData.succes?.email as Any, "pro")
+                        var postData = try jsonDecoder.decode(MyUserData.self, from: response.data!)
+                        MyUserData.user = postData
                         print(postData, "BOH")
                         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enter")
+                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
                         self.present(nextViewController, animated:true, completion:nil)
                     }
                     catch {

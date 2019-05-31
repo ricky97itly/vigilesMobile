@@ -432,6 +432,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" textContentType="address-line1"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password scarsa" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brP-L3-bx5">
+                                <rect key="frame" x="48" y="570" width="140" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <constraints>
@@ -466,6 +473,7 @@
                         <outlet property="email" destination="JOT-Yz-blM" id="ml3-hw-YjZ"/>
                         <outlet property="name" destination="ydy-az-6C2" id="7Xz-JW-L51"/>
                         <outlet property="password" destination="wh8-3W-dEd" id="WlA-q8-G7u"/>
+                        <outlet property="passwordStrength" destination="brP-L3-bx5" id="Zpu-eJ-0Yr"/>
                         <outlet property="registerBtn" destination="0gA-fS-V4O" id="nQD-8D-i7w"/>
                         <outlet property="repeatPassword" destination="DO5-Nl-wpg" id="Gxe-Ku-4U4"/>
                         <outlet property="street_number" destination="Kcf-03-k1R" id="PjP-fp-EVQ"/>
@@ -491,6 +499,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Mej-gU-Ttg"/>
+        <segue reference="Leq-D7-zut"/>
     </inferredMetricsTieBreakers>
 </document>
