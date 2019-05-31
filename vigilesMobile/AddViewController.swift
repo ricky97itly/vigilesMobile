@@ -18,6 +18,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var addBtn: UIButton!
+    @IBOutlet weak var street_number: UITextField!
     @IBOutlet weak var emergencyDescription: UITextView!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelAddress: UILabel!
@@ -45,6 +46,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         self.name.delegate = self
         self.name.layer.cornerRadius = 15
         self.tag.layer.cornerRadius = 15
+        self.street_number.layer.cornerRadius = 15
     }
     
     // Nasconde tastiera quando premo fuori
@@ -60,8 +62,8 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     }
     
     @IBAction func addEmergency() {
-        let params:[String:String] = ["title" : "\(name.text!)", "address": "\(address.text!)" ,"description" : "\(emergencyDescription.text!)", "tags": "\(tag.text!)" ]
-        let url = URL(string: "http://vigilesweb.test/api/reports")!
+        let params:[String:String] = ["title" : "\(name.text!)", "address": "\(address.text!)" , "street_number": "\(street_number.text!)", "description" : "\(emergencyDescription.text!)", "tags": "\(tag.text!)" ]
+        let url = URL(string: "http://vigilesweb.test/api/report")!
         Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
             
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
@@ -69,6 +71,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
                 
                 guard response.error == nil
                     else {
+                        Alert.showAlert(on: self, with: "Attenzione", message: "Non è possibile registrarsi, riprova più tardi")
                         print(response.error!)
                         return
                 }
@@ -80,13 +83,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
                         }
                         return
                 }
-                
-                if response.response?.statusCode == 401 {
-                    let alert = UIAlertController(title: "Attenzione", message: "Non è possibile eseguire la richiesta", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                }
-                else if response.response?.statusCode == 200 {
+        
                     do {
                         let jsonDecoder = JSONDecoder()
                         let postData = try jsonDecoder.decode(Reports.self, from: response.data!)
@@ -100,7 +97,6 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
             }
         }
     }
-}
 
 extension AddViewController: CLLocationManagerDelegate {
     
@@ -122,7 +118,8 @@ extension AddViewController: CLLocationManagerDelegate {
                     let streetNumber = pm.subThoroughfare ?? ""
                     let streetName = pm.thoroughfare ?? ""
                     //                        let locality =  pm.locality ?? ""
-                    self.address.text = "\(streetName) \(streetNumber)"
+                    self.address.text = "\(streetName)"
+                    self.street_number.text = "\(streetNumber)"
                     print(streetName, streetNumber)
                     manager.stopUpdatingLocation()
                 }
