@@ -50,7 +50,6 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cella", for: indexPath) as? ChatTableViewCell
         cell?.chatTitle.text = chatTitle[indexPath.row]
-        cell?.chatNumber.text = chatNumber[indexPath.row]
         cell?.chatImg.image = chatImg[indexPath.row]
         cell?.layer.cornerRadius = 15
         return (cell!)
