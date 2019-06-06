@@ -11,17 +11,31 @@ import Alamofire
 
 var testChat = [String]()
 
+
 class ChatViewController: UIViewController {    
     @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var chatCV: UICollectionView!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var chatTV: UITableView!
     var chatImg = [UIImage(named: "code"), UIImage(named: "code"), UIImage(named: "code")]
     var chatTitle = ["Incidente", "Schianto", "Apple Chiusa"]
     var chatNumber = ["Segnalazione 0001", "Segnalazione 0002", "Segnalazione 0003"]
+    var reports = [Reports]()
+    var selectedReports = [Reports]()
+    var reportImgs = [UIImageView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ReportsModel().fetchEvents(complete: {
+            (reports) in self.reports = reports
+            //            Viene gestita l'esecuzione di più elementi di lavoro
+            let queue = DispatchQueue.main
+            //            Vengono eseguite più azioni "in parallelo"
+            queue.async(execute: {
+                self.chatTV.delegate = self
+                self.chatTV.dataSource = self
+                self.chatTV?.reloadData()
+            })
+        })
         // Do any additional setup after loading the view.
     }
 }
@@ -44,13 +58,19 @@ class ChatViewController: UIViewController {
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chatTitle.count
+        return reports.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cella", for: indexPath) as? ChatTableViewCell
-        cell?.chatTitle.text = chatTitle[indexPath.row]
-        cell?.chatImg.image = chatImg[indexPath.row]
+        if self.reports.count > 0 {
+            let report = self.reports[indexPath.row]
+            cell?.chatTitle.text = report.title
+            //            Converto url in stringa
+            let imgUrl = URL(string: report.media!)
+            //            kf è metodo diKingFisher
+            cell?.chatImg.kf.setImage(with: imgUrl)
+        }
         cell?.layer.cornerRadius = 15
         return (cell!)
     }

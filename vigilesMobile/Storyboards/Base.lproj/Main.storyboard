@@ -211,10 +211,10 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pac-NC-QnM">
-                                <rect key="frame" x="118" y="488" width="139" height="6"/>
+                                <rect key="frame" x="117.66666666666669" y="488" width="140" height="6"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resta collegato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-R8-9zf">
-                                        <rect key="frame" x="33" y="-12" width="106" height="18"/>
+                                        <rect key="frame" x="33.999999999999986" y="-12" width="106.00000000000001" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7t7-R8-9zf" secondAttribute="height" multiplier="53:9" id="8ss-27-TFL"/>
                                             <constraint firstAttribute="height" constant="18" id="d3G-NE-I6I"/>
@@ -224,7 +224,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebK-QU-lcR" userLabel="CheckBox">
-                                        <rect key="frame" x="0.0" y="-16" width="15" height="22"/>
+                                        <rect key="frame" x="0.0" y="-16" width="16" height="22"/>
                                         <state key="normal" image="Rectangle 11"/>
                                         <state key="selected" image="Group"/>
                                         <connections>
