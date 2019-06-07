@@ -117,6 +117,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="sendMail:" destination="46b-yp-spc" eventType="touchUpInside" id="X6e-Dz-z4I"/>
                                     <segue destination="1uB-ca-aHy" kind="show" id="lnm-jl-kpd"/>
                                 </connections>
                             </button>
@@ -211,10 +212,10 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pac-NC-QnM">
-                                <rect key="frame" x="117.66666666666669" y="488" width="140" height="6"/>
+                                <rect key="frame" x="118" y="488" width="139" height="6"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resta collegato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-R8-9zf">
-                                        <rect key="frame" x="33.999999999999986" y="-12" width="106.00000000000001" height="18"/>
+                                        <rect key="frame" x="33" y="-12" width="106" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="7t7-R8-9zf" secondAttribute="height" multiplier="53:9" id="8ss-27-TFL"/>
                                             <constraint firstAttribute="height" constant="18" id="d3G-NE-I6I"/>
@@ -224,7 +225,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebK-QU-lcR" userLabel="CheckBox">
-                                        <rect key="frame" x="0.0" y="-16" width="16" height="22"/>
+                                        <rect key="frame" x="0.0" y="-16" width="15" height="22"/>
                                         <state key="normal" image="Rectangle 11"/>
                                         <state key="selected" image="Group"/>
                                         <connections>
@@ -432,13 +433,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES" textContentType="address-line1"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password scarsa" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brP-L3-bx5">
-                                <rect key="frame" x="48" y="570" width="140" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <constraints>
@@ -473,7 +467,6 @@
                         <outlet property="email" destination="JOT-Yz-blM" id="ml3-hw-YjZ"/>
                         <outlet property="name" destination="ydy-az-6C2" id="7Xz-JW-L51"/>
                         <outlet property="password" destination="wh8-3W-dEd" id="WlA-q8-G7u"/>
-                        <outlet property="passwordStrength" destination="brP-L3-bx5" id="Zpu-eJ-0Yr"/>
                         <outlet property="registerBtn" destination="0gA-fS-V4O" id="nQD-8D-i7w"/>
                         <outlet property="repeatPassword" destination="DO5-Nl-wpg" id="Gxe-Ku-4U4"/>
                         <outlet property="street_number" destination="Kcf-03-k1R" id="PjP-fp-EVQ"/>
@@ -499,6 +492,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Leq-D7-zut"/>
+        <segue reference="Mej-gU-Ttg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,7 +19,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var street_number: UITextField!
-    @IBOutlet weak var passwordStrength: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

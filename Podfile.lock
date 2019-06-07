@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.8.2)
   - AlamofireImage (3.5.2):
     - Alamofire (~> 4.8)
+  - Bolts/Tasks (1.9.0)
   - GoogleMaps (3.1.0):
     - GoogleMaps/Maps (= 3.1.0)
   - GoogleMaps/Base (3.1.0)
@@ -17,6 +18,10 @@ PODS:
   - Kingfisher (5.4.0)
   - MessageKit (3.0.0):
     - InputBarAccessoryView (~> 4.2.2)
+  - Parse (1.17.2):
+    - Parse/Core (= 1.17.2)
+  - Parse/Core (1.17.2):
+    - Bolts/Tasks (~> 1.9)
   - Scaledrone (0.5.0):
     - Starscream (~> 3.1.0)
   - Starscream (3.1.0)
@@ -34,6 +39,7 @@ DEPENDENCIES:
   - GradientButtonSwift
   - Kingfisher (~> 5.0)
   - MessageKit (~> 3.0.0-swift5)
+  - Parse
   - Scaledrone (~> 0.5.0)
   - SwiftyJSON
   - ValidationComponents
@@ -42,6 +48,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - Bolts
     - GoogleMaps
     - GooglePlacePicker
     - GooglePlaces
@@ -49,6 +56,7 @@ SPEC REPOS:
     - InputBarAccessoryView
     - Kingfisher
     - MessageKit
+    - Parse
     - Scaledrone
     - Starscream
     - SwiftyJSON
@@ -58,6 +66,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: 1c60c2a26e9d1e73bcb0c6f89609db8d777d13c1
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
@@ -65,12 +74,13 @@ SPEC CHECKSUMS:
   InputBarAccessoryView: 2b937602598e2fab3149f37f51dd7ad795653812
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   MessageKit: e892a9ca49ebe6d82684d3a93ad84021fa23e2c6
+  Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
   Scaledrone: 7fc6a9ab8e969b0df53fe14b54217db8ddf0715a
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   ValidationComponents: fad1f9e9d7fbf3e10c893c880ef9d27627e90382
   ValidationToolkit: ce8e9c1a5d49eddc3266a009d46df5ea22042dbc
 
-PODFILE CHECKSUM: 8961165a3ae5266e9a43ce557f3026f66f0a18dc
+PODFILE CHECKSUM: dc6ccfaac69562429c892a46b559fbf69c69506f
 
-COCOAPODS: 1.6.0
+COCOAPODS: 1.7.1

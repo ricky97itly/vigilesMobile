@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4AF12ACE830410A934C06C1CEC8D4CA"
+               BlueprintIdentifier = "D209D2E087A00E5810D895F4828853E5"
                BuildableName = "GradientButtonSwift.framework"
                BlueprintName = "GradientButtonSwift"
                ReferencedContainer = "container:Pods.xcodeproj">

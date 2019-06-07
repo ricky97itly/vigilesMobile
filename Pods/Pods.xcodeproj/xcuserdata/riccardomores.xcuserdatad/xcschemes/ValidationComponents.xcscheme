@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5EB33B65490E2714622EF71FBF9129CF"
+               BlueprintIdentifier = "C2BE126FB9848B4429C7D0F63BEE0C30"
                BuildableName = "ValidationComponents.framework"
                BlueprintName = "ValidationComponents"
                ReferencedContainer = "container:Pods.xcodeproj">
