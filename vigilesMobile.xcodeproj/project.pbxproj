@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -80,6 +80,7 @@
 
 /* Begin PBXFileReference section */
 		2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		211DCC0222AA864300FF593A /* vigilesMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = vigilesMobile.entitlements; sourceTree = "<group>"; };
 		212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalTableViewCell.swift; path = vigilesMobile/Historical/HistoricalTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		212FA16F2252314D00FD9917 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
 		212FA1712252314D00FD9917 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
@@ -265,6 +266,7 @@
 		2161CD80222FF7F2001ABD2E /* vigilesMobile */ = {
 			isa = PBXGroup;
 			children = (
+				211DCC0222AA864300FF593A /* vigilesMobile.entitlements */,
 				212FA16D2252314D00FD9917 /* IQKeyboardManagerSwift */,
 				218BD3E42232DAE90067FE59 /* Storyboards */,
 				2170B4F02279DA27003C4331 /* Chat */,
@@ -465,6 +467,11 @@
 					2161CD7D222FF7F2001ABD2E = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					2161CD94222FF7F3001ABD2E = {
 						CreatedOnToolsVersion = 10.1;
@@ -852,6 +859,7 @@
 			baseConfigurationReference = 3F83C3C4A90BA5068CB6FB9A /* Pods-vigilesMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = vigilesMobile/vigilesMobile.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q84HB5733Y;
@@ -875,6 +883,7 @@
 			baseConfigurationReference = 364C90B747A133782DBE2414 /* Pods-vigilesMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = vigilesMobile/vigilesMobile.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q84HB5733Y;
