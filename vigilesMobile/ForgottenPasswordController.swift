@@ -45,6 +45,7 @@ class ForgottenPasswordController: UIViewController, UITextFieldDelegate {
             showMessage(userMessage: userMessage)
             return
         }
+//        Richiede reset password da mail
         PFUser.requestPasswordResetForEmail(inBackground: mail!, block: {(success:Bool, error:NSError?) -> Void in
             
             if error != nil {
