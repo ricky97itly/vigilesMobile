@@ -8,6 +8,11 @@
 
 import Foundation
 
+class Data: Codable {
+    var success: Reports
+    static var report: Data?
+}
+
 // Struct copia il suo valore quando viene assegnato a qualcos'altro. Class no
 struct Reports: Codable {
     static var report: AnyObject?
@@ -15,6 +20,8 @@ struct Reports: Codable {
     let id: Int?
     let address: String?
     let street_number: Int?
+    let latitude: Double?
+    let longitude: Double?
     let description: String?
     let media: String?
     let tags: String?
@@ -22,6 +29,8 @@ struct Reports: Codable {
 
 // Gestiamo i dati facendo riferimento alla struct precedente. In questo caso usiamo una classe per evitare rallentamenti gestendo ora la quantità di dati presente nel json
 class ReportsData: Codable {
+//    var success: Reports
+//    static var report: ReportsData?
     var data: [Reports]?
     init(data: [Reports]) {
         self.data = data

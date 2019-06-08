@@ -5,11 +5,11 @@
 //  Created by Riccardo Mores on 08/03/2019.
 //  Copyright © 2019 Riccardo Mores. All rights reserved.
 
-
 import UIKit
 import MapKit
 import CoreLocation
 import Alamofire
+import SwiftyJSON
 
 class HomeViewController: UIViewController {
     
@@ -26,15 +26,12 @@ class HomeViewController: UIViewController {
     let annotation = MKPointAnnotation()
     let ied = MKPointAnnotation()
     var previousLocation: CLLocation?
+    var reports = [Reports]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
-        //        Creazione marker
-        ied.title = "IED"
-        ied.subtitle = "Dove studiamo"
-        ied.coordinate = CLLocationCoordinate2D(latitude: 45.461035, longitude: 9.210483)
-        mapView.addAnnotation(ied)
+        setUpMarkers()
         UI()
     }
     
@@ -46,12 +43,43 @@ class HomeViewController: UIViewController {
         self.infoView.layer.shadowRadius = 5
     }
     
+    func setUpMarkers() {
+        ReportsModel().fetchEvents(complete: {
+            (reports) in self.reports = reports
+            //            Viene gestita l'esecuzione di più elementi di lavoro
+            let queue = DispatchQueue.main
+            //            Vengono eseguite più azioni "in parallelo"
+            queue.async(execute: {
+                for report in reports {
+//                    Se uno di questi parametri manca il codice non va e passa a quello successivo
+                    if let title = report.title, let address = report.address {
+                        // Geo Code per convertire in Lat e Long
+                        let geoCoder = CLGeocoder()
+                        let addressString = "\(address), Milano"
+                        geoCoder.geocodeAddressString(addressString) { (placemarks, error) in
+                            if let error = error {
+                                print(error, "Questo è l'errore")
+                            }
+                            else {
+                                let placemarks = placemarks
+                                if let location = placemarks?.first?.location {
+                                    let annotation = MKPointAnnotation()
+                                    annotation.title = title
+                                    annotation.coordinate = location.coordinate
+                                    self.mapView.addAnnotation(annotation)
+                                }
+                            }
+                        }
+                    }
+                }
+            })
+        })
+    }
+    
     //    Button info, al click appare view
     @IBAction func onPressed(_ sender: Any) {
-        bottomConstraint.constant = 10
-        UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
-            self.view.layoutIfNeeded()
-        }, completion: nil)
+        Alert.showAlert(on: self, with: "Ciao!", message: "Premi su un marker per vedere più informazioni.")
+
     }
     
     //    Button dentro la view, al click si chiude
@@ -76,6 +104,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+//    Controllo dei servizi di localizzazione, se non vanno esce alert
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
@@ -178,5 +207,15 @@ extension HomeViewController: MKMapViewDelegate {
                 self.addressLabel.text = "\(streetName) \(streetNumber)"
             }
         }
+    }
+    
+//    Funzione per marker click, fa apparire la view
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        //        Do Some sort of fancy animation here
+        bottomConstraint.constant = 10
+        UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+//        infoView.title
     }
 }

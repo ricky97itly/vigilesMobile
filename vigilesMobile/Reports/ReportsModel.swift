@@ -45,6 +45,7 @@ class ReportsModel: NSObject {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let reports = try decoder.decode(ReportsData.self, from: response.data!)
                 //                Si mandano i dati recuperati a HistoricalViewController
+                print(reports.data!)
                 complete(reports.data!)
                 print("Vai stronzo")
             }
