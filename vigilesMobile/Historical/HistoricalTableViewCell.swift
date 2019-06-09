@@ -9,13 +9,17 @@
 import UIKit
 
 class HistoricalTableViewCell: UITableViewCell {
-    @IBOutlet weak var codeImg: UIImageView!
+
     @IBOutlet weak var emergencyImg: UIImageView!
     @IBOutlet weak var emergencyTitle: UILabel!
     @IBOutlet weak var emergencyAddress: UILabel!
-//    @IBOutlet weak var emergencyId: UILabel!
-    @IBOutlet weak var streetNumber: UILabel!
     @IBOutlet weak var emergencyDescription: UILabel!
+    @IBOutlet weak var codeImg: UIImageView!
+    
+//    @IBOutlet weak var emergencyId: UILabel!
+    @IBOutlet weak var emergencyId: UILabel!
+    @IBOutlet weak var streetNumber: UILabel!
+
     
     //    Spazio tra le celle
     override var frame: CGRect {

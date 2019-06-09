@@ -301,7 +301,7 @@
                     </view>
                     <connections>
                         <outlet property="email" destination="f5z-k6-pfd" id="XYU-Rm-Ppw"/>
-                        <outlet property="enterBtn" destination="nKf-xf-FsO" id="FxG-m9-yb7"/>
+                        <outlet property="enterBtn" destination="nKf-xf-FsO" id="M54-7c-PRa"/>
                         <outlet property="password" destination="RCr-Ud-rQO" id="I0k-Nc-oDQ"/>
                         <outlet property="registerBtn" destination="n06-UG-0PQ" id="3cX-pD-ohV"/>
                     </connections>

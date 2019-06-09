@@ -52,7 +52,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
     @IBAction func loginButton(_ sender: Any) {
         let params:[String:String] = ["email" : "\(email.text!)", "password" : "\(password.text!)"]
         let url = URL(string: "http://vigilesweb.test/api/login")!

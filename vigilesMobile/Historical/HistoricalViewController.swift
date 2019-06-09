@@ -59,7 +59,7 @@ extension HistoricalViewController: UITableViewDelegate, UITableViewDataSource {
             //            Converto url in stringa
             let imgUrl = URL(string: report.media!)
             //            kf è metodo diKingFisher
-            cell?.codeImg.kf.setImage(with: imgUrl)
+            cell?.emergencyImg.kf.setImage(with: imgUrl)
         }
         cell?.layer.cornerRadius = 15
         return (cell!)
