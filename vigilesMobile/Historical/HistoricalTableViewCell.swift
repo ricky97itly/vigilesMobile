@@ -13,7 +13,7 @@ class HistoricalTableViewCell: UITableViewCell {
     @IBOutlet weak var emergencyImg: UIImageView!
     @IBOutlet weak var emergencyTitle: UILabel!
     @IBOutlet weak var emergencyAddress: UILabel!
-    @IBOutlet weak var emergencyId: UILabel!
+//    @IBOutlet weak var emergencyId: UILabel!
     @IBOutlet weak var streetNumber: UILabel!
     @IBOutlet weak var emergencyDescription: UILabel!
     

@@ -10,6 +10,7 @@ import MapKit
 import CoreLocation
 import Alamofire
 import SwiftyJSON
+import Kingfisher
 
 class HomeViewController: UIViewController {
     
@@ -20,6 +21,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var infoImg: UIImageView!
+    @IBOutlet weak var infoDescription: UILabel!
+    @IBOutlet weak var infoTitle: UILabel!
+    @IBOutlet weak var infoID: UILabel!
+    @IBOutlet weak var infoAddress: UILabel!
     let locationManager = CLLocationManager()
     //    Zoom iniziale su posizione utente
     let regionRadius: CLLocationDistance = 1000
@@ -27,6 +32,8 @@ class HomeViewController: UIViewController {
     let ied = MKPointAnnotation()
     var previousLocation: CLLocation?
     var reports = [Reports]()
+    var selectedReports = Reports?.self
+    var infoIMG = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +74,11 @@ class HomeViewController: UIViewController {
                                     annotation.title = title
                                     annotation.coordinate = location.coordinate
                                     self.mapView.addAnnotation(annotation)
+                                    self.infoTitle.text = report.title
+                                    self.infoAddress.text = report.address
+                                    self.infoDescription.text = report.description
+                                    let imgUrl = URL(string: report.media!)
+                                    self.infoImg.kf.setImage(with: imgUrl)
                                 }
                             }
                         }
@@ -79,7 +91,6 @@ class HomeViewController: UIViewController {
     //    Button info, al click appare alert
     @IBAction func onPressed(_ sender: Any) {
         Alert.showAlert(on: self, with: "Ciao!", message: "Premi su un marker per vedere più informazioni.")
-
     }
     
     //    Button dentro la view, al click si chiude
@@ -88,6 +99,7 @@ class HomeViewController: UIViewController {
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
+        resetInfoView()
     }
     
     //    Per migliore localizzazione
@@ -215,6 +227,13 @@ extension HomeViewController: MKMapViewDelegate {
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
-//        infoView.title
     }
+    
+    private func resetInfoView() {
+        self.infoImg.image = nil
+        self.infoTitle.text = "Untiled"
+        self.infoDescription.text = "No description"
+        self.infoAddress.text = "No address"
+    }
+
 }
