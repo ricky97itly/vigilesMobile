@@ -11,6 +11,7 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 import Kingfisher
+import Lightbox
 
 class HomeViewController: UIViewController {
     
@@ -228,6 +229,31 @@ extension HomeViewController: MKMapViewDelegate {
             self.view.layoutIfNeeded()
         }, completion: nil)
     }
+    
+    @objc func didTapImageView() {
+        
+        let image = infoImg.image
+        if infoImg.image == nil {
+            return
+        }
+        
+        let lightboxImage = LightboxImage(image: image!, text: reports.description )
+        LightboxConfig.InfoLabel.textAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
+        
+        // Create an instance of LightboxController.
+        let controller = LightboxController(images: [lightboxImage])
+        
+        // Set delegates.
+        //        controller.pageDelegate = self
+        //        controller.dismissalDelegate = self
+        
+        // Use dynamic background.
+        controller.dynamicBackground = true
+        
+        // Present your controller.
+        present(controller, animated: true, completion: nil)
+    }
+
     
     private func resetInfoView() {
         self.infoImg.image = nil

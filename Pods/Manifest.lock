@@ -3,6 +3,7 @@ PODS:
   - AlamofireImage (3.5.2):
     - Alamofire (~> 4.8)
   - Bolts/Tasks (1.9.0)
+  - Cache (5.2.0)
   - GoogleMaps (3.1.0):
     - GoogleMaps/Maps (= 3.1.0)
   - GoogleMaps/Base (3.1.0)
@@ -14,8 +15,12 @@ PODS:
   - GooglePlaces (3.1.0):
     - GoogleMaps/Base (= 3.1.0)
   - GradientButtonSwift (1.0.2)
+  - Imaginary (4.2.0):
+    - Cache (~> 5.0)
   - InputBarAccessoryView (4.2.2)
   - Kingfisher (5.4.0)
+  - Lightbox (2.3.0):
+    - Imaginary (~> 4.0)
   - MessageKit (3.0.0):
     - InputBarAccessoryView (~> 4.2.2)
   - Parse (1.17.2):
@@ -38,6 +43,7 @@ DEPENDENCIES:
   - GooglePlaces
   - GradientButtonSwift
   - Kingfisher (~> 5.0)
+  - Lightbox
   - MessageKit (~> 3.0.0-swift5)
   - Parse
   - Scaledrone (~> 0.5.0)
@@ -49,12 +55,15 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - Bolts
+    - Cache
     - GoogleMaps
     - GooglePlacePicker
     - GooglePlaces
     - GradientButtonSwift
+    - Imaginary
     - InputBarAccessoryView
     - Kingfisher
+    - Lightbox
     - MessageKit
     - Parse
     - Scaledrone
@@ -67,12 +76,15 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   GooglePlacePicker: 1c60c2a26e9d1e73bcb0c6f89609db8d777d13c1
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
   GradientButtonSwift: b2231f7ccb0d2c817409ca20634f7a430876f7d5
+  Imaginary: dae33d06dbc2ada22f98afef5eb45cc061311a2c
   InputBarAccessoryView: 2b937602598e2fab3149f37f51dd7ad795653812
   Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  Lightbox: d317750e4132bfb871a5307cfe0a2c7d6a583c65
   MessageKit: e892a9ca49ebe6d82684d3a93ad84021fa23e2c6
   Parse: 3b31a3dd1777b07ee7f0caee32fafbff544483a5
   Scaledrone: 7fc6a9ab8e969b0df53fe14b54217db8ddf0715a
@@ -81,6 +93,6 @@ SPEC CHECKSUMS:
   ValidationComponents: fad1f9e9d7fbf3e10c893c880ef9d27627e90382
   ValidationToolkit: ce8e9c1a5d49eddc3266a009d46df5ea22042dbc
 
-PODFILE CHECKSUM: dc6ccfaac69562429c892a46b559fbf69c69506f
+PODFILE CHECKSUM: 4266ad2e186adfa492eba200ab38ff252e7ce7f6
 
 COCOAPODS: 1.7.1

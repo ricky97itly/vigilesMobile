@@ -19,6 +19,7 @@ pod 'Scaledrone', '~> 0.5.0'
 pod 'ValidationComponents'
 pod 'GradientButtonSwift'
 pod 'Parse'
+pod 'Lightbox'
 
   target 'vigilesMobileTests' do
     inherit! :search_paths
