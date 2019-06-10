@@ -89,7 +89,7 @@ class HomeViewController: UIViewController {
         })
     }
     
-    //    Button info, al click appare alert
+    //    Button info, al click appare view
     @IBAction func onPressed(_ sender: Any) {
         Alert.showAlert(on: self, with: "Ciao!", message: "Premi su un marker per vedere più informazioni.")
     }
@@ -175,6 +175,7 @@ class HomeViewController: UIViewController {
     @IBAction func centerMapOnUserButtonClicked() {
         mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
     }
+    
 }
 
 extension HomeViewController: CLLocationManagerDelegate {

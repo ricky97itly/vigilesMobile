@@ -21,17 +21,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UI()
-        callModel()
-    }
-    
-    func UI() {
         searchBar.self.delegate = self
         self.searchBar.layer.cornerRadius = 20
         self.searchBar.clipsToBounds = true
-    }
-    
-    func callModel() {
         selectedReports = reports
         ReportsModel().fetchEvents(complete: {
             (reports) in self.reports = reports
@@ -47,11 +39,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     }
     
     
-    // Nasconde tastiera se premo al di fuori di essa
+    // hide keyboard when I press outside 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    // Nasconde tastiera se premo invio
+    // hide keyboard when I press return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchBar.resignFirstResponder()
         return (true)
