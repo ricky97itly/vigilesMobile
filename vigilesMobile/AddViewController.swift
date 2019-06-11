@@ -61,7 +61,38 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         return (true)
     }
     
+    func validateFields() {
+        
+        if name.text == nil || (name.text?.isEmpty)! {
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire nome dell'emergenza")
+            return
+        }
+        if address.text == nil || (address.text?.isEmpty)! {
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire indirizzo")
+            return
+        }
+        if street_number.text == nil || (street_number.text?.isEmpty)! {
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire numero civico")
+            return
+        }
+        
+        if emergencyDescription.text == nil || (emergencyDescription.text?.isEmpty)! {
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire la descrizione dell'emergenza")
+            return
+        }
+
+        if tag.text == nil || (tag.text!.isEmpty) {
+            Alert.showAlert(on: self, with: "Attenzione", message: "Inserire uno o più tag")
+            return
+        }
+    }
+    
+    @IBAction func infoBtn(_ sender: Any) {
+        Alert.showAlert(on: self, with: "Aggiungi", message: "Compila i campi per segnalare un'emergenza, per segnalare la tua posizione ti basta premere sull'apposito pulsante. ")
+    }
+    
     @IBAction func addEmergency() {
+        validateFields()
         let params:[String:AnyObject] = ["user_id": MyUserData.user?.success.id as AnyObject as AnyObject, "code_id": 1 as AnyObject, "zone_id": 1 as AnyObject, "title" : "\(name.text!)" as AnyObject, "address": "\(address.text!)" as AnyObject , "street_number": "\(street_number.text!)" as AnyObject, "description" : "\(emergencyDescription.text!)" as AnyObject, "tags": "\(tag.text!)" as AnyObject, "media": "img.png" as AnyObject ]
         let url = URL(string: "http://vigilesweb.test/api/report")!
         Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseJSON { response in

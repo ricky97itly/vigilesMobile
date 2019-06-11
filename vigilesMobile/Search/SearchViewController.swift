@@ -49,6 +49,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         return (true)
     }
     
+    @IBAction func infoBtn(_ sender: Any) {
+        Alert.showAlert(on: self, with: "Ricerca", message: "Qui potrai effettuare le ricerce scrivendo l'indirizzo da te desiderato.")
+    }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print("mortacci tua")
         guard !searchText.isEmpty

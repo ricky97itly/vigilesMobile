@@ -143,7 +143,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titolo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEA-M1-EXA">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="0.0" y="16" width="80" height="34"/>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -152,7 +152,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="4cA-Tw-kyh"/>
-                                            <constraint firstItem="kEA-M1-EXA" firstAttribute="top" secondItem="Re5-aW-loP" secondAttribute="top" id="9pk-ik-UZM"/>
+                                            <constraint firstItem="kEA-M1-EXA" firstAttribute="top" secondItem="Re5-aW-loP" secondAttribute="top" constant="16" id="9pk-ik-UZM"/>
                                             <constraint firstItem="kEA-M1-EXA" firstAttribute="leading" secondItem="Re5-aW-loP" secondAttribute="leading" id="HEt-tg-1og"/>
                                             <constraint firstAttribute="trailing" secondItem="kEA-M1-EXA" secondAttribute="trailing" id="M2a-Xw-2Uc"/>
                                             <constraint firstAttribute="bottom" secondItem="kEA-M1-EXA" secondAttribute="bottom" id="lIH-wG-TPw"/>
@@ -224,6 +224,17 @@
                                     <action selector="userPosition:" destination="tUF-Yx-HYC" eventType="touchUpInside" id="mDy-9p-pNR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72U-YX-7fk">
+                                <rect key="frame" x="21" y="46" width="27" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="OYW-M8-yhQ"/>
+                                    <constraint firstAttribute="height" constant="28" id="PFv-pe-W4C"/>
+                                </constraints>
+                                <state key="normal" image="info"/>
+                                <connections>
+                                    <action selector="infoBtn:" destination="tUF-Yx-HYC" eventType="touchUpInside" id="Wi0-LJ-iqD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -236,6 +247,7 @@
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="esH-pj-BkF" secondAttribute="trailing" constant="121" id="Cdp-3I-dP3"/>
                             <constraint firstItem="MCs-4b-8w5" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="EkZ-8P-KUO"/>
                             <constraint firstItem="NhK-cB-GtC" firstAttribute="top" secondItem="vWU-rl-8H8" secondAttribute="bottom" constant="20" id="H2N-a9-iAD"/>
+                            <constraint firstItem="72U-YX-7fk" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="21" id="H6o-BF-gJ6"/>
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="oBk-X7-4If" secondAttribute="bottom" constant="50" id="NPG-tX-35H"/>
                             <constraint firstItem="oBk-X7-4If" firstAttribute="top" relation="lessThanOrEqual" secondItem="EcU-ee-IL8" secondAttribute="bottom" constant="50" id="O2L-Qm-9Ym"/>
                             <constraint firstItem="42K-W8-U6F" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="Ot8-cK-avX"/>
@@ -243,6 +255,7 @@
                             <constraint firstItem="USR-mC-laL" firstAttribute="centerY" secondItem="JJJ-ar-pfL" secondAttribute="centerY" id="Qzl-89-zqG"/>
                             <constraint firstItem="MCs-4b-8w5" firstAttribute="top" secondItem="NhK-cB-GtC" secondAttribute="bottom" constant="24" id="RLg-OG-INL"/>
                             <constraint firstItem="CpK-Vz-3Eq" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="TCE-32-5xx"/>
+                            <constraint firstItem="NhK-cB-GtC" firstAttribute="top" secondItem="72U-YX-7fk" secondAttribute="bottom" constant="20" id="UTc-5F-541"/>
                             <constraint firstItem="NhK-cB-GtC" firstAttribute="leading" secondItem="MCs-4b-8w5" secondAttribute="leading" id="UUB-aA-zxj"/>
                             <constraint firstItem="esH-pj-BkF" firstAttribute="top" relation="lessThanOrEqual" secondItem="MCs-4b-8w5" secondAttribute="bottom" constant="20" id="VqH-sK-Spl"/>
                             <constraint firstItem="94l-40-dYq" firstAttribute="leading" secondItem="esH-pj-BkF" secondAttribute="trailing" constant="8" id="XmS-c9-95W"/>
@@ -254,10 +267,12 @@
                             <constraint firstItem="sVa-Vf-IIx" firstAttribute="trailing" secondItem="EcU-ee-IL8" secondAttribute="trailing" constant="16" id="ej3-eq-bbW"/>
                             <constraint firstItem="vWU-rl-8H8" firstAttribute="centerX" secondItem="JJJ-ar-pfL" secondAttribute="centerX" id="gta-ca-oku"/>
                             <constraint firstItem="esH-pj-BkF" firstAttribute="leading" secondItem="sVa-Vf-IIx" secondAttribute="leading" constant="16" id="izv-7y-a3G"/>
+                            <constraint firstItem="vWU-rl-8H8" firstAttribute="leading" secondItem="72U-YX-7fk" secondAttribute="trailing" constant="87" id="oEM-4G-haz"/>
                             <constraint firstItem="USR-mC-laL" firstAttribute="leading" secondItem="CpK-Vz-3Eq" secondAttribute="leading" id="oZF-WE-CeO"/>
                             <constraint firstItem="42K-W8-U6F" firstAttribute="top" relation="lessThanOrEqual" secondItem="CpK-Vz-3Eq" secondAttribute="bottom" constant="20" id="qRt-G7-NaW"/>
                             <constraint firstItem="94l-40-dYq" firstAttribute="baseline" secondItem="esH-pj-BkF" secondAttribute="baseline" id="r8z-PR-Cxf"/>
                             <constraint firstItem="USR-mC-laL" firstAttribute="top" secondItem="esH-pj-BkF" secondAttribute="bottom" constant="16" id="s02-Kd-V8Q"/>
+                            <constraint firstItem="72U-YX-7fk" firstAttribute="top" secondItem="sVa-Vf-IIx" secondAttribute="top" constant="2" id="u9k-YX-xOb"/>
                             <constraint firstItem="vWU-rl-8H8" firstAttribute="top" secondItem="sVa-Vf-IIx" secondAttribute="top" id="xPv-Uv-sN5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sVa-Vf-IIx"/>
@@ -286,6 +301,7 @@
     <resources>
         <image name="add" width="25" height="25"/>
         <image name="aggiungi" width="26" height="24"/>
+        <image name="info" width="27" height="28"/>
         <image name="position" width="18" height="18"/>
         <namedColor name="vigilesRed">
             <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

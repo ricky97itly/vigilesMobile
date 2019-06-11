@@ -61,7 +61,7 @@
                                         <rect key="frame" x="0.0" y="84" width="343" height="555"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cella" rowHeight="127" id="MUA-29-vTb" customClass="SearchTableViewCell" customModule="vigilesMobile" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cella" rowHeight="127" id="MUA-29-vTb" customClass="SearchTableViewCell" customModule="vigilesMobile" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="343" height="127"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MUA-29-vTb" id="rOt-cp-Nva">
@@ -113,10 +113,10 @@
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LHm-OG-zBy" userLabel="DescriptionView">
-                                                            <rect key="frame" x="60" y="65" width="298" height="15"/>
+                                                            <rect key="frame" x="60" y="65" width="258" height="15"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrizione" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZf-yA-5Sx" userLabel="SearchDescription">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="298" height="15"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="258" height="15"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -162,6 +162,17 @@
                                     </tableView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsg-vv-TCL">
+                                <rect key="frame" x="21" y="46" width="27" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="qOU-QX-08Z"/>
+                                    <constraint firstAttribute="height" constant="28" id="wGa-6v-7lu"/>
+                                </constraints>
+                                <state key="normal" image="info"/>
+                                <connections>
+                                    <action selector="infoBtn:" destination="kat-ax-NOf" eventType="touchUpInside" id="Ujg-ss-MDZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -169,8 +180,12 @@
                         <constraints>
                             <constraint firstItem="HSn-mL-kfX" firstAttribute="leading" secondItem="8v5-ZZ-9lY" secondAttribute="leadingMargin" id="2Wk-Lw-duX"/>
                             <constraint firstItem="HSn-mL-kfX" firstAttribute="centerX" secondItem="GbH-PU-sqf" secondAttribute="centerX" id="Few-I3-BAs"/>
+                            <constraint firstItem="GbH-PU-sqf" firstAttribute="leading" secondItem="jsg-vv-TCL" secondAttribute="trailing" constant="104.67" id="H3G-ov-GyO"/>
                             <constraint firstItem="GbH-PU-sqf" firstAttribute="centerX" secondItem="8v5-ZZ-9lY" secondAttribute="centerX" id="HEv-5d-anp"/>
+                            <constraint firstItem="HSn-mL-kfX" firstAttribute="top" secondItem="jsg-vv-TCL" secondAttribute="bottom" constant="20" id="Isg-sD-wMb"/>
                             <constraint firstAttribute="bottomMargin" secondItem="HSn-mL-kfX" secondAttribute="bottom" constant="-4" id="c3P-k1-5Bq"/>
+                            <constraint firstItem="jsg-vv-TCL" firstAttribute="leading" secondItem="cJO-mP-zRo" secondAttribute="leading" constant="21" id="edc-4l-Glo"/>
+                            <constraint firstItem="jsg-vv-TCL" firstAttribute="top" secondItem="cJO-mP-zRo" secondAttribute="top" constant="2" id="myD-43-s44"/>
                             <constraint firstItem="GbH-PU-sqf" firstAttribute="top" secondItem="cJO-mP-zRo" secondAttribute="top" id="pHL-rW-P1U"/>
                             <constraint firstItem="HSn-mL-kfX" firstAttribute="top" secondItem="GbH-PU-sqf" secondAttribute="bottom" constant="20" id="vlG-VT-oDp"/>
                         </constraints>
@@ -302,6 +317,7 @@
     <resources>
         <image name="cerca" width="30" height="28"/>
         <image name="code" width="40" height="40"/>
+        <image name="info" width="27" height="28"/>
         <namedColor name="vigilesRed">
             <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
