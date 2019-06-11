@@ -65,6 +65,7 @@ extension HistoricalViewController: UITableViewDelegate, UITableViewDataSource {
         return (cell!)
     } // Fine funzione tableView
     
+    
     //    Gestisce la cancellazione di una cella (non serve ma lo tengo per il futuro)
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == UITableViewCell.EditingStyle.delete {

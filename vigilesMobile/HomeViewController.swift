@@ -63,7 +63,7 @@ class HomeViewController: UIViewController {
                     if let title = report.title, let address = report.address {
                         // Geo Code per convertire in Lat e Long
                         let geoCoder = CLGeocoder()
-                        let addressString = "\(address), Milano"
+                        let addressString = "\(address) \(report.street_number), Milano"
                         geoCoder.geocodeAddressString(addressString) { (placemarks, error) in
                             if let error = error {
                                 print(error, "Questo è l'errore")

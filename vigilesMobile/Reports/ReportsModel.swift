@@ -47,7 +47,7 @@ class ReportsModel: NSObject {
                 //                Si mandano i dati recuperati a HistoricalViewController
                 print(reports.data!)
                 complete(reports.data!)
-                print("Vai stronzo")
+                print("Vai!!")
             }
                 
             catch let error {

@@ -16,8 +16,11 @@ class Data: Codable {
 // Struct copia il suo valore quando viene assegnato a qualcos'altro. Class no
 struct Reports: Codable {
     static var report: AnyObject?
-    let title: String?
     let id: Int?
+    let user_id = MyUserData.user?.success.id as Int?
+    let code_id = 1
+    let zone_id = 1
+    let title: String?
     let address: String?
     let street_number: Int?
     let latitude: Double?
