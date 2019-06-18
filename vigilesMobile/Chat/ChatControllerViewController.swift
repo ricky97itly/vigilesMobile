@@ -11,9 +11,9 @@ import MessageKit
 
 class ChatControllerViewController: MessagesViewController {
     
-    var messages: [Message] = []
-    var member: Member!
     var chatService: ChatService!
+    var member: Member!
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         member = Member(name: .randomName, color: .random)

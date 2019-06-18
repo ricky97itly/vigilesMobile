@@ -5,36 +5,38 @@
 //  Created by Riccardo Mores on 08/03/2019.
 //  Copyright © 2019 Riccardo Mores. All rights reserved.
 
-import UIKit
-import MapKit
-import CoreLocation
 import Alamofire
-import SwiftyJSON
+import CoreLocation
+import MapKit
 import Kingfisher
 import Lightbox
+import SwiftyJSON
+import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var findUserLocation: UIButton!
-    @IBOutlet weak var chatBtn: NSLayoutConstraint!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var chatBtn: NSLayoutConstraint!
+    @IBOutlet weak var findUserLocation: UIButton!
+    @IBOutlet weak var infoAddress: UILabel!
+    @IBOutlet weak var infoID: UILabel!
     @IBOutlet weak var infoImg: UIImageView!
     @IBOutlet weak var infoDescription: UILabel!
     @IBOutlet weak var infoTitle: UILabel!
-    @IBOutlet weak var infoID: UILabel!
-    @IBOutlet weak var infoAddress: UILabel!
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var mapView: MKMapView!
+    let annotation = MKPointAnnotation() //?
     let locationManager = CLLocationManager()
+    
     //    Zoom iniziale su posizione utente
     let regionRadius: CLLocationDistance = 1000
-    let annotation = MKPointAnnotation()
-    let ied = MKPointAnnotation()
+    
+    var annotations = [MyAnnotation]()
+    var infoIMG = [UIImageView]()
     var previousLocation: CLLocation?
     var reports = [Reports]()
-    var selectedReports = Reports?.self
-    var infoIMG = [UIImage]()
+//    var selectedReports = Reports?.self
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,67 +48,89 @@ class HomeViewController: UIViewController {
     func UI() {
         self.infoView.layer.cornerRadius = 15
         self.infoView.layer.shadowColor = UIColor.black.cgColor
-        self.infoView.layer.shadowOpacity = 0.3
         self.infoView.layer.shadowOffset = CGSize.zero
+        self.infoView.layer.shadowOpacity = 0.3
         self.infoView.layer.shadowRadius = 5
     }
     
     func setUpMarkers() {
         ReportsModel().fetchEvents(complete: {
             (reports) in self.reports = reports
-            //            Viene gestita l'esecuzione di più elementi di lavoro
+            //  Viene gestita l'esecuzione di più elementi di lavoro
             let queue = DispatchQueue.main
-            //            Vengono eseguite più azioni "in parallelo"
             queue.async(execute: {
                 for report in reports {
-//                    Se uno di questi parametri manca il codice non va e passa a quello successivo
+                    //  Se uno di questi parametri manca il codice non va e passa a quello     successivo  (?)
+                    print("for ", report.street_number as? Int)
                     if let title = report.title, let address = report.address {
+                        print("if let ", report.address)
                         // Geo Code per convertire in Lat e Long
                         let geoCoder = CLGeocoder()
                         let addressString = "\(address) \(report.street_number), Milano"
-                        geoCoder.geocodeAddressString(addressString) { (placemarks, error) in
+                        geoCoder.geocodeAddressString(addressString, completionHandler: { (placemarks, error) in
                             if let error = error {
                                 print(error, "Questo è l'errore")
                             }
                             else {
-                                let placemarks = placemarks
-                                if let location = placemarks?.first?.location {
-                                    let annotation = MKPointAnnotation()
-                                    annotation.title = title
-                                    annotation.coordinate = location.coordinate
-                                    self.mapView.addAnnotation(annotation)
-                                    self.infoTitle.text = report.title
-                                    self.infoAddress.text = report.address
-                                    self.infoDescription.text = report.description
-                                    let imgUrl = URL(string: report.media!)
-                                    self.infoImg.kf.setImage(with: imgUrl)
-                                }
+                                let placemark = placemarks?.first
+                                let lat = placemark?.location?.coordinate.latitude
+                                let lon = placemark?.location?.coordinate.longitude
+                                let annotation = MyAnnotation()
+                                annotation.coordinate.latitude = lat!
+                                annotation.coordinate.longitude = lon!
+                                annotation.customPropertyAddress = addressString
+                                annotation.customPropertyID = "\(report.id!)"
+                                annotation.customPropertyImg = report.media
+                                annotation.customPropertyDescription = report.description
+                                //                                if annotation.customPropertyStreetNum != nil {
+                                //                                    annotation.customPropertyStreetNum = "\(report.street_number!)"
+                                //                                    print(annotation.customPropertyStreetNum)
+                                //                                }
+                                annotation.title = title
+                                self.mapView.addAnnotation(annotation)
+                                self.mapView.showAnnotations(self.mapView.annotations, animated: true)
                             }
-                        }
+                        })
                     }
                 }
             })
         })
     }
     
-    //    Button info, al click appare view
-    @IBAction func onPressed(_ sender: Any) {
-        Alert.showAlert(on: self, with: "Ciao!", message: "Premi su un marker per vedere più informazioni.")
+    //    Al click sul marker compaiono le info
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        //        Do Some sort of fancy animation here
+        bottomConstraint.constant = 10
+        UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        if let annotation = view.annotation {
+            fillView(annotation: annotation as! MyAnnotation)
+        }
+    }
+
+    func fillView(annotation: MyAnnotation) {
+        self.infoAddress.text = annotation.customPropertyAddress//! + String(annotation.customPropertyStreetNum!)
+        self.infoDescription.text = annotation.customPropertyDescription
+        self.infoID.text = annotation.customPropertyID
+        
+//        let imgUrl = URL(string: annotation.customPropertyImg!)
+//        self.infoIMG.kf.setImage(with: imgUrl)
+        
+        self.infoTitle.text = annotation.title ?? ""
     }
     
-    //    Button dentro la view, al click si chiude
+    //    Chiude le info del marker
     @IBAction func dismissView(_ sender: Any) {
         bottomConstraint.constant = -220
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
-        resetInfoView()
     }
     
-    //    Per migliore localizzazione
-    func setupLocationManager() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    //    Button Info per ricevere un aiuto su cosa fare
+    @IBAction func onPressed(_ sender: Any) {
+        Alert.showAlert(on: self, with: "Ciao!", message: "Premi su un marker per vedere più informazioni.")
     }
     
     //   Zoom su utente
@@ -117,7 +141,36 @@ class HomeViewController: UIViewController {
         }
     }
     
-//    Controllo dei servizi di localizzazione, se non vanno esce alert
+    //    Trovo l'utente
+    func startTackingUserLocation() {
+        mapView.showsUserLocation = true
+        //        Centro l'utente
+        centerViewOnUserLocation()
+        //        Aggiorno posizione in movimento
+        locationManager.startUpdatingLocation()
+        previousLocation = getCenterLocation(for: mapView)
+    }
+    
+    //    Ottengo lat e long utente
+    func getCenterLocation(for mapView: MKMapView) -> CLLocation {
+        let latitude = mapView.centerCoordinate.latitude
+        let longitude = mapView.centerCoordinate.longitude
+        
+        return CLLocation(latitude: latitude, longitude: longitude)
+    }
+    
+    //    Al click sul button viene centrata la posizione dell'utente
+    @IBAction func centerMapOnUserButtonClicked() {
+        mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
+    }
+    
+    //    Migliora la localizzazione
+    func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+    //  Controllo dei servizi di localizzazione, se non vanno esce alert
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
@@ -147,33 +200,10 @@ class HomeViewController: UIViewController {
             break
         case .authorizedAlways:
             break
-        //            Per modifiche future, è funzione di Swift 5 (AGGIORNATE)
+        //            Per modifiche future, è funzione di Swift 5
         @unknown default:
             print("modifica")
         }
-    }
-    
-    //    Per trovare utente
-    func startTackingUserLocation() {
-        mapView.showsUserLocation = true
-        //        Centra utente
-        centerViewOnUserLocation()
-        //        Aggiorna posizione in movimento
-        locationManager.startUpdatingLocation()
-        previousLocation = getCenterLocation(for: mapView)
-    }
-    
-    //    Ottengo lat e long utente
-    func getCenterLocation(for mapView: MKMapView) -> CLLocation {
-        let latitude = mapView.centerCoordinate.latitude
-        let longitude = mapView.centerCoordinate.longitude
-        
-        return CLLocation(latitude: latitude, longitude: longitude)
-    }
-    
-    //    Al click sul button torna alla posizione dell'utente
-    @IBAction func centerMapOnUserButtonClicked() {
-        mapView.setUserTrackingMode(MKUserTrackingMode.follow, animated: true)
     }
     
 }
@@ -218,21 +248,13 @@ extension HomeViewController: MKMapViewDelegate {
             //            Per velocizzare esecuzione, esegue azioni in parallelo
             DispatchQueue.main.async {
                 self.addressLabel.text = "\(streetName) \(streetNumber)"
+                
+                
             }
         }
     }
-    
-//    Funzione per marker click, fa apparire la view
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        //        Do Some sort of fancy animation here
-        bottomConstraint.constant = 10
-        UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
-            self.view.layoutIfNeeded()
-        }, completion: nil)
-    }
-    
+
     @objc func didTapImageView() {
-        
         let image = infoImg.image
         if infoImg.image == nil {
             return
@@ -254,13 +276,4 @@ extension HomeViewController: MKMapViewDelegate {
         // Present your controller.
         present(controller, animated: true, completion: nil)
     }
-
-    
-    private func resetInfoView() {
-        self.infoImg.image = nil
-        self.infoTitle.text = "Untiled"
-        self.infoDescription.text = "No description"
-        self.infoAddress.text = "No address"
-    }
-
 }

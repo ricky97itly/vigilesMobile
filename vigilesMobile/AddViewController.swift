@@ -6,33 +6,32 @@
 //  Copyright © 2019 Riccardo Mores. All rights reserved.
 //
 
-import UIKit
-import MapKit
-import CoreLocation
 import AddressBookUI
-import Photos
-import UserNotifications
 import Alamofire
+import CoreLocation
+import MapKit
+import Photos
+import UIKit
+import UserNotifications
 
 class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegate, UITextViewDelegate {
     
-    @IBOutlet weak var address: UITextField!
     @IBOutlet weak var addBtn: UIButton!
-    @IBOutlet weak var street_number: UITextField!
+    @IBOutlet weak var address: UITextField!
     @IBOutlet weak var emergencyDescription: UITextView!
-    @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelAddress: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var locationBtn: UIButton!
     @IBOutlet weak var mediaBtn: UIButton!
     @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var street_number: UITextField!
     @IBOutlet weak var tag: UITextField!
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         UI()
-        // Do any additional setup after loading the view.
     }
     
     func UI() {
@@ -45,14 +44,15 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         self.locationManager.delegate = self
         self.name.delegate = self
         self.name.layer.cornerRadius = 15
-        self.tag.layer.cornerRadius = 15
         self.street_number.layer.cornerRadius = 15
+        self.tag.layer.cornerRadius = 15
     }
     
     // Nasconde tastiera quando premo fuori
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     // Nasconde tastiera quando premo invio
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         name.resignFirstResponder()
@@ -61,8 +61,8 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         return (true)
     }
     
+    //Validazione campi schermata Aggiungi
     func validateFields() {
-        
         if name.text == nil || (name.text?.isEmpty)! {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire nome dell'emergenza")
             return
@@ -75,12 +75,10 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire numero civico")
             return
         }
-        
         if emergencyDescription.text == nil || (emergencyDescription.text?.isEmpty)! {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire la descrizione dell'emergenza")
             return
         }
-
         if tag.text == nil || (tag.text!.isEmpty) {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire uno o più tag")
             return
@@ -93,11 +91,13 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     
     @IBAction func addEmergency() {
         validateFields()
-        let params:[String:AnyObject] = ["user_id": MyUserData.user?.success.id as AnyObject as AnyObject, "code_id": 1 as AnyObject, "zone_id": 1 as AnyObject, "title" : "\(name.text!)" as AnyObject, "address": "\(address.text!)" as AnyObject , "street_number": "\(street_number.text!)" as AnyObject, "description" : "\(emergencyDescription.text!)" as AnyObject, "tags": "\(tag.text!)" as AnyObject, "media": "img.png" as AnyObject ]
+        
+        let params:[String:AnyObject] = ["user_id": MyUserData.user?.success.id as AnyObject, "code_id": 1 as AnyObject, "zone_id": 1 as AnyObject, "title" : "\(name.text!)" as AnyObject, "address": "\(address.text!)" as AnyObject , "street_number": "\(street_number.text!)" as AnyObject, "latitude": Double() as AnyObject, "longitude": Double() as AnyObject, "description" : "\(emergencyDescription.text!)" as AnyObject, "tags": "\(tag.text!)" as AnyObject, "media": "img" as AnyObject ]
         let url = URL(string: "http://vigilesweb.test/api/report")!
+        
         Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseJSON { response in
-            
             print(response)
+            
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                 print("Data: \(utf8Text)")
                 
@@ -107,7 +107,6 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
                         print(response.error!)
                         return
                 }
-                
                 guard (response.value as? [String:Any]) != nil
                     else {
                         if let error = response.error {
@@ -116,19 +115,34 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
                         return
                 }
         
-                    do {
-                        let jsonDecoder = JSONDecoder()
-                        let postData = try jsonDecoder.decode(Reports.self, from: response.data!)
-                        Reports.report = postData as AnyObject
-                        print(postData, "BOH")
-                    }
-                    catch {
-                        print("JSONSerialization error:", error)
-                    }
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let postData = try jsonDecoder.decode(Reports.self, from: response.data!)
+                    Reports.report = postData as AnyObject
+                    print(postData, "BOH")
+                }
+                catch {
+                    print("JSONSerialization error:", error)
                 }
             }
         }
     }
+    
+    @IBAction func addMedia(_ sender: UIButton) {
+        let photos = PHPhotoLibrary.authorizationStatus()
+        if photos == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({status in
+                if status == .authorized{
+                    print("VAII")
+                } else {
+                    print("NON VAII")
+                }
+            })
+        }
+        checkLibrary()
+        checkPermission()
+    }
+}
 
 extension AddViewController: CLLocationManagerDelegate {
     
@@ -141,7 +155,7 @@ extension AddViewController: CLLocationManagerDelegate {
         geocoder.reverseGeocodeLocation(locat!, completionHandler: {
             (placemarks, error) in
             if (error != nil) {
-                print("PERCHÉ NON VAI")
+                print("PERCHÉ")
             }
             else {
                 let pm = placemarks! as [CLPlacemark]
@@ -165,12 +179,15 @@ extension AddViewController: CLLocationManagerDelegate {
     }
 }
 
+
+//    Alert che verranno mostrati all'utente, action consente di effettuare un'azione
 extension AddViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    //    Alert che verranno mostrati all'utente, action consente di effettuare un'azione
+    
     func displayUploadImageDialog(btnSelected: UIButton) {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
+        
         //        Messaggio per evitare imprevisti con foto poco belle
         let alert = UIAlertController(title: "Aggiunta Media", message: "La foto da te scelta sarà visualizzabile agli altri utenti", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Fotocamera", style: .default, handler: {(action: UIAlertAction) in
@@ -181,9 +198,10 @@ extension AddViewController: UIImagePickerControllerDelegate, UINavigationContro
         }))
         alert.addAction(UIAlertAction(title: "Annulla", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+        
         //        Per verificare su quale dispositivo si sta lavorando
         if UI_USER_INTERFACE_IDIOM() == .phone {
-            //                Per effettuare più operazioni insieme
+            //                Queue serve per effettuare più operazioni insieme
             OperationQueue.main.addOperation({() -> Void in
                 picker.sourceType = .photoLibrary
                 self.present(picker, animated: true) {() -> Void in }
@@ -196,10 +214,8 @@ extension AddViewController: UIImagePickerControllerDelegate, UINavigationContro
     }
     
     func getImage(fromSourceType sourceType: UIImagePickerController.SourceType) {
-        
         //Check is source type available
         if UIImagePickerController.isSourceTypeAvailable(sourceType) {
-            
             let imagePickerController = UIImagePickerController()
             imagePickerController.delegate = self
             imagePickerController.sourceType = sourceType
@@ -233,20 +249,5 @@ extension AddViewController: UIImagePickerControllerDelegate, UINavigationContro
                 break
             }
         }
-    }
-    
-    @IBAction func addMedia(_ sender: UIButton) {
-        let photos = PHPhotoLibrary.authorizationStatus()
-        if photos == .notDetermined {
-            PHPhotoLibrary.requestAuthorization({status in
-                if status == .authorized{
-                    print("VAI")
-                } else {
-                    print("NON VAI")
-                }
-            })
-        }
-        checkLibrary()
-        checkPermission()
     }
 }

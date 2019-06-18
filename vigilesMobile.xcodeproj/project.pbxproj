@@ -45,6 +45,8 @@
 		21A818D82233C48A00F5B1AA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D72233C48A00F5B1AA /* AddViewController.swift */; };
 		21A818DA2233C4E800F5B1AA /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */; };
 		21A818DC2233C57800F5B1AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A818DB2233C57800F5B1AA /* ProfileViewController.swift */; };
+		3A0F5ABD22B9801D007F5CDC /* MarkerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F5ABC22B9801D007F5CDC /* MarkerClass.swift */; };
+		3A45ED6422B5179D00BCD385 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A45ED6322B5179D00BCD385 /* MapKit.framework */; };
 		3AE272882265FCBE003990F2 /* ForgottenPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */; };
 		561F4FE9228B81B000659C92 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561F4FE8228B81B000659C92 /* Extensions.swift */; };
 		561F4FEB228B841500659C92 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561F4FEA228B841500659C92 /* ChatService.swift */; };
@@ -127,6 +129,8 @@
 		21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
 		21A818DB2233C57800F5B1AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		364C90B747A133782DBE2414 /* Pods-vigilesMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vigilesMobile.release.xcconfig"; path = "Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile.release.xcconfig"; sourceTree = "<group>"; };
+		3A0F5ABC22B9801D007F5CDC /* MarkerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerClass.swift; sourceTree = "<group>"; };
+		3A45ED6322B5179D00BCD385 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgottenPasswordController.swift; sourceTree = "<group>"; };
 		3EF4D51B6C47918F9CAF49AF /* Pods-vigilesMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vigilesMobileUITests.debug.xcconfig"; path = "Target Support Files/Pods-vigilesMobileUITests/Pods-vigilesMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F83C3C4A90BA5068CB6FB9A /* Pods-vigilesMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vigilesMobile.debug.xcconfig"; path = "Target Support Files/Pods-vigilesMobile/Pods-vigilesMobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A45ED6422B5179D00BCD385 /* MapKit.framework in Frameworks */,
 				78902E446F64E823495B5911 /* Pods_vigilesMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,15 +276,14 @@
 				218BD3E42232DAE90067FE59 /* Storyboards */,
 				2170B4F02279DA27003C4331 /* Chat */,
 				2170B4EF2279D9F1003C4331 /* Historical */,
+				217B1CEC2286D23400AACC07 /* ReportsClassesStructsModel */,
 				2170B4F12279DA7A003C4331 /* Search */,
-				217B1CEC2286D23400AACC07 /* Reports */,
 				217B1CED2286D24800AACC07 /* User, Login, Register */,
-				3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */,
 				21A818D72233C48A00F5B1AA /* AddViewController.swift */,
-				218BD3F52232E7BE0067FE59 /* HomeViewController.swift */,
-				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
 				56AE4179228BFBB8007AF38C /* AlertStruct.swift */,
 				2161CD81222FF7F2001ABD2E /* AppDelegate.swift */,
+				3AE272872265FCBE003990F2 /* ForgottenPasswordController.swift */,
+				218BD3F52232E7BE0067FE59 /* HomeViewController.swift */,
 				2161CD88222FF7F2001ABD2E /* vigilesMobile.xcdatamodeld */,
 				2161CD90222FF7F3001ABD2E /* Info.plist */,
 				2161CD8B222FF7F3001ABD2E /* Assets.xcassets */,
@@ -308,8 +312,8 @@
 		2170B4EF2279D9F1003C4331 /* Historical */ = {
 			isa = PBXGroup;
 			children = (
-				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
 				212B193C225534680067ECE4 /* HistoricalTableViewCell.swift */,
+				21A818D92233C4E800F5B1AA /* HistoricalViewController.swift */,
 			);
 			path = Historical;
 			sourceTree = "<group>";
@@ -318,11 +322,11 @@
 			isa = PBXGroup;
 			children = (
 				56A8ECC5227F53E000299242 /* ChatControllerViewController.swift */,
-				56ACCF35224D16FE003F0063 /* ChatViewController.swift */,
-				567FFFFE22773E9A00E3B4DA /* ChatTableViewCell.swift */,
-				56A8ECC7227F55B800299242 /* Message.swift */,
-				561F4FE8228B81B000659C92 /* Extensions.swift */,
 				561F4FEA228B841500659C92 /* ChatService.swift */,
+				567FFFFE22773E9A00E3B4DA /* ChatTableViewCell.swift */,
+				56ACCF35224D16FE003F0063 /* ChatViewController.swift */,
+				561F4FE8228B81B000659C92 /* Extensions.swift */,
+				56A8ECC7227F55B800299242 /* Message.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -336,21 +340,23 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		217B1CEC2286D23400AACC07 /* Reports */ = {
+		217B1CEC2286D23400AACC07 /* ReportsClassesStructsModel */ = {
 			isa = PBXGroup;
 			children = (
-				2170B4ED2279D77D003C4331 /* ReportsStruct.swift */,
+				3A0F5ABC22B9801D007F5CDC /* MarkerClass.swift */,
 				21954AE6227B466200FBA9C7 /* ReportsModel.swift */,
+				2170B4ED2279D77D003C4331 /* ReportsStruct.swift */,
 			);
-			path = Reports;
+			path = ReportsClassesStructsModel;
 			sourceTree = "<group>";
 		};
 		217B1CED2286D24800AACC07 /* User, Login, Register */ = {
 			isa = PBXGroup;
 			children = (
-				6CBFC510227F3AB800E0CB96 /* UserStruct.swift */,
 				56FD53F42243133A006C9533 /* LoginViewController.swift */,
+				21A818DB2233C57800F5B1AA /* ProfileViewController.swift */,
 				21791B13224283960008B28C /* RegisterViewController.swift */,
+				6CBFC510227F3AB800E0CB96 /* UserStruct.swift */,
 			);
 			path = "User, Login, Register";
 			sourceTree = "<group>";
@@ -359,12 +365,12 @@
 			isa = PBXGroup;
 			children = (
 				218BD3E92232DB5B0067FE59 /* Aggiungi.storyboard */,
+				218BD3E72232DB340067FE59 /* Cerca.storyboard */,
 				218BD3E52232DB080067FE59 /* Home.storyboard */,
 				2161CD8D222FF7F3001ABD2E /* LaunchScreen.storyboard */,
 				2161CD85222FF7F2001ABD2E /* Main.storyboard */,
-				218BD3E72232DB340067FE59 /* Cerca.storyboard */,
-				218BD3EB2232DB680067FE59 /* Storico.storyboard */,
 				218BD3ED2232DB750067FE59 /* Profilo.storyboard */,
+				218BD3EB2232DB680067FE59 /* Storico.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 		A1D57ACCC478F3A09CAC59DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A45ED6322B5179D00BCD385 /* MapKit.framework */,
 				2114AA1E223FC1CA006E23C1 /* CoreLocation.framework */,
 				9075DECBDB3E2B1138E9DB9E /* Pods_vigilesMobile.framework */,
 				7EB2FA954C38D63C577560DB /* Pods_vigilesMobileTests.framework */,
@@ -673,6 +680,7 @@
 				21A818DA2233C4E800F5B1AA /* HistoricalViewController.swift in Sources */,
 				212FA1902252314E00FD9917 /* IQKeyboardManager.swift in Sources */,
 				2161CD82222FF7F2001ABD2E /* AppDelegate.swift in Sources */,
+				3A0F5ABD22B9801D007F5CDC /* MarkerClass.swift in Sources */,
 				212FA1882252314D00FD9917 /* IQBarButtonItem.swift in Sources */,
 				56ACCF36224D16FE003F0063 /* ChatViewController.swift in Sources */,
 				21A818DC2233C57800F5B1AA /* ProfileViewController.swift in Sources */,

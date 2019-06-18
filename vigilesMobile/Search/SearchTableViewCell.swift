@@ -11,9 +11,9 @@ import UIKit
 class SearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var codeImg: UIImageView!
-    @IBOutlet weak var searchName: UILabel!
     @IBOutlet weak var searchAddress: UILabel!
     @IBOutlet weak var searchDescription: UILabel!
+    @IBOutlet weak var searchName: UILabel!
     
     //    Spazio tra le celle
     override var frame: CGRect {
@@ -27,5 +27,4 @@ class SearchTableViewCell: UITableViewCell {
             super.frame = frame
         }
     }
-    
 }

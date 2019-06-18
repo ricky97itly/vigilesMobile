@@ -6,52 +6,51 @@
 //  Copyright © 2019 Riccardo Mores. All rights reserved.
 //
 
-import UIKit
 import Alamofire
 import ValidationComponents
+import UIKit
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var surname: UITextField!
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var repeatPassword: UITextField!
-    @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var address: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var registerBtn: UIButton!
+    @IBOutlet weak var repeatPassword: UITextField!
     @IBOutlet weak var street_number: UITextField!
+    @IBOutlet weak var surname: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.email.delegate = self
         UI()
-        // Do any additional setup after loading the view.
     }
     
     func UI() {
-        self.registerBtn.layer.borderWidth = 1
-        self.registerBtn.layer.borderColor = UIColor.white.cgColor
-        self.registerBtn.clipsToBounds = true
-        self.name.layer.borderWidth = 1
-        self.name.layer.cornerRadius = 15
-        self.name.layer.borderColor = UIColor.white.cgColor
-        self.surname.layer.borderWidth = 1
-        self.surname.layer.cornerRadius = 15
-        self.surname.layer.borderColor = UIColor.white.cgColor
-        self.email.layer.borderWidth = 1
-        self.email.layer.cornerRadius = 15
-        self.email.layer.borderColor = UIColor.white.cgColor
-        self.password.layer.borderWidth = 1
-        self.password.layer.cornerRadius = 15
-        self.password.layer.borderColor = UIColor.white.cgColor
-        self.repeatPassword.layer.borderWidth = 1
-        self.repeatPassword.layer.cornerRadius = 15
-        self.repeatPassword.layer.borderColor = UIColor.white.cgColor
+        self.address.layer.borderColor = UIColor.white.cgColor
         self.address.layer.borderWidth = 1
         self.address.layer.cornerRadius = 15
-        self.address.layer.borderColor = UIColor.white.cgColor
+        self.email.layer.borderColor = UIColor.white.cgColor
+        self.email.layer.borderWidth = 1
+        self.email.layer.cornerRadius = 15
+        self.name.layer.borderColor = UIColor.white.cgColor
+        self.name.layer.borderWidth = 1
+        self.name.layer.cornerRadius = 15
+        self.registerBtn.layer.borderColor = UIColor.white.cgColor
+        self.registerBtn.layer.borderWidth = 1
+        self.registerBtn.clipsToBounds = true
+        self.repeatPassword.layer.borderColor = UIColor.white.cgColor
+        self.repeatPassword.layer.borderWidth = 1
+        self.repeatPassword.layer.cornerRadius = 15
+        self.password.layer.borderColor = UIColor.white.cgColor
+        self.password.layer.borderWidth = 1
+        self.password.layer.cornerRadius = 15
+        self.street_number.layer.borderColor = UIColor.white.cgColor
         self.street_number.layer.borderWidth = 1
         self.street_number.layer.cornerRadius = 15
-        self.street_number.layer.borderColor = UIColor.white.cgColor
+        self.surname.layer.borderColor = UIColor.white.cgColor
+        self.surname.layer.borderWidth = 1
+        self.surname.layer.cornerRadius = 15
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -59,7 +58,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     // hide keyboard when I press return
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         name.resignFirstResponder()
         surname.resignFirstResponder()
@@ -70,7 +68,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
 // Per verificare che la mail abbia gli elementi che la compongono
-   
     func validateFields() {
         let mail: String = email.text!
         let rule = EmailValidationPredicate()
@@ -88,7 +85,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire mail")
             return
         }
-        
         if password.text == nil || (password.text?.isEmpty)! {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire password")
             return
@@ -109,7 +105,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             Alert.showAlert(on: self, with: "Attenzione", message: "Inserire numero civico")
             return
         }
-        
         if isValidEmail {
             print("Mail valida")
         }
@@ -120,14 +115,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func registerBtn(_ sender: Any) {
-        
         validateFields()
 
         let params:[String:String] = ["name": "\(name.text!)", "surname": "\(surname.text!)", "email" : "\(email.text!)", "password" : "\(password.text!)", "confirm_password" : "\(repeatPassword.text!)", "address" : "\(address.text!)", "street_number": "\(street_number.text!)"]
-        
         let url = URL(string: "http://vigilesweb.test/api/register")!
+        
         Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
-            
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
                 print("Data: \(utf8Text)")
                 
@@ -137,7 +130,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         print(response.error!)
                         return
                 }
-                
                 guard (response.value as? [String:Any]) != nil
                     else {
                         if let error = response.error {
@@ -145,19 +137,20 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                         }
                         return
                 }
-                    do {
-                        let jsonDecoder = JSONDecoder()
-                        var postData = try jsonDecoder.decode(MyUserData.self, from: response.data!)
-                        MyUserData.user = postData
-                        print(postData, "BOH")
-                        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
-                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
-                        self.present(nextViewController, animated:true, completion:nil)
-                    }
-                    catch {
-                        print("JSONSerialization error:", error)
-                    }
+                
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    var postData = try jsonDecoder.decode(MyUserData.self, from: response.data!)
+                    MyUserData.user = postData
+                    print(postData, "BOH")
+                    let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+                    let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
+                    self.present(nextViewController, animated:true, completion:nil)
+                }
+                catch {
+                    print("JSONSerialization error:", error)
                 }
             }
         }
     }
+}

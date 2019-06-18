@@ -6,9 +6,9 @@
 //  Copyright © 2019 Riccardo Mores. All rights reserved.
 //
 
-import UIKit
 import CoreLocation
 import Kingfisher
+import UIKit
 
 class HistoricalViewController: UIViewController {
     @IBOutlet weak var todayTableView: UITableView!

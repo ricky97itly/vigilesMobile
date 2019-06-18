@@ -6,21 +6,21 @@
 //  Copyright © 2019 Riccardo Mores. All rights reserved.
 //
 
-import UIKit
 import Alamofire
 import Kingfisher
+import UIKit
 
 class ProfileViewController: UIViewController {
     
     
-    @IBOutlet weak var chatBtn: UIButton!
-    @IBOutlet weak var profilePic: UIImageView!
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var surname: UILabel!
     @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var mail: UILabel!
-    @IBOutlet weak var street_number: UILabel!
+    @IBOutlet weak var chatBtn: UIButton!
     @IBOutlet weak var logoutBtn: UIButton!
+    @IBOutlet weak var mail: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var street_number: UILabel!
+    @IBOutlet weak var surname: UILabel!
     let url = URL(string: "http://vigilesweb.test/api/login")!
     var profileImg = [UIImage]()
     
@@ -31,13 +31,13 @@ class ProfileViewController: UIViewController {
     }
     
     func UI() {
-        self.logoutBtn.layer.borderWidth = 2.5
-        self.logoutBtn.layer.borderColor = UIColor.white.cgColor
-        self.logoutBtn.clipsToBounds = true
-        profilePic.layer.masksToBounds = false
+        profilePic.clipsToBounds = true
         profilePic.layer.borderColor = UIColor.black.cgColor
         profilePic.layer.cornerRadius = profilePic.frame.height/2.1
-        profilePic.clipsToBounds = true
+        profilePic.layer.masksToBounds = false
+        self.logoutBtn.layer.borderColor = UIColor.white.cgColor
+        self.logoutBtn.layer.borderWidth = 2.5
+        self.logoutBtn.clipsToBounds = true
     }
     
     func fillProfile() {

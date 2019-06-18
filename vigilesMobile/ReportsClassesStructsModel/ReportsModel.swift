@@ -6,8 +6,8 @@
 //  Copyright © 2019 Riccardo Mores. All rights reserved.
 //
 
-import Foundation
 import Alamofire
+import Foundation
 import SwiftyJSON
 
 class ReportsModel: NSObject {
@@ -16,7 +16,7 @@ class ReportsModel: NSObject {
     //    Closure, possiamo passarlo nel codice (abbiamo "assegnato" result a Reports)
     func fetchEvents(complete: @escaping (_ result: [Reports]) -> ()) {
         let url = URL(string: "http://vigilesweb.test/api/reports")!
-        print("prova")
+        print("prova ReportsModel")
         
         Alamofire.request(url, method: .get).validate().responseJSON {
             response in
@@ -49,11 +49,9 @@ class ReportsModel: NSObject {
                 complete(reports.data!)
                 print("Vai!!")
             }
-                
             catch let error {
                 print("Decoding error: ", error)
             }
-            
             return
         }
     }
