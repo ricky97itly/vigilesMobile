@@ -2,8 +2,8 @@
 //  HomeViewController.swift
 //  vigilesMobile
 //
-//  Created by Riccardo Mores on 08/03/2019.
-//  Copyright © 2019 Riccardo Mores. All rights reserved.
+//  Created by vigiles_admin on 08/03/2019.
+//  Copyright © 2019 Vigiles. All rights reserved.
 
 import Alamofire
 import CoreLocation
@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
     let regionRadius: CLLocationDistance = 1000
     
     var annotations = [MyAnnotation]()
-    var infoIMG = [UIImageView]()
+//    var infoIMG = [UIImageView]()
     var previousLocation: CLLocation?
     var reports = [Reports]()
 //    var selectedReports = Reports?.self
@@ -54,19 +54,17 @@ class HomeViewController: UIViewController {
     }
     
     func setUpMarkers() {
-        ReportsModel().fetchEvents(complete: {
+        ReportsModel().funcRequest(complete: {
             (reports) in self.reports = reports
             //  Viene gestita l'esecuzione di più elementi di lavoro
             let queue = DispatchQueue.main
             queue.async(execute: {
                 for report in reports {
-                    //  Se uno di questi parametri manca il codice non va e passa a quello     successivo  (?)
-                    print("for ", report.street_number as? Int)
+                    //  Se uno di questi parametri manca il codice non va e passa a quello successivo  (?)
                     if let title = report.title, let address = report.address {
-                        print("if let ", report.address)
                         // Geo Code per convertire in Lat e Long
                         let geoCoder = CLGeocoder()
-                        let addressString = "\(address) \(report.street_number), Milano"
+                        let addressString = "\(address) \(report.street_number!), Milano"
                         geoCoder.geocodeAddressString(addressString, completionHandler: { (placemarks, error) in
                             if let error = error {
                                 print(error, "Questo è l'errore")
@@ -76,17 +74,17 @@ class HomeViewController: UIViewController {
                                 let lat = placemark?.location?.coordinate.latitude
                                 let lon = placemark?.location?.coordinate.longitude
                                 let annotation = MyAnnotation()
+                                
                                 annotation.coordinate.latitude = lat!
                                 annotation.coordinate.longitude = lon!
-                                annotation.customPropertyAddress = addressString
+                                
+                                annotation.customPropertyAddress = report.address
                                 annotation.customPropertyID = "\(report.id!)"
                                 annotation.customPropertyImg = report.media
                                 annotation.customPropertyDescription = report.description
-                                //                                if annotation.customPropertyStreetNum != nil {
-                                //                                    annotation.customPropertyStreetNum = "\(report.street_number!)"
-                                //                                    print(annotation.customPropertyStreetNum)
-                                //                                }
+                                annotation.customPropertyStreetNum = report.street_number!
                                 annotation.title = title
+                                
                                 self.mapView.addAnnotation(annotation)
                                 self.mapView.showAnnotations(self.mapView.annotations, animated: true)
                             }
@@ -110,13 +108,12 @@ class HomeViewController: UIViewController {
     }
 
     func fillView(annotation: MyAnnotation) {
-        self.infoAddress.text = annotation.customPropertyAddress//! + String(annotation.customPropertyStreetNum!)
+        let imgUrl = URL(string: annotation.customPropertyImg!)
+        
+        self.infoAddress.text = annotation.customPropertyAddress! + " " + String(annotation.customPropertyStreetNum!)
         self.infoDescription.text = annotation.customPropertyDescription
         self.infoID.text = annotation.customPropertyID
-        
-//        let imgUrl = URL(string: annotation.customPropertyImg!)
-//        self.infoIMG.kf.setImage(with: imgUrl)
-        
+        self.infoImg.kf.setImage(with: imgUrl)
         self.infoTitle.text = annotation.title ?? ""
     }
     

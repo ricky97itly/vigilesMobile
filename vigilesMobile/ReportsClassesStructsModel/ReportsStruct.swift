@@ -2,8 +2,8 @@
 //  ReportsStruct.swift
 //  vigilesMobile
 //
-//  Created by Riccardo Mores on 01/05/2019.
-//  Copyright © 2019 Riccardo Mores. All rights reserved.
+//  Created by vigiles_admin on 08/03/2019.
+//  Copyright © 2019 Vigiles. All rights reserved.
 //
 
 import Foundation

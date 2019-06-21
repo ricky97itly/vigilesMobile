@@ -2,8 +2,8 @@
 //  SearchViewController.swift
 //  vigilesMobile
 //
-//  Created by Riccardo Mores on 09/03/2019.
-//  Copyright © 2019 Riccardo Mores. All rights reserved.
+//  Created by vigiles_admin on 08/03/2019.
+//  Copyright © 2019 Vigiles. All rights reserved.
 //
 
 import Kingfisher
@@ -26,7 +26,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         self.searchBar.clipsToBounds = true
         selectedReports = reports
         
-        ReportsModel().fetchEvents(complete: {
+        ReportsModel().funcRequest(complete: {
             (reports) in self.reports = reports
             //            Viene gestita l'esecuzione di più elementi di lavoro
             let queue = DispatchQueue.main

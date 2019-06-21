@@ -2,8 +2,8 @@
 //  MarkerStruct.swift
 //  vigilesMobile
 //
-//  Created by Valeria Spanò on 18/06/2019.
-//  Copyright © 2019 Riccardo Mores. All rights reserved.
+//  Created by vigiles_admin on 08/03/2019.
+//  Copyright © 2019 Vigiles. All rights reserved.
 //
 
 import Foundation
@@ -15,5 +15,5 @@ class MyAnnotation : MKPointAnnotation {
     var customPropertyDescription : String?
     var customPropertyID: String? = nil
     var customPropertyImg: String?
-    var customPropertyStreetNum : String? = nil
+    var customPropertyStreetNum : Int?
 }

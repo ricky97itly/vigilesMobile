@@ -2,8 +2,8 @@
 //  HistoricalViewController.swift
 //  vigilesMobile
 //
-//  Created by Riccardo Mores on 09/03/2019.
-//  Copyright © 2019 Riccardo Mores. All rights reserved.
+//  Created by vigiles_admin on 08/03/2019.
+//  Copyright © 2019 Vigiles. All rights reserved.
 //
 
 import CoreLocation
@@ -26,7 +26,7 @@ class HistoricalViewController: UIViewController {
     }
     
     func modelInvocation() {
-        ReportsModel().fetchEvents(complete: {
+        ReportsModel().funcRequest(complete: {
             (reports) in self.reports = reports
             //            Viene gestita l'esecuzione di più elementi di lavoro
             let queue = DispatchQueue.main
@@ -53,8 +53,8 @@ extension HistoricalViewController: UITableViewDelegate, UITableViewDataSource {
             let report = self.reports[indexPath.row]
             cell?.emergencyTitle.text = report.title
             //            cell?.emergencyId.text = report.id
-            cell?.emergencyAddress.text = report.address
-            //            cell?.streetNumber.text = report.street_number
+            cell?.emergencyAddress.text = report.address! + " \(report.street_number!)"
+//            cell?.streetNumber.text = "\(report.street_number)"
             cell?.emergencyDescription.text = report.description
             //            Converto url in stringa
             let imgUrl = URL(string: report.media!)

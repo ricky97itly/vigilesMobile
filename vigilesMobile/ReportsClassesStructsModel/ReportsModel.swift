@@ -2,8 +2,8 @@
 //  ReportsModel.swift
 //  vigilesMobile
 //
-//  Created by Riccardo Mores on 02/05/2019.
-//  Copyright © 2019 Riccardo Mores. All rights reserved.
+//  Created by vigiles_admin on 08/03/2019.
+//  Copyright © 2019 Vigiles. All rights reserved.
 //
 
 import Alamofire
@@ -14,8 +14,8 @@ class ReportsModel: NSObject {
     
     //    Escaping viene richiamato dopo l'esecuzione della funzione, facendola quindi "vivere più a lungo"
     //    Closure, possiamo passarlo nel codice (abbiamo "assegnato" result a Reports)
-    func fetchEvents(complete: @escaping (_ result: [Reports]) -> ()) {
-        let url = URL(string: "http://vigilesweb.test/api/reports")!
+    func funcRequest(complete: @escaping (_ result: [Reports]) -> ()) {
+        let url = URL(string: "http://localhost:8000/api/reports")!
         print("prova ReportsModel")
         
         Alamofire.request(url, method: .get).validate().responseJSON {
@@ -42,10 +42,10 @@ class ReportsModel: NSObject {
             //            Do esegue il codice per decodificare json chiedendo risposta dai dati presenti al suo interno. In caso di errore viene passato e               "preso" dal catch
             do {
                 let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let reports = try decoder.decode(ReportsData.self, from: response.data!)
                 //                Si mandano i dati recuperati a HistoricalViewController
-                print(reports.data!)
+                print("Reports Data ", reports.data!)
+                
                 complete(reports.data!)
                 print("Vai!!")
             }

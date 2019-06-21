@@ -2,7 +2,8 @@
 //  AlertStruct.swift
 //
 //
-//  Created by Riccardo Mores on 14/05/2019.
+//  Created by vigiles_admin on 08/03/2019.
+//  Copyright © 2019 Vigiles. All rights reserved.
 //
 
 import Foundation

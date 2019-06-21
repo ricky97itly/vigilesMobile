@@ -2,8 +2,8 @@
 //  SearchTableViewCell.swift
 //  vigilesMobile
 //
-//  Created by Claudia Lolli on 04/04/2019.
-//  Copyright © 2019 Riccardo Mores. All rights reserved.
+//  Created by vigiles_admin on 08/03/2019.
+//  Copyright © 2019 Vigiles. All rights reserved.
 //
 
 import UIKit

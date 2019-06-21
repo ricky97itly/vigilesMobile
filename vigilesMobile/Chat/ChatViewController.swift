@@ -2,8 +2,8 @@
 //  ChatViewController.swift
 //  vigilesMobile
 //
-//  Created by Claudia Lolli on 28/03/2019.
-//  Copyright © 2019 Riccardo Mores. All rights reserved.
+//  Created by vigiles_admin on 08/03/2019.
+//  Copyright © 2019 Vigiles. All rights reserved.
 //
 
 import UIKit
@@ -25,7 +25,7 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ReportsModel().fetchEvents(complete: {
+        ReportsModel().funcRequest(complete: {
             (reports) in self.reports = reports
             //            Viene gestita l'esecuzione di più elementi di lavoro
             let queue = DispatchQueue.main
