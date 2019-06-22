@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var repeatPassword: UITextField!
     @IBOutlet weak var street_number: UITextField!
     @IBOutlet weak var surname: UITextField!
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +52,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.surname.layer.borderColor = UIColor.white.cgColor
         self.surname.layer.borderWidth = 1
         self.surname.layer.cornerRadius = 15
+        name.attributedPlaceholder = NSAttributedString(string: "Nome", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        surname.attributedPlaceholder = NSAttributedString(string: "Cognome", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        address.attributedPlaceholder = NSAttributedString(string: "Indirizzo", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        street_number.attributedPlaceholder = NSAttributedString(string: "Numero", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        email.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        password.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        repeatPassword.attributedPlaceholder = NSAttributedString(string: "Conferma Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -65,6 +73,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         password.resignFirstResponder()
         repeatPassword.resignFirstResponder()
         return (true)
+    }
+    
+    func showActivityIndicatory() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = UIActivityIndicatorView.Style.white
+        self.view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
     }
     
 // Per verificare che la mail abbia gli elementi che la compongono
@@ -118,7 +134,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         validateFields()
 
         let params:[String:String] = ["name": "\(name.text!)", "surname": "\(surname.text!)", "email" : "\(email.text!)", "password" : "\(password.text!)", "confirm_password" : "\(repeatPassword.text!)", "address" : "\(address.text!)", "street_number": "\(street_number.text!)"]
-        let url = URL(string: "http://vigilesweb.test/api/register")!
+        let url = URL(string: "http://localhost:8000/api/register")!
         
         Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
@@ -142,7 +158,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                     let jsonDecoder = JSONDecoder()
                     var postData = try jsonDecoder.decode(MyUserData.self, from: response.data!)
                     MyUserData.user = postData
-                    print(postData, "BOH")
+                    print(postData)
+                    self.showActivityIndicatory()
                     let storyBoard = UIStoryboard(name: "Main", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
                     self.present(nextViewController, animated:true, completion:nil)

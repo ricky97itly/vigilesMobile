@@ -28,6 +28,10 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
     @IBOutlet weak var street_number: UITextField!
     @IBOutlet weak var tag: UITextField!
     let locationManager = CLLocationManager()
+    var alertController: UIAlertController?
+    var alertTimer: Timer?
+    var remainingTime = 0
+    var baseMessage: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,11 +93,64 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         Alert.showAlert(on: self, with: "Aggiungi", message: "Compila i campi per segnalare un'emergenza, per segnalare la tua posizione ti basta premere sull'apposito pulsante. ")
     }
     
+//    Funzione con dentro i parametri che saranno presenti nell'alert. Per popolarlo mi basta richiamarla e riempire i campi
+    func showAlertMsg(title: String, message: String, time: Int) {
+        
+        guard (self.alertController == nil) else {
+            print("Alert già presente")
+            return
+        }
+        
+        self.baseMessage = message
+        self.remainingTime = time
+        
+        self.alertController = UIAlertController(title: title, message: self.alertMessage(), preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Chiudi", style: .cancel) { (action) in
+            print("Alert cancellato")
+            self.alertController=nil;
+            self.alertTimer?.invalidate()
+            self.alertTimer=nil
+        }
+        
+        self.alertController!.addAction(cancelAction)
+        
+        self.alertTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AddViewController.countDown), userInfo: nil, repeats: true)
+        
+        self.present(self.alertController!, animated: true, completion: nil)
+    }
+    
+//    Per conto alla rovescia
+    @objc func countDown() {
+        
+        self.remainingTime -= 1
+        if (self.remainingTime < 0) {
+            self.alertTimer?.invalidate()
+            self.alertTimer = nil
+            self.alertController!.dismiss(animated: true, completion: {
+                self.alertController = nil
+            })
+        } else {
+            self.alertController!.message = self.alertMessage()
+        }
+        
+    }
+    
+//    Mostra conto alla rovescia
+    func alertMessage() -> String {
+        var message = " "
+        if let baseMessage = self.baseMessage {
+            message=baseMessage + " "
+        }
+        return(message + "\(self.remainingTime)")
+    }
+
+    
     @IBAction func addEmergency() {
         validateFields()
         
         let params:[String:AnyObject] = ["user_id": MyUserData.user?.success.id as AnyObject, "code_id": 1 as AnyObject, "zone_id": 1 as AnyObject, "title" : "\(name.text!)" as AnyObject, "address": "\(address.text!)" as AnyObject , "street_number": "\(street_number.text!)" as AnyObject, "latitude": Double() as AnyObject, "longitude": Double() as AnyObject, "description" : "\(emergencyDescription.text!)" as AnyObject, "tags": "\(tag.text!)" as AnyObject, "media": "img" as AnyObject ]
-        let url = URL(string: "http://vigilesweb.test/api/report")!
+        let url = URL(string: "http://localhost:8000/api/report")!
         
         Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseJSON { response in
             print(response)
@@ -120,6 +177,12 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
                     let postData = try jsonDecoder.decode(Reports.self, from: response.data!)
                     Reports.report = postData as AnyObject
                     print(postData, "BOH")
+                    self.self.showAlertMsg(title: "Grazie!", message: "La segnalazione è stata inviata all'operatore. Questo messaggio si autodistruggerà in ", time: 5)
+                    self.name.text = ""
+                    self.address.text = ""
+                    self.street_number.text = ""
+                    self.emergencyDescription.text = ""
+                    self.tag.text = ""
                 }
                 catch {
                     print("JSONSerialization error:", error)

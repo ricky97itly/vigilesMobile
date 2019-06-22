@@ -60,7 +60,7 @@ class HomeViewController: UIViewController {
             let queue = DispatchQueue.main
             queue.async(execute: {
                 for report in reports {
-                    //  Se uno di questi parametri manca il codice non va e passa a quello successivo  (?)
+                    //  Se ad uno di questi parametri manca il codice non va e passa a quello successivo  (?)
                     if let title = report.title, let address = report.address {
                         // Geo Code per convertire in Lat e Long
                         let geoCoder = CLGeocoder()
@@ -77,7 +77,7 @@ class HomeViewController: UIViewController {
                                 
                                 annotation.coordinate.latitude = lat!
                                 annotation.coordinate.longitude = lon!
-                                
+//                                Si riprendono info dalla classe dei marker
                                 annotation.customPropertyAddress = report.address
                                 annotation.customPropertyID = "\(report.id!)"
                                 annotation.customPropertyImg = report.media
@@ -97,7 +97,7 @@ class HomeViewController: UIViewController {
     
     //    Al click sul marker compaiono le info
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        //        Do Some sort of fancy animation here
+
         bottomConstraint.constant = 10
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
@@ -107,6 +107,7 @@ class HomeViewController: UIViewController {
         }
     }
 
+//    Per riempire view
     func fillView(annotation: MyAnnotation) {
         let imgUrl = URL(string: annotation.customPropertyImg!)
         
@@ -251,26 +252,26 @@ extension HomeViewController: MKMapViewDelegate {
         }
     }
 
-    @objc func didTapImageView() {
-        let image = infoImg.image
-        if infoImg.image == nil {
-            return
-        }
-        
-        let lightboxImage = LightboxImage(image: image!, text: reports.description )
-        LightboxConfig.InfoLabel.textAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
-        
-        // Create an instance of LightboxController.
-        let controller = LightboxController(images: [lightboxImage])
-        
-        // Set delegates.
-        //        controller.pageDelegate = self
-        //        controller.dismissalDelegate = self
-        
-        // Use dynamic background.
-        controller.dynamicBackground = true
-        
-        // Present your controller.
-        present(controller, animated: true, completion: nil)
-    }
+//    @objc func didTapImageView() {
+//        let image = infoImg.image
+//        if infoImg.image == nil {
+//            return
+//        }
+//
+//        let lightboxImage = LightboxImage(image: image!, text: reports.description )
+//        LightboxConfig.InfoLabel.textAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)]
+//
+//        // Create an instance of LightboxController.
+//        let controller = LightboxController(images: [lightboxImage])
+//
+//        // Set delegates.
+//        //        controller.pageDelegate = self
+//        //        controller.dismissalDelegate = self
+//
+//        // Use dynamic background.
+//        controller.dynamicBackground = true
+//
+//        // Present your controller.
+//        present(controller, animated: true, completion: nil)
+//    }
 }
