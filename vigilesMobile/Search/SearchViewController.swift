@@ -107,6 +107,8 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             let imgUrl = URL(string: report.media!)
             //            kf è metodo di KingFisher
             cell?.codeImg.kf.setImage(with: imgUrl)
+            cell?.codeImg.layer.cornerRadius = (cell?.codeImg.frame.width)! / 2.1
+            cell?.codeImg.layer.masksToBounds = true
         }
         cell?.layer.cornerRadius = 15
         return (cell!)

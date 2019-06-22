@@ -19,23 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6h-or-uzK" userLabel="HistoricalView">
-                                <rect key="frame" x="112.66666666666669" y="44" width="150" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segnalazioni" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zu-Vn-21A" userLabel="Historical">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="5Zu-Vn-21A" secondAttribute="trailing" id="4SS-YT-ggY"/>
-                                    <constraint firstItem="5Zu-Vn-21A" firstAttribute="leading" secondItem="Z6h-or-uzK" secondAttribute="leading" id="MqE-B6-ZEr"/>
-                                    <constraint firstAttribute="bottom" secondItem="5Zu-Vn-21A" secondAttribute="bottom" id="amU-bF-tyl"/>
-                                    <constraint firstItem="5Zu-Vn-21A" firstAttribute="top" secondItem="Z6h-or-uzK" secondAttribute="top" id="byM-ux-Xyo"/>
-                                </constraints>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="c16-27-aLS">
                                 <rect key="frame" x="15" y="138" width="345" height="581"/>
                                 <subviews>
@@ -177,18 +160,50 @@
                                     <constraint firstAttribute="width" constant="216" id="YD1-RH-p4d"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScQ-Jp-cgr">
+                                <rect key="frame" x="21" y="46" width="27" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="G6g-d0-0RU"/>
+                                    <constraint firstAttribute="width" constant="27" id="oxt-H2-I2M"/>
+                                </constraints>
+                                <state key="normal" image="info"/>
+                                <connections>
+                                    <action selector="infoBtn:" destination="xIy-tA-QqQ" eventType="touchUpInside" id="aME-SZ-AMH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6h-or-uzK" userLabel="HistoricalView">
+                                <rect key="frame" x="112.66666666666667" y="44" width="170.66666666666663" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segnalazioni" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zu-Vn-21A" userLabel="Historical">
+                                        <rect key="frame" x="0.0" y="0.0" width="162" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5Zu-Vn-21A" secondAttribute="trailing" constant="8.6666666666666288" id="4SS-YT-ggY"/>
+                                    <constraint firstItem="5Zu-Vn-21A" firstAttribute="leading" secondItem="Z6h-or-uzK" secondAttribute="leading" id="MqE-B6-ZEr"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Zu-Vn-21A" secondAttribute="bottom" id="amU-bF-tyl"/>
+                                    <constraint firstItem="5Zu-Vn-21A" firstAttribute="top" secondItem="Z6h-or-uzK" secondAttribute="top" id="byM-ux-Xyo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="vigilesRed"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ScQ-Jp-cgr" firstAttribute="top" secondItem="o4R-sN-gYm" secondAttribute="top" constant="2" id="04C-TK-tjO"/>
                             <constraint firstItem="o4R-sN-gYm" firstAttribute="bottom" secondItem="c16-27-aLS" secondAttribute="bottom" constant="10" id="0UO-eR-0ac"/>
                             <constraint firstItem="c16-27-aLS" firstAttribute="top" secondItem="Vh7-31-fhy" secondAttribute="bottom" constant="20" id="2mg-4w-FDP"/>
+                            <constraint firstItem="ScQ-Jp-cgr" firstAttribute="leading" secondItem="o4R-sN-gYm" secondAttribute="leading" constant="21" id="6GQ-xD-A3l"/>
                             <constraint firstItem="c16-27-aLS" firstAttribute="leading" secondItem="o4R-sN-gYm" secondAttribute="leading" constant="15" id="DrQ-PG-XNu"/>
-                            <constraint firstItem="c16-27-aLS" firstAttribute="centerX" secondItem="Z6h-or-uzK" secondAttribute="centerX" id="Pd4-QK-Lvj"/>
+                            <constraint firstItem="c16-27-aLS" firstAttribute="centerX" secondItem="Z6h-or-uzK" secondAttribute="centerX" constant="-10.5" id="Pd4-QK-Lvj"/>
                             <constraint firstItem="Vh7-31-fhy" firstAttribute="top" relation="lessThanOrEqual" secondItem="Z6h-or-uzK" secondAttribute="bottom" constant="40" id="TRA-1h-Ziq"/>
+                            <constraint firstItem="Vh7-31-fhy" firstAttribute="top" secondItem="ScQ-Jp-cgr" secondAttribute="bottom" constant="20" id="iWY-pm-ZMq"/>
                             <constraint firstItem="Vh7-31-fhy" firstAttribute="leading" secondItem="o4R-sN-gYm" secondAttribute="leading" constant="16" id="lWw-Ki-IzQ"/>
                             <constraint firstItem="Z6h-or-uzK" firstAttribute="top" secondItem="o4R-sN-gYm" secondAttribute="top" id="qAr-Id-Jx0"/>
-                            <constraint firstItem="Z6h-or-uzK" firstAttribute="centerX" secondItem="Azt-zA-d36" secondAttribute="centerX" id="wYn-03-xYJ"/>
+                            <constraint firstItem="Z6h-or-uzK" firstAttribute="leading" secondItem="ScQ-Jp-cgr" secondAttribute="trailing" constant="64.670000000000002" id="qdg-ex-lno"/>
+                            <constraint firstItem="Z6h-or-uzK" firstAttribute="centerX" secondItem="Azt-zA-d36" secondAttribute="centerX" constant="10.5" id="wYn-03-xYJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o4R-sN-gYm"/>
                     </view>
@@ -1965,6 +1980,7 @@ AZmMAAGZlAABmZcAAZmcAAGZpAABmacAAZm5AAGZvAABmcEAAAAAAAAEAQAAAAAAAABtAAAAAAAAAAAA
 AAAAAAGZww
 </mutableData>
         </image>
+        <image name="info" width="27" height="28"/>
         <image name="storico" width="26" height="24"/>
         <namedColor name="vigilesRed">
             <color red="1" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

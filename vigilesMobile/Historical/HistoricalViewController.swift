@@ -25,6 +25,10 @@ class HistoricalViewController: UIViewController {
         modelInvocation()
     }
     
+    @IBAction func infoBtn(_ sender: Any) {
+      Alert.showAlert(on: self, with: "Segnalazioni", message: "Qui vedrai tutte le segnalazioni fatte dagli utenti.")
+    }
+    
     func modelInvocation() {
         ReportsModel().funcRequest(complete: {
             (reports) in self.reports = reports
@@ -75,6 +79,8 @@ extension HistoricalViewController: UITableViewDelegate, UITableViewDataSource {
             let imgUrl = URL(string: report.media!)
             //            kf è metodo diKingFisher
             cell?.emergencyImg.kf.setImage(with: imgUrl)
+            cell?.emergencyImg.layer.cornerRadius = (cell?.emergencyImg.frame.width)! / 2.1
+            cell?.emergencyImg.layer.masksToBounds = true
         }
         cell?.layer.cornerRadius = 15
         return (cell!)

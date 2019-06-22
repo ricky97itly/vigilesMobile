@@ -14,7 +14,6 @@ class ProfileViewController: UIViewController {
     
     
     @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var chatBtn: UIButton!
     @IBOutlet weak var logoutBtn: UIButton!
     @IBOutlet weak var mail: UILabel!
     @IBOutlet weak var name: UILabel!
