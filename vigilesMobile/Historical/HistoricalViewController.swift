@@ -54,6 +54,21 @@ extension HistoricalViewController: UITableViewDelegate, UITableViewDataSource {
             cell?.emergencyTitle.text = report.title
             //            cell?.emergencyId.text = report.id
             cell?.emergencyAddress.text = report.address! + " \(report.street_number!)"
+            
+            switch report.code_id {
+            case 2:
+                let green = #imageLiteral(resourceName: "code-green")
+                cell?.codeImg.image = green
+            case 3:
+                let yellow = #imageLiteral(resourceName: "code")
+                cell?.codeImg.image = yellow
+            case 4:
+                let red = #imageLiteral(resourceName: "code-red")
+                cell?.codeImg.image = red
+            default:
+                break
+            }
+            
 //            cell?.streetNumber.text = "\(report.street_number)"
             cell?.emergencyDescription.text = report.description
             //            Converto url in stringa

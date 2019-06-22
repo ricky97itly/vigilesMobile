@@ -86,6 +86,21 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             //            cell?.emergencyId.text = report.id
             cell?.searchAddress.text = report.address
             //            cell?.streetNumber.text = report.street_number
+            
+            switch report.code_id {
+            case 2:
+                let green = #imageLiteral(resourceName: "code-green")
+                cell?.codeImg.image = green
+            case 3:
+                let yellow = #imageLiteral(resourceName: "code")
+                cell?.codeImg.image = yellow
+            case 4:
+                let red = #imageLiteral(resourceName: "code-red")
+                cell?.codeImg.image = red
+            default:
+                break
+            }
+            
             cell?.searchDescription.text = report.description
             
             //            Converto url in stringa

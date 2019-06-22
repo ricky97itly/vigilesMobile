@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var chatBtn: NSLayoutConstraint!
     @IBOutlet weak var findUserLocation: UIButton!
     @IBOutlet weak var infoAddress: UILabel!
+    @IBOutlet weak var infoCode: UIImageView!
     @IBOutlet weak var infoID: UILabel!
     @IBOutlet weak var infoImg: UIImageView!
     @IBOutlet weak var infoDescription: UILabel!
@@ -79,6 +80,7 @@ class HomeViewController: UIViewController {
                                 annotation.coordinate.longitude = lon!
 //                                Si riprendono info dalla classe dei marker
                                 annotation.customPropertyAddress = report.address
+                                annotation.customPropertyCodeID = report.code_id
                                 annotation.customPropertyID = "\(report.id!)"
                                 annotation.customPropertyImg = report.media
                                 annotation.customPropertyDescription = report.description
@@ -87,6 +89,7 @@ class HomeViewController: UIViewController {
                                 
                                 self.mapView.addAnnotation(annotation)
                                 self.mapView.showAnnotations(self.mapView.annotations, animated: true)
+                         
                             }
                         })
                     }
@@ -112,6 +115,21 @@ class HomeViewController: UIViewController {
         let imgUrl = URL(string: annotation.customPropertyImg!)
         
         self.infoAddress.text = annotation.customPropertyAddress! + " " + String(annotation.customPropertyStreetNum!)
+        
+        switch annotation.customPropertyCodeID {
+        case 2:
+            let green = #imageLiteral(resourceName: "code-green")
+            infoCode.image = green
+        case 3:
+            let yellow = #imageLiteral(resourceName: "code")
+            infoCode.image = yellow
+        case 4:
+            let red = #imageLiteral(resourceName: "code-red")
+            infoCode.image = red
+        default:
+            break
+        }
+        
         self.infoDescription.text = annotation.customPropertyDescription
         self.infoID.text = annotation.customPropertyID
         self.infoImg.kf.setImage(with: imgUrl)

@@ -190,6 +190,7 @@
                         <outlet property="bottomConstraint" destination="vJs-lD-jSV" id="Y4y-GH-KwZ"/>
                         <outlet property="findUserLocation" destination="Zj0-Mu-yHW" id="hh9-ry-3wq"/>
                         <outlet property="infoAddress" destination="8I8-Eq-wsD" id="n16-Hu-7ho"/>
+                        <outlet property="infoCode" destination="TN7-FP-kos" id="1um-W7-p25"/>
                         <outlet property="infoDescription" destination="7l3-XG-yMI" id="Ysa-k0-lET"/>
                         <outlet property="infoID" destination="6MR-IG-YMh" id="KXr-iI-CPk"/>
                         <outlet property="infoImg" destination="12X-gZ-QCX" id="zrU-s7-83D"/>

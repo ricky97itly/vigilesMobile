@@ -16,7 +16,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var chatTV: UITableView!
-    var chatImg = [UIImage(named: "code"), UIImage(named: "code"), UIImage(named: "code")]
+    var chatImg = [UIImage(named: "code-yellow"), UIImage(named: "code-green"), UIImage(named: "code-red")]
     var chatTitle = ["Incidente", "Schianto", "Apple Chiusa"]
     var chatNumber = ["Segnalazione 0001", "Segnalazione 0002", "Segnalazione 0003"]
     var reports = [Reports]()

@@ -18,7 +18,7 @@ struct Reports: Codable {
     static var report: AnyObject?
     let id: Int?
     let user_id = MyUserData.user?.success.id as Int?
-    let code_id = 1
+    let code_id: Int?
     let zone_id = 1
     let title: String?
     let address: String?
