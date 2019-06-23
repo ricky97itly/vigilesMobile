@@ -130,10 +130,10 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
             self.alertController!.dismiss(animated: true, completion: {
                 self.alertController = nil
             })
-        } else {
+        }
+        else {
             self.alertController!.message = self.alertMessage()
         }
-        
     }
     
 //    Mostra conto alla rovescia

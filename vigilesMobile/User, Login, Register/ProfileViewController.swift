@@ -51,7 +51,6 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func logoutBtn(_ sender: UIButton) {
-        //        performSegue(withIdentifier: "Main.storyboard", sender: self)
     }
 }
 

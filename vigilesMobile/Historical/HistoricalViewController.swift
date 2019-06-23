@@ -76,7 +76,7 @@ extension HistoricalViewController: UITableViewDelegate, UITableViewDataSource {
 //            cell?.streetNumber.text = "\(report.street_number)"
             cell?.emergencyDescription.text = report.description
             //            Converto url in stringa
-            let imgUrl = URL(string: report.media!)
+            let imgUrl = URL(string: report.media ?? "valore")
             //            kf è metodo diKingFisher
             cell?.emergencyImg.kf.setImage(with: imgUrl)
             cell?.emergencyImg.layer.cornerRadius = (cell?.emergencyImg.frame.width)! / 2.1
@@ -84,7 +84,7 @@ extension HistoricalViewController: UITableViewDelegate, UITableViewDataSource {
         }
         cell?.layer.cornerRadius = 15
         return (cell!)
-    } // Fine funzione tableView
+    }
     
     
     //    Gestisce la cancellazione di una cella (non serve ma lo tengo per il futuro)

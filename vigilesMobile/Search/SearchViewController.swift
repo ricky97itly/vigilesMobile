@@ -104,7 +104,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             cell?.searchDescription.text = report.description
             
             //            Converto url in stringa
-            let imgUrl = URL(string: report.media!)
+            let imgUrl = URL(string: report.media ?? "valore" )
             //            kf è metodo di KingFisher
             cell?.codeImg.kf.setImage(with: imgUrl)
             cell?.codeImg.layer.cornerRadius = (cell?.codeImg.frame.width)! / 2.1

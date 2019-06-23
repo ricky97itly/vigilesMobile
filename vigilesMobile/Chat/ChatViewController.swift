@@ -14,11 +14,7 @@ var testChat = [String]()
 
 class ChatViewController: UIViewController {    
     @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var chatTV: UITableView!
-    var chatImg = [UIImage(named: "code-yellow"), UIImage(named: "code-green"), UIImage(named: "code-red")]
-    var chatTitle = ["Incidente", "Schianto", "Apple Chiusa"]
-    var chatNumber = ["Segnalazione 0001", "Segnalazione 0002", "Segnalazione 0003"]
     var reports = [Reports]()
     var selectedReports = [Reports]()
     var reportImgs = [UIImageView]()
@@ -67,7 +63,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
             let report = self.reports[indexPath.row]
             cell?.chatTitle.text = report.title
             //            Converto url in stringa
-            let imgUrl = URL(string: report.media!)
+            let imgUrl = URL(string: report.media ?? "valore")
             //            kf è metodo diKingFisher
             cell?.chatImg.kf.setImage(with: imgUrl)
         }

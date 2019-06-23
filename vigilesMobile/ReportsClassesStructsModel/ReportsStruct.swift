@@ -14,6 +14,9 @@ class Data: Codable {
 }
 
 // Struct copia il suo valore quando viene assegnato a qualcos'altro. Class no
+// Codable permette ai dati di essere serializzati per diversi tipi di rappresentazione dati -> comprende encodable e decodable e rende immediato il loro utilizzo (una riga fa tutto praticamente)
+// Encodable: permette la codifica di una rappresentazione interna, un nostro oggetto, in una rappresentazione esterna come può essere un JSON
+// Decodable: permette di decodificare una rappresentazione esterna, come un JSON, in una rappresentazione interna (da JSON alla class/struct conforme a questo protocollo)
 struct Reports: Codable {
     static var report: AnyObject?
     let id: Int?
@@ -32,8 +35,6 @@ struct Reports: Codable {
 
 // Gestiamo i dati facendo riferimento alla struct precedente. In questo caso usiamo una classe per evitare rallentamenti gestendo ora la quantità di dati presente nel json
 class ReportsData: Codable {
-//    var success: Reports
-//    static var report: ReportsData?
     var data: [Reports]?
     init(data: [Reports]) {
         self.data = data
