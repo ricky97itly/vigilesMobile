@@ -15,7 +15,7 @@ class ReportsModel: NSObject {
     //    Escaping viene richiamato dopo l'esecuzione della funzione, facendola quindi "vivere più a lungo"
     //    Closure, possiamo passarlo nel codice (abbiamo "assegnato" result a Reports)
     func funcRequest(complete: @escaping (_ result: [Reports]) -> ()) {
-        let url = URL(string: "http://vigilesweb.test/api/reports")!
+        let url = URL(string: "http://localhost:8000/api/reports")!
         print("prova ReportsModel")
         
         Alamofire.request(url, method: .get).validate().responseJSON {

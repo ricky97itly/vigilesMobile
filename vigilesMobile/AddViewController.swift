@@ -150,7 +150,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         validateFields()
         
         let params:[String:AnyObject] = ["user_id": MyUserData.user?.success.id as AnyObject, "code_id": 1 as AnyObject, "zone_id": 1 as AnyObject, "title" : "\(name.text!)" as AnyObject, "address": "\(address.text!)" as AnyObject , "street_number": "\(street_number.text!)" as AnyObject, "latitude": Double() as AnyObject, "longitude": Double() as AnyObject, "description" : "\(emergencyDescription.text!)" as AnyObject, "tags": "\(tag.text!)" as AnyObject, "media": "img" as AnyObject ]
-        let url = URL(string: "http://vigilesweb.test/api/report")!
+        let url = URL(string: "http://localhost:8000/api/report")!
         
         Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseJSON { response in
             print(response)

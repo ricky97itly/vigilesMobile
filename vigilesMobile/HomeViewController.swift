@@ -112,7 +112,8 @@ class HomeViewController: UIViewController {
 
 //    Per riempire view
     func fillView(annotation: MyAnnotation) {
-        let imgUrl = URL(string: annotation.customPropertyImg!)
+//        Valore di default per impedire crash se manca foto
+        let imgUrl = URL(string: annotation.customPropertyImg ?? "test")
         
         self.infoAddress.text = annotation.customPropertyAddress! + " " + String(annotation.customPropertyStreetNum!)
         

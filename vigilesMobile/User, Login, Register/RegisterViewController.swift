@@ -134,7 +134,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         validateFields()
 
         let params:[String:String] = ["name": "\(name.text!)", "surname": "\(surname.text!)", "email" : "\(email.text!)", "password" : "\(password.text!)", "confirm_password" : "\(repeatPassword.text!)", "address" : "\(address.text!)", "street_number": "\(street_number.text!)"]
-        let url = URL(string: "http://vigilesweb.test/api/register")!
+        let url = URL(string: "http://localhost:8000/api/register")!
         
         Alamofire.request(url, method: .post, parameters: params).validate().responseJSON { response in
             if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
