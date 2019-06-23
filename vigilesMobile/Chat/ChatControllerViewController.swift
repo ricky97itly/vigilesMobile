@@ -53,7 +53,7 @@ extension ChatControllerViewController: MessagesDataSource {
     
     func numberOfSections(
         in messagesCollectionView: MessagesCollectionView) -> Int {
-        print("GIGGI\(messages.count)")
+        print("PROVA\(messages.count)")
         return messages.count
     }
     
@@ -98,7 +98,7 @@ extension ChatControllerViewController: MessagesDisplayDelegate {
         for message: MessageType,
         at indexPath: IndexPath,
         in messagesCollectionView: MessagesCollectionView) {
-        print("GIGGINO")
+        print("PROVA2")
         let message = messages[indexPath.section]
         let color = message.member.color
         avatarView.backgroundColor = color

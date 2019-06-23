@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var street_number: UILabel!
     @IBOutlet weak var surname: UILabel!
-    let url = URL(string: "http://localhost:8000/api/login")!
+    let url = URL(string: "http://vigilesweb.test/api/login")!
     var profileImg = [UIImage]()
     
     override func viewDidLoad() {

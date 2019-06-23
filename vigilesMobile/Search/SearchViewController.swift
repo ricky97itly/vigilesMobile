@@ -54,21 +54,21 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("mortacci tua")
+        print("PROVA1")
         guard !searchText.isEmpty
             else {
-                print("mena")
+                print("PROVA2")
                 searchTableView.reloadData()
                 return
         }
-        print("taralli")
+        print("PROVA3")
         
         selectedReports = reports.filter({
             reports -> Bool in (reports.address?.lowercased().contains(searchText.lowercased()))!
         })
         print(reports)
         print(selectedReports)
-        print("tvb")
+        print("PROVA4")
         
         searchTableView.reloadData()
     }

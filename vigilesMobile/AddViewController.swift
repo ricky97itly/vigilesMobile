@@ -150,7 +150,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
         validateFields()
         
         let params:[String:AnyObject] = ["user_id": MyUserData.user?.success.id as AnyObject, "code_id": 1 as AnyObject, "zone_id": 1 as AnyObject, "title" : "\(name.text!)" as AnyObject, "address": "\(address.text!)" as AnyObject , "street_number": "\(street_number.text!)" as AnyObject, "latitude": Double() as AnyObject, "longitude": Double() as AnyObject, "description" : "\(emergencyDescription.text!)" as AnyObject, "tags": "\(tag.text!)" as AnyObject, "media": "img" as AnyObject ]
-        let url = URL(string: "http://localhost:8000/api/report")!
+        let url = URL(string: "http://vigilesweb.test/api/report")!
         
         Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).validate().responseJSON { response in
             print(response)
@@ -176,7 +176,7 @@ class AddViewController: UIViewController, MKMapViewDelegate, UITextFieldDelegat
                     let jsonDecoder = JSONDecoder()
                     let postData = try jsonDecoder.decode(Reports.self, from: response.data!)
                     Reports.report = postData as AnyObject
-                    print(postData, "BOH")
+                    print(postData, "PROVA")
                     self.self.showAlertMsg(title: "Grazie!", message: "La segnalazione è stata inviata all'operatore. Questo messaggio si autodistruggerà in ", time: 5)
                     self.name.text = ""
                     self.address.text = ""
@@ -218,7 +218,7 @@ extension AddViewController: CLLocationManagerDelegate {
         geocoder.reverseGeocodeLocation(locat!, completionHandler: {
             (placemarks, error) in
             if (error != nil) {
-                print("PERCHÉ")
+                print("PROVA2")
             }
             else {
                 let pm = placemarks! as [CLPlacemark]

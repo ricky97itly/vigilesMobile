@@ -15,12 +15,12 @@ class ReportsModel: NSObject {
     //    Escaping viene richiamato dopo l'esecuzione della funzione, facendola quindi "vivere più a lungo"
     //    Closure, possiamo passarlo nel codice (abbiamo "assegnato" result a Reports)
     func funcRequest(complete: @escaping (_ result: [Reports]) -> ()) {
-        let url = URL(string: "http://localhost:8000/api/reports")!
+        let url = URL(string: "http://vigilesweb.test/api/reports")!
         print("prova ReportsModel")
         
         Alamofire.request(url, method: .get).validate().responseJSON {
             response in
-            print("Inizio film")
+            print("Prova1")
             //            Verifichiamo errori, guard permette di performare un’azione solo quando la sua condizione non è verificata (quindi falsa)
             guard response.error == nil
                 else {
@@ -38,7 +38,7 @@ class ReportsModel: NSObject {
                     }
                     return
             }
-            print("Thanos")
+            print("Prova2")
             //            Do esegue il codice per decodificare json chiedendo risposta dai dati presenti al suo interno. In caso di errore viene passato e               "preso" dal catch
             do {
                 let decoder = JSONDecoder()
